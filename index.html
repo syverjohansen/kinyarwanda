@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinyarwanda Exercises</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Lessons">
+        <div class="brand">
+          <span class="brand-mark">Kw</span>
+          <div>
+            <h1>Kinyarwanda</h1>
+            <p>Lesson practice builder</p>
+          </div>
+        </div>
+
+        <form id="lesson-form" class="stacked-form">
+          <label for="lesson-name">New lesson</label>
+          <div class="inline-form">
+            <input id="lesson-name" name="lessonName" type="text" placeholder="Chapter 3" autocomplete="off" required />
+            <button type="submit">Add</button>
+          </div>
+        </form>
+
+        <nav id="lesson-list" class="lesson-list" aria-label="Lesson list"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Exercises</p>
+            <h2 id="active-title">Add a lesson to begin</h2>
+          </div>
+          <div class="topbar-actions">
+            <button id="sync-toggle" type="button" title="Open sync settings">Sync</button>
+            <button id="export-data" type="button" title="Download lesson data">Export</button>
+            <label class="import-button" for="import-data">Import</label>
+            <input id="import-data" type="file" accept="application/json" />
+          </div>
+        </header>
+
+        <section id="sync-panel" class="sync-panel" hidden>
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">GitHub Gist</p>
+              <h3>Sync lessons across devices</h3>
+            </div>
+            <button id="disconnect-sync" class="danger-button" type="button" hidden>Disconnect</button>
+          </div>
+
+          <div id="sync-connect" class="sync-connect">
+            <p>
+              Create a GitHub token with gist permission, paste it here, and this app will store lesson data in a private Gist.
+            </p>
+            <div class="inline-form">
+              <input id="github-token" type="password" placeholder="GitHub token with gist permission" autocomplete="off" />
+              <button id="connect-sync" type="button">Connect</button>
+            </div>
+            <a class="token-link" href="https://github.com/settings/tokens/new?scopes=gist&description=Kinyarwanda%20Lessons" target="_blank" rel="noopener noreferrer">Create token on GitHub</a>
+          </div>
+
+          <div id="sync-controls" class="sync-controls" hidden>
+            <div class="sync-buttons">
+              <button id="save-sync" type="button">Save to GitHub</button>
+              <button id="load-sync" type="button">Load from GitHub</button>
+            </div>
+            <p id="last-synced" class="sync-meta"></p>
+          </div>
+
+          <p id="sync-message" class="sync-message" role="status"></p>
+        </section>
+
+        <section id="empty-state" class="empty-state">
+          <h3>No lesson selected</h3>
+          <p>Add a lesson on the left. Then add exercises and questions inside it.</p>
+        </section>
+
+        <section id="lesson-editor" class="lesson-editor" hidden>
+          <div class="editor-grid">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Lesson</p>
+                  <h3>Details</h3>
+                </div>
+                <button id="delete-lesson" class="danger-button" type="button">Delete</button>
+              </div>
+
+              <form id="rename-lesson-form" class="stacked-form">
+                <label for="rename-lesson">Lesson name</label>
+                <div class="inline-form">
+                  <input id="rename-lesson" name="renameLesson" type="text" autocomplete="off" required />
+                  <button type="submit">Save</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Add</p>
+                  <h3>Exercise</h3>
+                </div>
+              </div>
+              <form id="exercise-form" class="stacked-form">
+                <label for="exercise-name">Exercise name</label>
+                <div class="inline-form">
+                  <input id="exercise-name" name="exerciseName" type="text" placeholder="Translate into Kinyarwanda" autocomplete="off" required />
+                  <button type="submit">Add</button>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <div id="exercise-list" class="exercise-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="exercise-template">
+      <article class="exercise-card">
+        <div class="exercise-heading">
+          <input class="exercise-title-input" type="text" aria-label="Exercise name" />
+          <button class="remove-exercise danger-button" type="button">Delete</button>
+        </div>
+
+        <form class="question-form">
+          <div class="field-row">
+            <label>
+              Prompt
+              <textarea name="prompt" rows="2" placeholder="The elderly man is hoeing" required></textarea>
+            </label>
+            <label>
+              Correct answer
+              <textarea name="answer" rows="2" placeholder="Umusaza arahinga." required></textarea>
+            </label>
+          </div>
+          <label>
+            Optional hint
+            <input name="hint" type="text" placeholder="Use present progressive" autocomplete="off" />
+          </label>
+          <button type="submit">Add question</button>
+        </form>
+
+        <div class="question-list"></div>
+      </article>
+    </template>
+
+    <template id="question-template">
+      <article class="question-card">
+        <div class="question-content">
+          <p class="question-prompt"></p>
+          <p class="question-answer"></p>
+          <p class="question-hint"></p>
+        </div>
+        <div class="question-actions">
+          <button class="edit-question" type="button">Edit</button>
+          <button class="remove-question danger-button" type="button">Delete</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
