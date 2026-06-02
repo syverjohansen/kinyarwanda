@@ -329,6 +329,109 @@ label {
   gap: 0.65rem;
 }
 
+.practice-panel {
+  background: #edf5f2;
+  border: 1px solid #c9ded6;
+  border-radius: 8px;
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.practice-heading {
+  align-items: start;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.practice-heading h4,
+.practice-heading p,
+.practice-empty,
+.practice-prompt p,
+.practice-result {
+  margin: 0;
+}
+
+.practice-heading h4 {
+  font-size: 1rem;
+}
+
+.practice-score {
+  background: #fff;
+  border: 1px solid #c9ded6;
+  border-radius: 999px;
+  color: var(--accent-strong);
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.35rem 0.6rem;
+}
+
+.practice-empty {
+  color: var(--muted);
+}
+
+.practice-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.practice-prompt {
+  background: #fff;
+  border: 1px solid #dbe7e2;
+  border-radius: 8px;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem;
+}
+
+.practice-prompt span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.practice-prompt p {
+  font-size: 1.05rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.practice-hint {
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0;
+}
+
+.practice-hint::before {
+  content: "Hint: ";
+}
+
+.practice-result {
+  font-weight: 800;
+  min-height: 1.3rem;
+}
+
+.practice-result.correct {
+  color: var(--accent-strong);
+}
+
+.practice-result.incorrect {
+  color: var(--danger);
+}
+
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.practice-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
 .question-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -396,12 +499,14 @@ label {
   .topbar,
   .panel-header,
   .exercise-heading,
+  .practice-heading,
   .question-card {
     align-items: stretch;
     flex-direction: column;
   }
 
   .topbar-actions,
+  .practice-actions,
   .question-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
