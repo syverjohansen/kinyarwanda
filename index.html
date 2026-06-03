@@ -79,43 +79,62 @@
         </section>
 
         <section id="lesson-editor" class="lesson-editor" hidden>
-          <div class="editor-grid">
-            <section class="panel">
-              <div class="panel-header">
-                <div>
-                  <p class="eyebrow">Lesson</p>
-                  <h3>Details</h3>
-                </div>
-                <button id="delete-lesson" class="danger-button" type="button">Delete</button>
-              </div>
-
-              <form id="rename-lesson-form" class="stacked-form">
-                <label for="rename-lesson">Lesson name</label>
-                <div class="inline-form">
-                  <input id="rename-lesson" name="renameLesson" type="text" autocomplete="off" required />
-                  <button type="submit">Save</button>
-                </div>
-              </form>
-            </section>
-
-            <section class="panel">
-              <div class="panel-header">
-                <div>
-                  <p class="eyebrow">Add</p>
-                  <h3>Exercise</h3>
-                </div>
-              </div>
-              <form id="exercise-form" class="stacked-form">
-                <label for="exercise-name">Exercise name</label>
-                <div class="inline-form">
-                  <input id="exercise-name" name="exerciseName" type="text" placeholder="Translate into Kinyarwanda" autocomplete="off" required />
-                  <button type="submit">Add</button>
-                </div>
-              </form>
-            </section>
+          <div class="mode-tabs" role="tablist" aria-label="Lesson mode">
+            <button id="build-mode" class="mode-tab active" type="button">Build</button>
+            <button id="practice-mode" class="mode-tab" type="button">Practice</button>
           </div>
 
-          <div id="exercise-list" class="exercise-list"></div>
+          <section id="build-view">
+            <div class="editor-grid">
+              <section class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="eyebrow">Lesson</p>
+                    <h3>Details</h3>
+                  </div>
+                  <button id="delete-lesson" class="danger-button" type="button">Delete</button>
+                </div>
+
+                <form id="rename-lesson-form" class="stacked-form">
+                  <label for="rename-lesson">Lesson name</label>
+                  <div class="inline-form">
+                    <input id="rename-lesson" name="renameLesson" type="text" autocomplete="off" required />
+                    <button type="submit">Save</button>
+                  </div>
+                </form>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="eyebrow">Add</p>
+                    <h3>Exercise</h3>
+                  </div>
+                </div>
+                <form id="exercise-form" class="stacked-form">
+                  <label for="exercise-name">Exercise name</label>
+                  <div class="inline-form">
+                    <input id="exercise-name" name="exerciseName" type="text" placeholder="Translate into Kinyarwanda" autocomplete="off" required />
+                    <button type="submit">Add</button>
+                  </div>
+                </form>
+              </section>
+            </div>
+
+            <div id="exercise-list" class="exercise-list"></div>
+          </section>
+
+          <section id="practice-view" class="practice-view" hidden>
+            <aside class="practice-sidebar" aria-label="Practice questions">
+              <div class="practice-sidebar-header">
+                <p class="eyebrow">Choose</p>
+                <h3>Questions</h3>
+              </div>
+              <nav id="practice-nav" class="practice-nav" aria-label="Exercise and question list"></nav>
+            </aside>
+
+            <section id="practice-card" class="flashcard-panel" aria-live="polite"></section>
+          </section>
         </section>
       </main>
     </div>
@@ -144,8 +163,6 @@
           </label>
           <button type="submit">Add question</button>
         </form>
-
-        <section class="practice-panel" aria-label="Practice exercise"></section>
 
         <div class="question-list"></div>
       </article>

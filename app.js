@@ -9,7 +9,16 @@ const state = {
   activeLessonId: null,
   githubToken: localStorage.getItem(TOKEN_KEY) || "",
   syncBusy: false,
-  practiceSessions: {},
+  activeMode: "build",
+  activePracticeQuestionId: null,
+  practice: {
+    checked: false,
+    correct: false,
+    showHint: false,
+    answer: "",
+    score: 0,
+    attempted: 0,
+  },
 };
 
 const elements = {
@@ -19,6 +28,12 @@ const elements = {
   activeTitle: document.querySelector("#active-title"),
   emptyState: document.querySelector("#empty-state"),
   lessonEditor: document.querySelector("#lesson-editor"),
+  buildMode: document.querySelector("#build-mode"),
+  practiceMode: document.querySelector("#practice-mode"),
+  buildView: document.querySelector("#build-view"),
+  practiceView: document.querySelector("#practice-view"),
+  practiceNav: document.querySelector("#practice-nav"),
+  practiceCard: document.querySelector("#practice-card"),
   renameLessonForm: document.querySelector("#rename-lesson-form"),
   renameLesson: document.querySelector("#rename-lesson"),
   deleteLesson: document.querySelector("#delete-lesson"),
@@ -73,6 +88,8 @@ function getActiveLesson() {
 
 function setActiveLesson(id) {
   state.activeLessonId = id;
+  state.activePracticeQuestionId = null;
+  resetPracticeCard();
   render();
 }
 
@@ -97,6 +114,8 @@ function removeLesson() {
 
   state.lessons = state.lessons.filter((item) => item.id !== lesson.id);
   state.activeLessonId = state.lessons[0]?.id || null;
+  state.activePracticeQuestionId = null;
+  resetPracticeCard();
   saveLessons();
   render();
 }
@@ -120,7 +139,8 @@ function removeExercise(exerciseId) {
   if (!lesson) return;
 
   lesson.exercises = lesson.exercises.filter((exercise) => exercise.id !== exerciseId);
-  delete state.practiceSessions[exerciseId];
+  state.activePracticeQuestionId = null;
+  resetPracticeCard();
   saveLessons();
   render();
 }
@@ -136,6 +156,7 @@ function addQuestion(exerciseId, formData) {
     hint: formData.get("hint").trim(),
   });
 
+  resetPracticeCard();
   saveLessons();
   render();
 }
@@ -145,7 +166,10 @@ function removeQuestion(exerciseId, questionId) {
   if (!exercise) return;
 
   exercise.questions = exercise.questions.filter((question) => question.id !== questionId);
-  resetPractice(exerciseId);
+  if (state.activePracticeQuestionId === questionId) {
+    state.activePracticeQuestionId = null;
+  }
+  resetPracticeCard();
   saveLessons();
   render();
 }
@@ -166,7 +190,7 @@ function editQuestion(exerciseId, questionId) {
   question.prompt = prompt.trim();
   question.answer = answer.trim();
   question.hint = hint.trim();
-  resetPractice(exerciseId);
+  resetPracticeCard();
   saveLessons();
   render();
 }
@@ -208,12 +232,19 @@ function renderLessonEditor() {
   }
 
   elements.activeTitle.textContent = lesson.name;
+  elements.buildMode.classList.toggle("active", state.activeMode === "build");
+  elements.practiceMode.classList.toggle("active", state.activeMode === "practice");
+  elements.buildView.hidden = state.activeMode !== "build";
+  elements.practiceView.hidden = state.activeMode !== "practice";
+
   elements.renameLesson.value = lesson.name;
   elements.exerciseList.replaceChildren();
 
   lesson.exercises.forEach((exercise) => {
     elements.exerciseList.append(renderExercise(exercise));
   });
+
+  renderPracticeView();
 }
 
 function renderExercise(exercise) {
@@ -221,7 +252,6 @@ function renderExercise(exercise) {
   const titleInput = node.querySelector(".exercise-title-input");
   const removeButton = node.querySelector(".remove-exercise");
   const questionForm = node.querySelector(".question-form");
-  const practicePanel = node.querySelector(".practice-panel");
   const questionList = node.querySelector(".question-list");
 
   titleInput.value = exercise.name;
@@ -241,8 +271,6 @@ function renderExercise(exercise) {
     questionList.append(renderQuestion(exercise.id, question));
   });
 
-  renderPractice(practicePanel, exercise);
-
   return node;
 }
 
@@ -256,26 +284,17 @@ function renderQuestion(exerciseId, question) {
   return node;
 }
 
-function getPracticeSession(exercise) {
-  const existing = state.practiceSessions[exercise.id];
-  if (existing && existing.total === exercise.questions.length) return existing;
-
-  const session = {
-    index: 0,
-    checked: false,
-    correct: false,
-    showHint: false,
-    score: 0,
-    attempted: 0,
-    total: exercise.questions.length,
-  };
-
-  state.practiceSessions[exercise.id] = session;
-  return session;
+function setMode(mode) {
+  state.activeMode = mode;
+  resetPracticeCard();
+  render();
 }
 
-function resetPractice(exerciseId) {
-  delete state.practiceSessions[exerciseId];
+function resetPracticeCard() {
+  state.practice.checked = false;
+  state.practice.correct = false;
+  state.practice.showHint = false;
+  state.practice.answer = "";
 }
 
 function normalizeAnswer(value) {
@@ -286,96 +305,149 @@ function normalizeAnswer(value) {
     .replace(/\s+/g, " ");
 }
 
-function renderPractice(container, exercise) {
-  container.replaceChildren();
+function getPracticeItems() {
+  const lesson = getActiveLesson();
+  if (!lesson) return [];
 
-  const title = document.createElement("div");
-  title.className = "practice-heading";
-  title.innerHTML = `
-    <div>
-      <p class="eyebrow">Practice</p>
-      <h4>${escapeHtml(exercise.name)}</h4>
-    </div>
-  `;
+  return lesson.exercises.flatMap((exercise, exerciseIndex) =>
+    exercise.questions.map((question, questionIndex) => ({
+      exercise,
+      question,
+      exerciseIndex,
+      questionIndex,
+      label: `${exerciseIndex + 1}.${questionIndex + 1}`,
+    })),
+  );
+}
 
-  if (exercise.questions.length === 0) {
-    const empty = document.createElement("p");
-    empty.className = "practice-empty";
-    empty.textContent = "Add questions to practice this exercise.";
-    container.append(title, empty);
+function getActivePracticeItem(items = getPracticeItems()) {
+  if (items.length === 0) return null;
+
+  const selected = items.find((item) => item.question.id === state.activePracticeQuestionId);
+  if (selected) return selected;
+
+  state.activePracticeQuestionId = items[0].question.id;
+  return items[0];
+}
+
+function selectPracticeQuestion(questionId) {
+  state.activePracticeQuestionId = questionId;
+  resetPracticeCard();
+  render();
+}
+
+function goToAdjacentPracticeQuestion(direction) {
+  const items = getPracticeItems();
+  const current = getActivePracticeItem(items);
+  if (!current) return;
+
+  const currentIndex = items.findIndex((item) => item.question.id === current.question.id);
+  const nextIndex = (currentIndex + direction + items.length) % items.length;
+  selectPracticeQuestion(items[nextIndex].question.id);
+}
+
+function renderPracticeView() {
+  const items = getPracticeItems();
+  elements.practiceNav.replaceChildren();
+  elements.practiceCard.replaceChildren();
+
+  if (items.length === 0) {
+    elements.practiceCard.innerHTML = `
+      <div class="flashcard-empty">
+        <h3>No questions yet</h3>
+        <p>Add exercises and questions in Build mode, then come back to practice.</p>
+      </div>
+    `;
     return;
   }
 
-  const session = getPracticeSession(exercise);
-  const question = exercise.questions[session.index] || exercise.questions[0];
-  const score = document.createElement("span");
-  score.className = "practice-score";
-  score.textContent = `${session.score}/${session.attempted} correct`;
-  title.append(score);
+  const active = getActivePracticeItem(items);
+  let lastExerciseId = "";
 
-  const form = document.createElement("form");
-  form.className = "practice-form";
-  form.innerHTML = `
-    <div class="practice-prompt">
-      <span>Question ${session.index + 1} of ${exercise.questions.length}</span>
-      <p>${escapeHtml(question.prompt)}</p>
+  items.forEach((item) => {
+    if (item.exercise.id !== lastExerciseId) {
+      const heading = document.createElement("p");
+      heading.className = "practice-nav-heading";
+      heading.textContent = `${item.exerciseIndex + 1}. ${item.exercise.name}`;
+      elements.practiceNav.append(heading);
+      lastExerciseId = item.exercise.id;
+    }
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `practice-question-link${item.question.id === active.question.id ? " active" : ""}`;
+    button.innerHTML = `<span>${item.label}</span><span>${escapeHtml(item.question.prompt)}</span>`;
+    button.addEventListener("click", () => selectPracticeQuestion(item.question.id));
+    elements.practiceNav.append(button);
+  });
+
+  const card = document.createElement("form");
+  card.className = "flashcard";
+  card.innerHTML = `
+    <div class="flashcard-topline">
+      <span>${active.label}</span>
+      <span>${state.practice.score}/${state.practice.attempted} correct</span>
+    </div>
+    <div class="flashcard-prompt">
+      <p>${escapeHtml(active.exercise.name)}</p>
+      <h3>${escapeHtml(active.question.prompt)}</h3>
     </div>
     <label>
       Your answer
-      <textarea name="practiceAnswer" rows="2" autocomplete="off" required ${session.checked ? "disabled" : ""}></textarea>
+      <textarea name="practiceAnswer" rows="3" autocomplete="off" required ${state.practice.checked ? "disabled" : ""}></textarea>
     </label>
-    <p class="practice-hint" ${session.showHint && question.hint ? "" : "hidden"}>${escapeHtml(question.hint || "")}</p>
+    <p class="practice-hint" ${state.practice.showHint && active.question.hint ? "" : "hidden"}>${escapeHtml(active.question.hint || "")}</p>
     <p class="practice-result" role="status"></p>
-    <div class="practice-actions">
-      <button class="check-answer" type="submit" ${session.checked ? "disabled" : ""}>Check</button>
-      <button class="show-hint" type="button" ${question.hint ? "" : "disabled"}>Hint</button>
-      <button class="next-question" type="button">${session.index === exercise.questions.length - 1 ? "Start over" : "Next"}</button>
-      <button class="reset-practice" type="button">Reset</button>
+    <div class="flashcard-actions">
+      <button type="submit" ${state.practice.checked ? "disabled" : ""}>Check</button>
+      <button class="show-hint secondary-button" type="button" ${active.question.hint ? "" : "disabled"}>Hint</button>
+      <button class="previous-question secondary-button" type="button">Previous</button>
+      <button class="next-question secondary-button" type="button">Next</button>
+      <button class="reset-score secondary-button" type="button">Reset score</button>
     </div>
   `;
 
-  const answerInput = form.querySelector("[name='practiceAnswer']");
-  const result = form.querySelector(".practice-result");
+  const answerInput = card.querySelector("[name='practiceAnswer']");
+  const result = card.querySelector(".practice-result");
+  answerInput.value = state.practice.answer;
 
-  if (session.checked) {
-    answerInput.value = session.answer || "";
-    result.className = `practice-result ${session.correct ? "correct" : "incorrect"}`;
-    result.textContent = session.correct ? "Correct." : `Not quite. Correct answer: ${question.answer}`;
+  if (state.practice.checked) {
+    result.className = `practice-result ${state.practice.correct ? "correct" : "incorrect"}`;
+    result.textContent = state.practice.correct ? `Correct: ${active.question.answer}` : `Not quite. Correct answer: ${active.question.answer}`;
   }
 
-  form.addEventListener("submit", (event) => {
+  card.addEventListener("submit", (event) => {
     event.preventDefault();
     const answer = answerInput.value;
-    const correct = normalizeAnswer(answer) === normalizeAnswer(question.answer);
+    const correct = normalizeAnswer(answer) === normalizeAnswer(active.question.answer);
 
-    session.answer = answer;
-    session.checked = true;
-    session.correct = correct;
-    session.attempted += 1;
-    if (correct) session.score += 1;
+    state.practice.answer = answer;
+    state.practice.checked = true;
+    state.practice.correct = correct;
+    state.practice.attempted += 1;
+    if (correct) state.practice.score += 1;
     render();
   });
 
-  form.querySelector(".show-hint").addEventListener("click", () => {
-    session.showHint = true;
+  answerInput.addEventListener("input", () => {
+    state.practice.answer = answerInput.value;
+  });
+
+  card.querySelector(".show-hint").addEventListener("click", () => {
+    state.practice.showHint = true;
     render();
   });
 
-  form.querySelector(".next-question").addEventListener("click", () => {
-    session.index = session.index === exercise.questions.length - 1 ? 0 : session.index + 1;
-    session.checked = false;
-    session.correct = false;
-    session.showHint = false;
-    session.answer = "";
+  card.querySelector(".previous-question").addEventListener("click", () => goToAdjacentPracticeQuestion(-1));
+  card.querySelector(".next-question").addEventListener("click", () => goToAdjacentPracticeQuestion(1));
+  card.querySelector(".reset-score").addEventListener("click", () => {
+    state.practice.score = 0;
+    state.practice.attempted = 0;
+    resetPracticeCard();
     render();
   });
 
-  form.querySelector(".reset-practice").addEventListener("click", () => {
-    resetPractice(exercise.id);
-    render();
-  });
-
-  container.append(title, form);
+  elements.practiceCard.append(card);
 }
 
 function exportLessons() {
@@ -601,6 +673,8 @@ elements.renameLessonForm.addEventListener("submit", (event) => {
 });
 
 elements.deleteLesson.addEventListener("click", removeLesson);
+elements.buildMode.addEventListener("click", () => setMode("build"));
+elements.practiceMode.addEventListener("click", () => setMode("practice"));
 
 elements.syncToggle.addEventListener("click", () => {
   elements.syncPanel.hidden = !elements.syncPanel.hidden;
