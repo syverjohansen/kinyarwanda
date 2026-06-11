@@ -545,6 +545,10 @@ label {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.answer-compare[hidden] {
+  display: none;
+}
+
 .answer-compare div {
   background: var(--surface-strong);
   border: 1px solid var(--line);
