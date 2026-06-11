@@ -183,10 +183,13 @@ label {
 
 .topbar-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.55rem;
+  justify-content: flex-end;
 }
 
-#import-data {
+#import-data,
+#import-chapter {
   display: none;
 }
 
@@ -618,7 +621,13 @@ label {
   color: var(--ink);
 }
 
-.secondary-button:hover {
+.secondary-import {
+  background: #eef2eb;
+  color: var(--ink);
+}
+
+.secondary-button:hover,
+.secondary-import:hover {
   background: #dfe7dc;
 }
 

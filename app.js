@@ -44,6 +44,8 @@ const elements = {
   loadSync: document.querySelector("#load-sync"),
   lastSynced: document.querySelector("#last-synced"),
   syncMessage: document.querySelector("#sync-message"),
+  exportChapter: document.querySelector("#export-chapter"),
+  importChapter: document.querySelector("#import-chapter"),
   exportData: document.querySelector("#export-data"),
   importData: document.querySelector("#import-data"),
   exerciseTemplate: document.querySelector("#exercise-template"),
@@ -752,6 +754,35 @@ function exportLessons() {
   URL.revokeObjectURL(url);
 }
 
+function exportChapter() {
+  const lesson = getActiveLesson();
+  if (!lesson) {
+    window.alert("Select a chapter before exporting.");
+    return;
+  }
+
+  const file = new Blob(
+    [
+      JSON.stringify(
+        {
+          type: "kinyarwanda-chapter",
+          version: 1,
+          chapter: lesson,
+        },
+        null,
+        2,
+      ),
+    ],
+    { type: "application/json" },
+  );
+  const url = URL.createObjectURL(file);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${slugify(lesson.name)}.json`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
 function importLessons(file) {
   const reader = new FileReader();
   reader.addEventListener("load", () => {
@@ -768,6 +799,120 @@ function importLessons(file) {
     }
   });
   reader.readAsText(file);
+}
+
+function importChapter(file) {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    try {
+      const data = JSON.parse(reader.result);
+      const chapter = normalizeImportedChapter(data);
+      const existingIndex = state.lessons.findIndex((lesson) => lesson.name.toLocaleLowerCase() === chapter.name.toLocaleLowerCase());
+
+      if (existingIndex >= 0) {
+        const replace = window.confirm(`"${chapter.name}" already exists. Replace it? Press Cancel to import as a duplicate.`);
+        if (replace) {
+          chapter.id = state.lessons[existingIndex].id;
+          state.lessons[existingIndex] = chapter;
+        } else {
+          chapter.name = makeDuplicateLessonName(chapter.name);
+          state.lessons.push(chapter);
+        }
+      } else {
+        state.lessons.push(chapter);
+      }
+
+      state.activeLessonId = chapter.id;
+      state.activeMode = "build";
+      state.activePracticeExerciseId = null;
+      resetPracticeSession();
+      saveLessons();
+      render();
+    } catch (error) {
+      window.alert(`Could not import chapter: ${error.message}`);
+    }
+  });
+  reader.readAsText(file);
+}
+
+function normalizeImportedChapter(data) {
+  const chapter = data?.chapter || data?.lesson || data;
+  if (!chapter || typeof chapter !== "object" || Array.isArray(chapter)) {
+    throw new Error("Expected a chapter object.");
+  }
+
+  const name = String(chapter.name || "").trim();
+  if (!name) throw new Error("The chapter needs a name.");
+
+  if (!Array.isArray(chapter.exercises)) {
+    throw new Error("The chapter needs an exercises array.");
+  }
+
+  return {
+    id: makeId("lesson"),
+    name,
+    exercises: chapter.exercises.map(normalizeImportedExercise),
+  };
+}
+
+function normalizeImportedExercise(exercise, index) {
+  if (!exercise || typeof exercise !== "object" || Array.isArray(exercise)) {
+    throw new Error(`Exercise ${index + 1} is not valid.`);
+  }
+
+  if (!Array.isArray(exercise.questions)) {
+    throw new Error(`Exercise ${index + 1} needs a questions array.`);
+  }
+
+  const name = String(exercise.name || "").trim() || `Exercise ${index + 1}`;
+
+  return {
+    id: makeId("exercise"),
+    name,
+    lastPracticed: typeof exercise.lastPracticed === "string" ? exercise.lastPracticed : "",
+    questions: exercise.questions.map(normalizeImportedQuestion),
+  };
+}
+
+function normalizeImportedQuestion(question, index) {
+  if (!question || typeof question !== "object" || Array.isArray(question)) {
+    throw new Error(`Question ${index + 1} is not valid.`);
+  }
+
+  const prompt = String(question.prompt || "").trim();
+  const answer = String(question.answer || "").trim();
+  if (!prompt || !answer) {
+    throw new Error(`Question ${index + 1} needs both prompt and answer.`);
+  }
+
+  return {
+    id: makeId("question"),
+    prompt,
+    answer,
+    hint: String(question.hint || "").trim(),
+  };
+}
+
+function makeDuplicateLessonName(name) {
+  let counter = 2;
+  let candidate = `${name} (${counter})`;
+
+  while (state.lessons.some((lesson) => lesson.name === candidate)) {
+    counter += 1;
+    candidate = `${name} (${counter})`;
+  }
+
+  return candidate;
+}
+
+function slugify(value) {
+  return (
+    value
+      .trim()
+      .toLocaleLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "chapter"
+  );
 }
 
 function renderSync() {
@@ -982,6 +1127,13 @@ elements.exerciseForm.addEventListener("submit", (event) => {
   event.preventDefault();
   addExercise(elements.exerciseName.value);
   elements.exerciseForm.reset();
+});
+
+elements.exportChapter.addEventListener("click", exportChapter);
+elements.importChapter.addEventListener("change", () => {
+  const file = elements.importChapter.files[0];
+  if (file) importChapter(file);
+  elements.importChapter.value = "";
 });
 
 elements.exportData.addEventListener("click", exportLessons);

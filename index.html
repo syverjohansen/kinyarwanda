@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kinyarwanda Exercises</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260611-chapter-import" />
   </head>
   <body>
     <div class="app-shell">
@@ -36,8 +36,11 @@
           </div>
           <div class="topbar-actions">
             <button id="sync-toggle" type="button" title="Open sync settings">Sync</button>
-            <button id="export-data" type="button" title="Download lesson data">Export</button>
-            <label class="import-button" for="import-data">Import</label>
+            <button id="export-chapter" type="button" title="Download selected chapter">Export Chapter</button>
+            <label class="import-button" for="import-chapter">Import Chapter</label>
+            <input id="import-chapter" type="file" accept="application/json" />
+            <button id="export-data" class="secondary-button" type="button" title="Download all lesson data">Export All</button>
+            <label class="import-button secondary-import" for="import-data">Import All</label>
             <input id="import-data" type="file" accept="application/json" />
           </div>
         </header>
@@ -185,6 +188,6 @@
       </article>
     </template>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260611-chapter-import"></script>
   </body>
 </html>
