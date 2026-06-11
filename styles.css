@@ -427,10 +427,26 @@ label {
 }
 
 .practice-question-link span:last-child {
-  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.practice-question-link strong,
+.practice-question-link small {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.practice-question-link strong {
+  color: var(--ink);
+}
+
+.practice-question-link small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 0.18rem;
 }
 
 .flashcard-panel {
@@ -448,6 +464,21 @@ label {
   color: var(--muted);
 }
 
+.flashcard-empty.complete {
+  align-content: center;
+  min-height: 24rem;
+}
+
+.flashcard-empty.complete h3 {
+  color: var(--accent-strong);
+  font-size: 1.5rem;
+}
+
+.flashcard-empty.complete button {
+  margin-top: 0.7rem;
+  width: fit-content;
+}
+
 .flashcard {
   display: grid;
   gap: 1rem;
@@ -461,6 +492,20 @@ label {
   font-size: 0.9rem;
   font-weight: 900;
   justify-content: space-between;
+}
+
+.practice-phase {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.75rem;
+}
+
+.practice-phase p {
+  color: var(--muted);
+  margin: 0;
 }
 
 .flashcard-prompt {
@@ -492,6 +537,38 @@ label {
 
 .practice-hint::before {
   content: "Hint: ";
+}
+
+.answer-compare {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.answer-compare div {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem;
+}
+
+.answer-compare span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.answer-compare p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.answer-compare div:last-child p {
+  color: var(--accent-strong);
+  font-weight: 900;
 }
 
 .practice-result {
@@ -622,6 +699,10 @@ label {
 
   .practice-nav {
     max-height: 18rem;
+  }
+
+  .answer-compare {
+    grid-template-columns: 1fr;
   }
 
   .editor-grid,

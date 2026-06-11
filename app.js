@@ -10,15 +10,8 @@ const state = {
   githubToken: localStorage.getItem(TOKEN_KEY) || "",
   syncBusy: false,
   activeMode: "build",
-  activePracticeQuestionId: null,
-  practice: {
-    checked: false,
-    correct: false,
-    showHint: false,
-    answer: "",
-    score: 0,
-    attempted: 0,
-  },
+  activePracticeExerciseId: null,
+  practiceSession: null,
 };
 
 const elements = {
@@ -88,8 +81,8 @@ function getActiveLesson() {
 
 function setActiveLesson(id) {
   state.activeLessonId = id;
-  state.activePracticeQuestionId = null;
-  resetPracticeCard();
+  state.activePracticeExerciseId = null;
+  resetPracticeSession();
   render();
 }
 
@@ -114,8 +107,8 @@ function removeLesson() {
 
   state.lessons = state.lessons.filter((item) => item.id !== lesson.id);
   state.activeLessonId = state.lessons[0]?.id || null;
-  state.activePracticeQuestionId = null;
-  resetPracticeCard();
+  state.activePracticeExerciseId = null;
+  resetPracticeSession();
   saveLessons();
   render();
 }
@@ -124,11 +117,15 @@ function addExercise(name) {
   const lesson = getActiveLesson();
   if (!lesson) return;
 
-  lesson.exercises.push({
+  const exercise = {
     id: makeId("exercise"),
     name: name.trim(),
     questions: [],
-  });
+    lastPracticed: "",
+  };
+
+  lesson.exercises.push(exercise);
+  state.activePracticeExerciseId = exercise.id;
 
   saveLessons();
   render();
@@ -139,8 +136,10 @@ function removeExercise(exerciseId) {
   if (!lesson) return;
 
   lesson.exercises = lesson.exercises.filter((exercise) => exercise.id !== exerciseId);
-  state.activePracticeQuestionId = null;
-  resetPracticeCard();
+  if (state.activePracticeExerciseId === exerciseId) {
+    state.activePracticeExerciseId = lesson.exercises[0]?.id || null;
+  }
+  resetPracticeSession();
   saveLessons();
   render();
 }
@@ -156,7 +155,7 @@ function addQuestion(exerciseId, formData) {
     hint: formData.get("hint").trim(),
   });
 
-  resetPracticeCard();
+  resetPracticeSession();
   saveLessons();
   render();
 }
@@ -166,10 +165,7 @@ function removeQuestion(exerciseId, questionId) {
   if (!exercise) return;
 
   exercise.questions = exercise.questions.filter((question) => question.id !== questionId);
-  if (state.activePracticeQuestionId === questionId) {
-    state.activePracticeQuestionId = null;
-  }
-  resetPracticeCard();
+  resetPracticeSession();
   saveLessons();
   render();
 }
@@ -190,7 +186,7 @@ function editQuestion(exerciseId, questionId) {
   question.prompt = prompt.trim();
   question.answer = answer.trim();
   question.hint = hint.trim();
-  resetPracticeCard();
+  resetPracticeSession();
   saveLessons();
   render();
 }
@@ -286,68 +282,262 @@ function renderQuestion(exerciseId, question) {
 
 function setMode(mode) {
   state.activeMode = mode;
-  resetPracticeCard();
+  resetPracticeSession();
   render();
 }
 
-function resetPracticeCard() {
-  state.practice.checked = false;
-  state.practice.correct = false;
-  state.practice.showHint = false;
-  state.practice.answer = "";
+function resetPracticeSession() {
+  state.practiceSession = null;
 }
 
-function normalizeAnswer(value) {
-  return value
-    .trim()
-    .toLocaleLowerCase()
-    .replace(/[.!?。！？]+$/u, "")
-    .replace(/\s+/g, " ");
+function resetCurrentCard() {
+  if (!state.practiceSession) return;
+  state.practiceSession.answer = "";
+  state.practiceSession.revealed = false;
+  state.practiceSession.showHint = false;
 }
 
-function getPracticeItems() {
+function getPracticeExercises() {
   const lesson = getActiveLesson();
   if (!lesson) return [];
 
-  return lesson.exercises.flatMap((exercise, exerciseIndex) =>
-    exercise.questions.map((question, questionIndex) => ({
-      exercise,
-      question,
-      exerciseIndex,
-      questionIndex,
-      label: `${exerciseIndex + 1}.${questionIndex + 1}`,
-    })),
-  );
+  return lesson.exercises.map((exercise, exerciseIndex) => ({
+    exercise,
+    exerciseIndex,
+    label: `${exerciseIndex + 1}`,
+  }));
 }
 
-function getActivePracticeItem(items = getPracticeItems()) {
-  if (items.length === 0) return null;
+function getActivePracticeExercise(items = getPracticeExercises()) {
+  const available = items.filter((item) => item.exercise.questions.length > 0);
+  if (available.length === 0) return items[0] || null;
 
-  const selected = items.find((item) => item.question.id === state.activePracticeQuestionId);
+  const selected = available.find((item) => item.exercise.id === state.activePracticeExerciseId);
   if (selected) return selected;
 
-  state.activePracticeQuestionId = items[0].question.id;
-  return items[0];
+  state.activePracticeExerciseId = available[0].exercise.id;
+  return available[0];
 }
 
-function selectPracticeQuestion(questionId) {
-  state.activePracticeQuestionId = questionId;
-  resetPracticeCard();
+function selectPracticeExercise(exerciseId) {
+  state.activePracticeExerciseId = exerciseId;
+  resetPracticeSession();
   render();
 }
 
-function goToAdjacentPracticeQuestion(direction) {
-  const items = getPracticeItems();
-  const current = getActivePracticeItem(items);
-  if (!current) return;
+function makePracticeSession(exercise) {
+  return {
+    exerciseId: exercise.id,
+    phase: "initial",
+    queue: exercise.questions.map((question) => question.id),
+    index: 0,
+    originalMissedIds: [],
+    remainingReviewIds: [],
+    currentDrillIds: [],
+    drillCounts: {},
+    escalatedIds: [],
+    completedInitialIds: [],
+    answer: "",
+    revealed: false,
+    showHint: false,
+    done: false,
+  };
+}
 
-  const currentIndex = items.findIndex((item) => item.question.id === current.question.id);
-  const nextIndex = (currentIndex + direction + items.length) % items.length;
-  selectPracticeQuestion(items[nextIndex].question.id);
+function getPracticeSession(exercise) {
+  if (!state.practiceSession || state.practiceSession.exerciseId !== exercise.id) {
+    state.practiceSession = makePracticeSession(exercise);
+  }
+
+  const questionIds = new Set(exercise.questions.map((question) => question.id));
+  const session = state.practiceSession;
+  session.queue = session.queue.filter((questionId) => questionIds.has(questionId));
+  session.originalMissedIds = session.originalMissedIds.filter((questionId) => questionIds.has(questionId));
+  session.remainingReviewIds = session.remainingReviewIds.filter((questionId) => questionIds.has(questionId));
+  session.currentDrillIds = session.currentDrillIds.filter((questionId) => questionIds.has(questionId));
+  session.escalatedIds = session.escalatedIds.filter((questionId) => questionIds.has(questionId));
+  session.completedInitialIds = session.completedInitialIds.filter((questionId) => questionIds.has(questionId));
+
+  if (session.queue.length === 0 && !session.done) {
+    advancePracticePhase(session, exercise);
+  }
+
+  return session;
+}
+
+function startDrillPhase(session, ids, requiredCount) {
+  session.phase = requiredCount === 3 ? "drill3" : "drill5";
+  session.currentDrillIds = [...ids];
+  session.queue = [...ids];
+  session.index = 0;
+  session.drillCounts = Object.fromEntries(ids.map((questionId) => [questionId, 0]));
+  if (requiredCount === 5) {
+    session.escalatedIds = [];
+  }
+  resetCurrentCard();
+}
+
+function startReviewPhase(session) {
+  session.phase = "review";
+  session.queue = [...session.remainingReviewIds];
+  session.index = 0;
+  resetCurrentCard();
+}
+
+function completePracticeSession(exercise) {
+  const now = new Date().toISOString();
+  exercise.lastPracticed = now;
+  state.practiceSession.done = true;
+  state.practiceSession.phase = "complete";
+  state.practiceSession.queue = [];
+  saveLessons();
+}
+
+function advancePracticePhase(session, exercise) {
+  if (session.phase === "initial") {
+    if (session.originalMissedIds.length === 0) {
+      completePracticeSession(exercise);
+      return;
+    }
+
+    session.remainingReviewIds = [...session.originalMissedIds];
+    startDrillPhase(session, session.remainingReviewIds, 3);
+    return;
+  }
+
+  if (session.phase === "drill3") {
+    if (session.escalatedIds.length > 0) {
+      startDrillPhase(session, session.escalatedIds, 5);
+      return;
+    }
+
+    startReviewPhase(session);
+    return;
+  }
+
+  if (session.phase === "drill5") {
+    startReviewPhase(session);
+    return;
+  }
+
+  if (session.phase === "review") {
+    if (session.remainingReviewIds.length === 0) {
+      completePracticeSession(exercise);
+      return;
+    }
+
+    startDrillPhase(session, session.remainingReviewIds, 3);
+  }
+}
+
+function getQuestionById(exercise, questionId) {
+  return exercise.questions.find((question) => question.id === questionId) || null;
+}
+
+function getQuestionLabel(exercise, questionId) {
+  const questionIndex = exercise.questions.findIndex((question) => question.id === questionId);
+  return questionIndex >= 0 ? questionIndex + 1 : "";
+}
+
+function getPhaseTitle(session) {
+  if (session.phase === "initial") return "First pass";
+  if (session.phase === "drill3") return "3x drill";
+  if (session.phase === "drill5") return "5x drill";
+  if (session.phase === "review") return "1x review";
+  return "Complete";
+}
+
+function getPhaseDescription(session) {
+  if (session.phase === "initial") return "Go through this section in order. Correct cards are done for the day.";
+  if (session.phase === "drill3") return "Practice first-pass misses until each one is correct 3 times.";
+  if (session.phase === "drill5") return "Extra reinforcement for cards missed during the 3x drill.";
+  if (session.phase === "review") return "One final pass on first-pass misses. Only this round clears a card.";
+  return "This section is complete for today.";
+}
+
+function getDrillRequiredCount(session) {
+  if (session.phase === "drill3") return 3;
+  if (session.phase === "drill5") return 5;
+  return 1;
+}
+
+function moveToNextQueuedCard(session, exercise) {
+  session.index += 1;
+
+  if (session.index >= session.queue.length) {
+    session.queue = [];
+    session.index = 0;
+    advancePracticePhase(session, exercise);
+  }
+
+  resetCurrentCard();
+}
+
+function gradeCurrentCard(isCorrect, exercise) {
+  const session = getPracticeSession(exercise);
+  const questionId = session.queue[session.index];
+  if (!questionId || session.done || !session.revealed) return;
+
+  if (session.phase === "initial") {
+    if (isCorrect) {
+      session.completedInitialIds.push(questionId);
+    } else if (!session.originalMissedIds.includes(questionId)) {
+      session.originalMissedIds.push(questionId);
+    }
+    moveToNextQueuedCard(session, exercise);
+    render();
+    return;
+  }
+
+  if (session.phase === "drill3" || session.phase === "drill5") {
+    const required = getDrillRequiredCount(session);
+
+    if (session.phase === "drill5") {
+      session.drillCounts[questionId] = (session.drillCounts[questionId] || 0) + 1;
+    } else if (isCorrect) {
+      session.drillCounts[questionId] = (session.drillCounts[questionId] || 0) + 1;
+    } else if (session.phase === "drill3" && !session.escalatedIds.includes(questionId)) {
+      session.escalatedIds.push(questionId);
+    }
+
+    if (session.drillCounts[questionId] >= required) {
+      session.queue = session.queue.filter((item) => item !== questionId);
+      if (session.index >= session.queue.length) {
+        session.index = 0;
+      }
+    } else if (session.queue.length > 0) {
+      session.index = (session.index + 1) % session.queue.length;
+    }
+
+    if (session.queue.length === 0) {
+      advancePracticePhase(session, exercise);
+    }
+
+    resetCurrentCard();
+    render();
+    return;
+  }
+
+  if (session.phase === "review") {
+    if (isCorrect) {
+      session.remainingReviewIds = session.remainingReviewIds.filter((item) => item !== questionId);
+    }
+    moveToNextQueuedCard(session, exercise);
+    render();
+  }
+}
+
+function formatPracticeDate(value) {
+  if (!value) return "Never practiced";
+  return `Last practiced ${new Date(value).toLocaleDateString(undefined, {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  })}`;
 }
 
 function renderPracticeView() {
-  const items = getPracticeItems();
+  const items = getPracticeExercises();
   elements.practiceNav.replaceChildren();
   elements.practiceCard.replaceChildren();
 
@@ -361,89 +551,129 @@ function renderPracticeView() {
     return;
   }
 
-  const active = getActivePracticeItem(items);
-  let lastExerciseId = "";
+  const active = getActivePracticeExercise(items);
 
   items.forEach((item) => {
-    if (item.exercise.id !== lastExerciseId) {
-      const heading = document.createElement("p");
-      heading.className = "practice-nav-heading";
-      heading.textContent = `${item.exerciseIndex + 1}. ${item.exercise.name}`;
-      elements.practiceNav.append(heading);
-      lastExerciseId = item.exercise.id;
-    }
-
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `practice-question-link${item.question.id === active.question.id ? " active" : ""}`;
-    button.innerHTML = `<span>${item.label}</span><span>${escapeHtml(item.question.prompt)}</span>`;
-    button.addEventListener("click", () => selectPracticeQuestion(item.question.id));
+    button.className = `practice-question-link${item.exercise.id === active?.exercise.id ? " active" : ""}`;
+    button.innerHTML = `
+      <span>${item.label}</span>
+      <span>
+        <strong>${escapeHtml(item.exercise.name)}</strong>
+        <small>${item.exercise.questions.length} questions · ${escapeHtml(formatPracticeDate(item.exercise.lastPracticed))}</small>
+      </span>
+    `;
+    button.addEventListener("click", () => selectPracticeExercise(item.exercise.id));
     elements.practiceNav.append(button);
   });
+
+  if (!active || active.exercise.questions.length === 0) {
+    elements.practiceCard.innerHTML = `
+      <div class="flashcard-empty">
+        <h3>No questions in this section</h3>
+        <p>Add questions in Build mode before practicing this section.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const exercise = active.exercise;
+  const session = getPracticeSession(exercise);
+
+  if (session.done) {
+    elements.practiceCard.innerHTML = `
+      <div class="flashcard-empty complete">
+        <h3>Section complete</h3>
+        <p>${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
+        <button id="restart-practice" type="button">Practice again</button>
+      </div>
+    `;
+    elements.practiceCard.querySelector("#restart-practice").addEventListener("click", () => {
+      resetPracticeSession();
+      render();
+    });
+    return;
+  }
+
+  const questionId = session.queue[session.index];
+  const question = getQuestionById(exercise, questionId);
+
+  if (!question) {
+    resetPracticeSession();
+    render();
+    return;
+  }
+
+  const required = getDrillRequiredCount(session);
+  const drillCount = session.drillCounts[questionId] || 0;
+  const progress =
+    session.phase === "drill3" || session.phase === "drill5"
+      ? `${drillCount}/${required} ${session.phase === "drill5" ? "seen" : "correct"}`
+      : `${session.index + 1}/${session.queue.length}`;
 
   const card = document.createElement("form");
   card.className = "flashcard";
   card.innerHTML = `
     <div class="flashcard-topline">
-      <span>${active.label}</span>
-      <span>${state.practice.score}/${state.practice.attempted} correct</span>
+      <span>${active.label}.${getQuestionLabel(exercise, questionId)}</span>
+      <span>${escapeHtml(progress)}</span>
+    </div>
+    <div class="practice-phase">
+      <p class="eyebrow">${escapeHtml(getPhaseTitle(session))}</p>
+      <p>${escapeHtml(getPhaseDescription(session))}</p>
     </div>
     <div class="flashcard-prompt">
-      <p>${escapeHtml(active.exercise.name)}</p>
-      <h3>${escapeHtml(active.question.prompt)}</h3>
+      <p>${escapeHtml(exercise.name)}</p>
+      <h3>${escapeHtml(question.prompt)}</h3>
     </div>
     <label>
       Your answer
-      <textarea name="practiceAnswer" rows="3" autocomplete="off" required ${state.practice.checked ? "disabled" : ""}></textarea>
+      <textarea name="practiceAnswer" rows="3" autocomplete="off" ${session.revealed ? "disabled" : ""}></textarea>
     </label>
-    <p class="practice-hint" ${state.practice.showHint && active.question.hint ? "" : "hidden"}>${escapeHtml(active.question.hint || "")}</p>
-    <p class="practice-result" role="status"></p>
+    <p class="practice-hint" ${session.showHint && question.hint ? "" : "hidden"}>${escapeHtml(question.hint || "")}</p>
+    <div class="answer-compare" ${session.revealed ? "" : "hidden"}>
+      <div>
+        <span>Your answer</span>
+        <p>${escapeHtml(session.answer || "No answer entered.")}</p>
+      </div>
+      <div>
+        <span>Expected answer</span>
+        <p>${escapeHtml(question.answer)}</p>
+      </div>
+    </div>
     <div class="flashcard-actions">
-      <button type="submit" ${state.practice.checked ? "disabled" : ""}>Check</button>
-      <button class="show-hint secondary-button" type="button" ${active.question.hint ? "" : "disabled"}>Hint</button>
-      <button class="previous-question secondary-button" type="button">Previous</button>
-      <button class="next-question secondary-button" type="button">Next</button>
-      <button class="reset-score secondary-button" type="button">Reset score</button>
+      <button class="reveal-answer" type="submit" ${session.revealed ? "disabled" : ""}>Show answer</button>
+      <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct</button>
+      <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong</button>
+      <button class="show-hint secondary-button" type="button" ${question.hint && !session.revealed ? "" : "disabled"}>Hint</button>
+      <button class="restart-section secondary-button" type="button">Restart section</button>
     </div>
   `;
 
   const answerInput = card.querySelector("[name='practiceAnswer']");
-  const result = card.querySelector(".practice-result");
-  answerInput.value = state.practice.answer;
-
-  if (state.practice.checked) {
-    result.className = `practice-result ${state.practice.correct ? "correct" : "incorrect"}`;
-    result.textContent = state.practice.correct ? `Correct: ${active.question.answer}` : `Not quite. Correct answer: ${active.question.answer}`;
-  }
+  answerInput.value = session.answer;
 
   card.addEventListener("submit", (event) => {
     event.preventDefault();
-    const answer = answerInput.value;
-    const correct = normalizeAnswer(answer) === normalizeAnswer(active.question.answer);
-
-    state.practice.answer = answer;
-    state.practice.checked = true;
-    state.practice.correct = correct;
-    state.practice.attempted += 1;
-    if (correct) state.practice.score += 1;
+    session.answer = answerInput.value.trim();
+    session.revealed = true;
     render();
   });
 
   answerInput.addEventListener("input", () => {
-    state.practice.answer = answerInput.value;
+    session.answer = answerInput.value;
   });
 
   card.querySelector(".show-hint").addEventListener("click", () => {
-    state.practice.showHint = true;
+    session.showHint = true;
     render();
   });
 
-  card.querySelector(".previous-question").addEventListener("click", () => goToAdjacentPracticeQuestion(-1));
-  card.querySelector(".next-question").addEventListener("click", () => goToAdjacentPracticeQuestion(1));
-  card.querySelector(".reset-score").addEventListener("click", () => {
-    state.practice.score = 0;
-    state.practice.attempted = 0;
-    resetPracticeCard();
+  card.querySelector(".mark-correct").addEventListener("click", () => gradeCurrentCard(true, exercise));
+  card.querySelector(".mark-wrong").addEventListener("click", () => gradeCurrentCard(false, exercise));
+  card.querySelector(".restart-section").addEventListener("click", () => {
+    resetPracticeSession();
     render();
   });
 
