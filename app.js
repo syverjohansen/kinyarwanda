@@ -674,20 +674,6 @@ function renderPracticeView() {
     render();
   });
 
-  card.addEventListener("keydown", (event) => {
-    if (!session.revealed) return;
-
-    if (event.key === "1") {
-      event.preventDefault();
-      gradeCurrentCard(true, exercise);
-    }
-
-    if (event.key === "2") {
-      event.preventDefault();
-      gradeCurrentCard(false, exercise);
-    }
-  });
-
   card.querySelector(".show-hint").addEventListener("click", () => {
     session.showHint = true;
     render();
@@ -701,6 +687,39 @@ function renderPracticeView() {
   });
 
   elements.practiceCard.append(card);
+}
+
+function handlePracticeShortcut(event) {
+  if (state.activeMode !== "practice" || event.metaKey || event.ctrlKey || event.altKey) return;
+
+  const active = getActivePracticeExercise();
+  if (!active || active.exercise.questions.length === 0) return;
+
+  const session = getPracticeSession(active.exercise);
+  if (session.done) return;
+
+  const questionId = session.queue[session.index];
+  const question = getQuestionById(active.exercise, questionId);
+  if (!question) return;
+
+  if (event.key === "4" && question.hint && !session.showHint) {
+    event.preventDefault();
+    session.showHint = true;
+    render();
+    return;
+  }
+
+  if (!session.revealed) return;
+
+  if (event.key === "1") {
+    event.preventDefault();
+    gradeCurrentCard(true, active.exercise);
+  }
+
+  if (event.key === "2") {
+    event.preventDefault();
+    gradeCurrentCard(false, active.exercise);
+  }
 }
 
 function exportLessons() {
@@ -928,6 +947,7 @@ elements.renameLessonForm.addEventListener("submit", (event) => {
 elements.deleteLesson.addEventListener("click", removeLesson);
 elements.buildMode.addEventListener("click", () => setMode("build"));
 elements.practiceMode.addEventListener("click", () => setMode("practice"));
+document.addEventListener("keydown", handlePracticeShortcut);
 
 elements.syncToggle.addEventListener("click", () => {
   elements.syncPanel.hidden = !elements.syncPanel.hidden;
