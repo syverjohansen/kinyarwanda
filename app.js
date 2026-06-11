@@ -644,9 +644,9 @@ function renderPracticeView() {
     </div>
     <div class="flashcard-actions">
       <button class="reveal-answer" type="submit" ${session.revealed ? "disabled" : ""}>Show answer</button>
-      <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct</button>
-      <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong</button>
-      <button class="show-hint secondary-button" type="button" ${question.hint && !session.revealed ? "" : "disabled"}>Hint</button>
+      <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct 1</button>
+      <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong 2</button>
+      <button class="show-hint secondary-button" type="button" ${question.hint && !session.revealed ? "" : "disabled"}>Hint 3</button>
       <button class="restart-section secondary-button" type="button">Restart section</button>
     </div>
   `;
@@ -692,6 +692,9 @@ function renderPracticeView() {
 function handlePracticeShortcut(event) {
   if (state.activeMode !== "practice" || event.metaKey || event.ctrlKey || event.altKey) return;
 
+  const key = getShortcutKey(event);
+  if (!key) return;
+
   const active = getActivePracticeExercise();
   if (!active || active.exercise.questions.length === 0) return;
 
@@ -702,7 +705,7 @@ function handlePracticeShortcut(event) {
   const question = getQuestionById(active.exercise, questionId);
   if (!question) return;
 
-  if (event.key === "4" && question.hint && !session.showHint) {
+  if (key === "3" && question.hint && !session.showHint && !session.revealed) {
     event.preventDefault();
     session.showHint = true;
     render();
@@ -711,15 +714,22 @@ function handlePracticeShortcut(event) {
 
   if (!session.revealed) return;
 
-  if (event.key === "1") {
+  if (key === "1") {
     event.preventDefault();
     gradeCurrentCard(true, active.exercise);
   }
 
-  if (event.key === "2") {
+  if (key === "2") {
     event.preventDefault();
     gradeCurrentCard(false, active.exercise);
   }
+}
+
+function getShortcutKey(event) {
+  if (event.key === "1" || event.code === "Digit1" || event.code === "Numpad1") return "1";
+  if (event.key === "2" || event.code === "Digit2" || event.code === "Numpad2") return "2";
+  if (event.key === "3" || event.code === "Digit3" || event.code === "Numpad3") return "3";
+  return "";
 }
 
 function exportLessons() {
@@ -947,7 +957,7 @@ elements.renameLessonForm.addEventListener("submit", (event) => {
 elements.deleteLesson.addEventListener("click", removeLesson);
 elements.buildMode.addEventListener("click", () => setMode("build"));
 elements.practiceMode.addEventListener("click", () => setMode("practice"));
-document.addEventListener("keydown", handlePracticeShortcut);
+document.addEventListener("keydown", handlePracticeShortcut, true);
 
 elements.syncToggle.addEventListener("click", () => {
   elements.syncPanel.hidden = !elements.syncPanel.hidden;
