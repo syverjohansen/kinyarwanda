@@ -246,11 +246,13 @@ function renderLessonEditor() {
 function renderExercise(exercise) {
   const node = elements.exerciseTemplate.content.firstElementChild.cloneNode(true);
   const titleInput = node.querySelector(".exercise-title-input");
+  const practiceMeta = node.querySelector(".exercise-practice-meta");
   const removeButton = node.querySelector(".remove-exercise");
   const questionForm = node.querySelector(".question-form");
   const questionList = node.querySelector(".question-list");
 
   titleInput.value = exercise.name;
+  practiceMeta.textContent = formatPracticeDate(exercise.lastPracticed);
   titleInput.addEventListener("change", () => {
     exercise.name = titleInput.value.trim() || "Untitled exercise";
     saveLessons();
@@ -448,11 +450,11 @@ function getPhaseTitle(session) {
 }
 
 function getPhaseDescription(session) {
-  if (session.phase === "initial") return "Go through this section in order. Correct cards are done for the day.";
+  if (session.phase === "initial") return "Go through this exercise in order. Correct cards are done for the day.";
   if (session.phase === "drill3") return "Practice first-pass misses until each one is correct 3 times.";
   if (session.phase === "drill5") return "Extra reinforcement for cards missed during the 3x drill.";
   if (session.phase === "review") return "One final pass on first-pass misses. Only this round clears a card.";
-  return "This section is complete for today.";
+  return "This exercise is complete for today.";
 }
 
 function getDrillRequiredCount(session) {
@@ -571,8 +573,8 @@ function renderPracticeView() {
   if (!active || active.exercise.questions.length === 0) {
     elements.practiceCard.innerHTML = `
       <div class="flashcard-empty">
-        <h3>No questions in this section</h3>
-        <p>Add questions in Build mode before practicing this section.</p>
+        <h3>No questions in this exercise</h3>
+        <p>Add questions in Build mode before practicing this exercise.</p>
       </div>
     `;
     return;
@@ -584,7 +586,7 @@ function renderPracticeView() {
   if (session.done) {
     elements.practiceCard.innerHTML = `
       <div class="flashcard-empty complete">
-        <h3>Section complete</h3>
+        <h3>Exercise complete</h3>
         <p>${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
         <button id="restart-practice" type="button">Practice again</button>
       </div>
@@ -622,6 +624,7 @@ function renderPracticeView() {
     <div class="practice-phase">
       <p class="eyebrow">${escapeHtml(getPhaseTitle(session))}</p>
       <p>${escapeHtml(getPhaseDescription(session))}</p>
+      <p class="practice-last-date">${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
     </div>
     <div class="flashcard-prompt">
       <p>${escapeHtml(exercise.name)}</p>
@@ -647,7 +650,7 @@ function renderPracticeView() {
       <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct 1</button>
       <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong 2</button>
       <button class="show-hint secondary-button" type="button" ${question.hint && !session.revealed ? "" : "disabled"}>Hint 3</button>
-      <button class="restart-section secondary-button" type="button">Restart section</button>
+      <button class="restart-section secondary-button" type="button">Restart exercise</button>
     </div>
   `;
 

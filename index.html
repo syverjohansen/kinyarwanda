@@ -128,7 +128,7 @@
             <aside class="practice-sidebar" aria-label="Practice questions">
               <div class="practice-sidebar-header">
                 <p class="eyebrow">Choose</p>
-                <h3>Section</h3>
+                <h3>Exercise</h3>
               </div>
               <nav id="practice-nav" class="practice-nav" aria-label="Exercise list"></nav>
             </aside>
@@ -142,7 +142,10 @@
     <template id="exercise-template">
       <article class="exercise-card">
         <div class="exercise-heading">
-          <input class="exercise-title-input" type="text" aria-label="Exercise name" />
+          <div class="exercise-title-group">
+            <input class="exercise-title-input" type="text" aria-label="Exercise name" />
+            <p class="exercise-practice-meta"></p>
+          </div>
           <button class="remove-exercise danger-button" type="button">Delete</button>
         </div>
 
