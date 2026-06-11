@@ -687,6 +687,10 @@ function renderPracticeView() {
   });
 
   elements.practiceCard.append(card);
+
+  if (!session.revealed) {
+    answerInput.focus();
+  }
 }
 
 function handlePracticeShortcut(event) {
