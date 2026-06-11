@@ -689,7 +689,10 @@ function renderPracticeView() {
   elements.practiceCard.append(card);
 
   if (!session.revealed) {
-    answerInput.focus();
+    requestAnimationFrame(() => {
+      answerInput.focus();
+      answerInput.setSelectionRange(answerInput.value.length, answerInput.value.length);
+    });
   }
 }
 
