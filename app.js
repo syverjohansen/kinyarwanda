@@ -665,6 +665,29 @@ function renderPracticeView() {
     session.answer = answerInput.value;
   });
 
+  answerInput.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.shiftKey || session.revealed) return;
+
+    event.preventDefault();
+    session.answer = answerInput.value.trim();
+    session.revealed = true;
+    render();
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (!session.revealed) return;
+
+    if (event.key === "1") {
+      event.preventDefault();
+      gradeCurrentCard(true, exercise);
+    }
+
+    if (event.key === "2") {
+      event.preventDefault();
+      gradeCurrentCard(false, exercise);
+    }
+  });
+
   card.querySelector(".show-hint").addEventListener("click", () => {
     session.showHint = true;
     render();
