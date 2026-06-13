@@ -1,0 +1,169 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 6",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Abahungu b'umwami",
+            "answer": "The king's boys/sons",
+            "hint": ""
+          },
+          {
+            "prompt": "Abigisha b'umwigishwa",
+            "answer": "The students teachers",
+            "hint": ""
+          },
+          {
+            "prompt": "Afite umwana wa Dawidi",
+            "answer": "He has David's child",
+            "hint": ""
+          },
+          {
+            "prompt": "Abana b'uriya mugabo ni bakeya cyane",
+            "answer": "The children of that man are very few",
+            "hint": ""
+          },
+          {
+            "prompt": "Afite abana babi",
+            "answer": "He has bad children",
+            "hint": ""
+          },
+          {
+            "prompt": "Umukobwa w'umwami afite abana beza",
+            "answer": "The king's daughter has good children",
+            "hint": ""
+          },
+          {
+            "prompt": "Umutware w'abantu aravuga neza cyane",
+            "answer": "The people's chief is speaking very well/nicely",
+            "hint": ""
+          },
+          {
+            "prompt": "Yego, mfite umwana w'uriya mubyeyi",
+            "answer": "Yes, I have a child of that parent",
+            "hint": ""
+          },
+          {
+            "prompt": "Mariya n'umubyeyi wa bariya bana",
+            "answer": "Mary is the parent of those children",
+            "hint": ""
+          },
+          {
+            "prompt": "Abigishwa b'uriya mwigisha",
+            "answer": "The students of that teacher",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu n'umwana w'uriya mugore mwiza",
+            "answer": "This is the child of that nice lady",
+            "hint": ""
+          },
+          {
+            "prompt": "Abakobwa b'aba bantu",
+            "answer": "The girls/daughters of these people",
+            "hint": ""
+          },
+          {
+            "prompt": "Umuhungu w'uyu musaza",
+            "answer": "The boy/son of that man",
+            "hint": ""
+          },
+          {
+            "prompt": "Abagore b'umugabo",
+            "answer": "The man's women/wives",
+            "hint": ""
+          },
+          {
+            "prompt": "Oya, baravuga nabi cyane",
+            "answer": "No, they are speaking very badly",
+            "hint": ""
+          },
+          {
+            "prompt": "Bafite abakozi b'umutware benshi",
+            "answer": "They have the chief's many workers",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bose n'abakozi b'umutware wacu",
+            "answer": "All of these are workers of our chief",
+            "hint": ""
+          },
+          {
+            "prompt": "Oya, mfite abana b'uyu mubyeyi",
+            "answer": "No, I have the children of this parent",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate",
+        "questions": [
+          {
+            "prompt": "Umutware wacu n'umuntu mwiza",
+            "answer": "Our chief is a nice/good person",
+            "hint": ""
+          },
+          {
+            "prompt": "Bafite abakozi benshi",
+            "answer": "They have many workers",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu banyu bakeya si beza.",
+            "answer": "Your few people are not good",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bana bacu bose si banini",
+            "answer": "All of these children of ours are not big",
+            "hint": ""
+          },
+          {
+            "prompt": "Yego, abantu babi si benshi",
+            "answer": "Yes, (there) are not many bad people",
+            "hint": ""
+          },
+          {
+            "prompt": "N'umwigisha w'abana b'umutware",
+            "answer": "He/she is a/the teacher of the chief's children",
+            "hint": ""
+          },
+          {
+            "prompt": "Our many chiefs are good men",
+            "answer": "Abatware bacu benshi n'abagabo beza",
+            "hint": ""
+          },
+          {
+            "prompt": "No, these are not your children",
+            "answer": "Oya, aba s'abana bawe.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero s'umukiza wacu",
+            "answer": "Peter is not our savior",
+            "hint": ""
+          },
+          {
+            "prompt": "This little child of his is not well",
+            "answer": "Uyu mwana we mutoya si muzima",
+            "hint": ""
+          },
+          {
+            "prompt": "Yes, your many students are good children",
+            "answer": "Yego, abigishwa bawe benshi n'abana beza",
+            "hint": ""
+          },
+          {
+            "prompt": "He's a very bad person; he speaks badly",
+            "answer": "N'umuntu mubi cyane; aravuga nabi",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

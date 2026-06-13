@@ -339,7 +339,6 @@ function makePracticeSession(exercise) {
     remainingReviewIds: [],
     currentDrillIds: [],
     drillCounts: {},
-    escalatedIds: [],
     completedInitialIds: [],
     answer: "",
     revealed: false,
@@ -359,7 +358,6 @@ function getPracticeSession(exercise) {
   session.originalMissedIds = session.originalMissedIds.filter((questionId) => questionIds.has(questionId));
   session.remainingReviewIds = session.remainingReviewIds.filter((questionId) => questionIds.has(questionId));
   session.currentDrillIds = session.currentDrillIds.filter((questionId) => questionIds.has(questionId));
-  session.escalatedIds = session.escalatedIds.filter((questionId) => questionIds.has(questionId));
   session.completedInitialIds = session.completedInitialIds.filter((questionId) => questionIds.has(questionId));
 
   if (session.queue.length === 0 && !session.done) {
@@ -369,15 +367,12 @@ function getPracticeSession(exercise) {
   return session;
 }
 
-function startDrillPhase(session, ids, requiredCount) {
-  session.phase = requiredCount === 3 ? "drill3" : "drill5";
+function startDrillPhase(session, ids) {
+  session.phase = "drill3";
   session.currentDrillIds = [...ids];
   session.queue = [...ids];
   session.index = 0;
   session.drillCounts = Object.fromEntries(ids.map((questionId) => [questionId, 0]));
-  if (requiredCount === 5) {
-    session.escalatedIds = [];
-  }
   resetCurrentCard();
 }
 
@@ -405,21 +400,11 @@ function advancePracticePhase(session, exercise) {
     }
 
     session.remainingReviewIds = [...session.originalMissedIds];
-    startDrillPhase(session, session.remainingReviewIds, 3);
+    startDrillPhase(session, session.remainingReviewIds);
     return;
   }
 
   if (session.phase === "drill3") {
-    if (session.escalatedIds.length > 0) {
-      startDrillPhase(session, session.escalatedIds, 5);
-      return;
-    }
-
-    startReviewPhase(session);
-    return;
-  }
-
-  if (session.phase === "drill5") {
     startReviewPhase(session);
     return;
   }
@@ -430,7 +415,7 @@ function advancePracticePhase(session, exercise) {
       return;
     }
 
-    startDrillPhase(session, session.remainingReviewIds, 3);
+    startDrillPhase(session, session.remainingReviewIds);
   }
 }
 
@@ -446,7 +431,6 @@ function getQuestionLabel(exercise, questionId) {
 function getPhaseTitle(session) {
   if (session.phase === "initial") return "First pass";
   if (session.phase === "drill3") return "3x drill";
-  if (session.phase === "drill5") return "5x drill";
   if (session.phase === "review") return "1x review";
   return "Complete";
 }
@@ -454,14 +438,12 @@ function getPhaseTitle(session) {
 function getPhaseDescription(session) {
   if (session.phase === "initial") return "Go through this exercise in order. Correct cards are done for the day.";
   if (session.phase === "drill3") return "Practice first-pass misses until each one is correct 3 times.";
-  if (session.phase === "drill5") return "Extra reinforcement for cards missed during the 3x drill.";
   if (session.phase === "review") return "One final pass on first-pass misses. Only this round clears a card.";
   return "This exercise is complete for today.";
 }
 
 function getDrillRequiredCount(session) {
   if (session.phase === "drill3") return 3;
-  if (session.phase === "drill5") return 5;
   return 1;
 }
 
@@ -493,15 +475,11 @@ function gradeCurrentCard(isCorrect, exercise) {
     return;
   }
 
-  if (session.phase === "drill3" || session.phase === "drill5") {
+  if (session.phase === "drill3") {
     const required = getDrillRequiredCount(session);
 
-    if (session.phase === "drill5") {
+    if (isCorrect) {
       session.drillCounts[questionId] = (session.drillCounts[questionId] || 0) + 1;
-    } else if (isCorrect) {
-      session.drillCounts[questionId] = (session.drillCounts[questionId] || 0) + 1;
-    } else if (session.phase === "drill3" && !session.escalatedIds.includes(questionId)) {
-      session.escalatedIds.push(questionId);
     }
 
     if (session.drillCounts[questionId] >= required) {
@@ -611,10 +589,7 @@ function renderPracticeView() {
 
   const required = getDrillRequiredCount(session);
   const drillCount = session.drillCounts[questionId] || 0;
-  const progress =
-    session.phase === "drill3" || session.phase === "drill5"
-      ? `${drillCount}/${required} ${session.phase === "drill5" ? "seen" : "correct"}`
-      : `${session.index + 1}/${session.queue.length}`;
+  const progress = session.phase === "drill3" ? `${drillCount}/${required} correct` : `${session.index + 1}/${session.queue.length}`;
 
   const card = document.createElement("form");
   card.className = "flashcard";

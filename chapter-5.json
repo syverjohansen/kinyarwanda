@@ -1,0 +1,214 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 5",
+    "exercises": [
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "She is a bad person; the man is not bad",
+            "answer": "N'umuntu mubi; umugabo si mubi",
+            "hint": ""
+          },
+          {
+            "prompt": "A few people are senior men",
+            "answer": "Abantu bakeya n'abagabo bakuru",
+            "hint": ""
+          },
+          {
+            "prompt": "The little old man is not well.",
+            "answer": "Umusaza mutoya si muzima",
+            "hint": ""
+          },
+          {
+            "prompt": "I am well; he is not well",
+            "answer": "Ndi muzima; si muzima",
+            "hint": ""
+          },
+          {
+            "prompt": "The boy is small; the girls are short",
+            "answer": "Umuhungu ni mutoya; abakobwa ni bagufi",
+            "hint": ""
+          },
+          {
+            "prompt": "She is not a girl; he is a boy",
+            "answer": "S'umukobwa; n'umuhungu",
+            "hint": ""
+          },
+          {
+            "prompt": "A few people are reading",
+            "answer": "Abantu bakeya barasoma",
+            "hint": ""
+          },
+          {
+            "prompt": "The healthy boys are working",
+            "answer": "Abahungu bazima barakora",
+            "hint": ""
+          },
+          {
+            "prompt": "The people are not a few",
+            "answer": "Abantu si bakeya",
+            "hint": ""
+          },
+          {
+            "prompt": "I am a bad old man. She is good.",
+            "answer": "Nd'umusaza mubi. Ni mwizi",
+            "hint": ""
+          },
+          {
+            "prompt": "The boy is not small; the girls are short",
+            "answer": "Umuhungu si mutoya; abakobwa ni bagufi",
+            "hint": ""
+          },
+          {
+            "prompt": "I am not a little old woman",
+            "answer": "Sindi umukecuru mutoya",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Pluralize the following",
+        "questions": [
+          {
+            "prompt": "Uyu mwigisha afite abigishwa bakeya cyane.",
+            "answer": "Aba bigisha bafite abigishwa bakeya cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya mugabo mutoya afite umugore munini cyane.",
+            "answer": "Bariya bagabo batoya bafite abagore banini cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu s'umwana, n'umugabo mukuru",
+            "answer": "Aba s'abana, n'abagabo bakuru",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya mugabo n'umwami mubi cyane",
+            "answer": "Bariya bagabo n'abami babi cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu mugore afite umuhungu n'umukobwa (n' means and here)",
+            "answer": "Aba bagore bafite abahungu n'abakobwa",
+            "hint": ""
+          },
+          {
+            "prompt": "Nd'umuntu mukuru. Mfite abantu benshi cyane.",
+            "answer": "Tur'abantu bakuru. Dufite abantu benshi cyane",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Give the singular/plural forms for the following stems",
+        "questions": [
+          {
+            "prompt": "-igishwa",
+            "answer": "umwigishwa, abigishwa",
+            "hint": ""
+          },
+          {
+            "prompt": "-gabo",
+            "answer": "umugabo, abagabo",
+            "hint": ""
+          },
+          {
+            "prompt": "-saza",
+            "answer": "umusaza, abasaza",
+            "hint": ""
+          },
+          {
+            "prompt": "-ana",
+            "answer": "umwana, abana",
+            "hint": ""
+          },
+          {
+            "prompt": "-kecuru",
+            "answer": "umukecuru, abakecuru",
+            "hint": ""
+          },
+          {
+            "prompt": "-ami",
+            "answer": "umwami, abami",
+            "hint": ""
+          },
+          {
+            "prompt": "-igisha",
+            "answer": "umwigisha, abigisha",
+            "hint": ""
+          },
+          {
+            "prompt": "-hungu",
+            "answer": "umuhungu, abahungu",
+            "hint": ""
+          },
+          {
+            "prompt": "-ntu",
+            "answer": "umuntu, abantu",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "This man is not a teacher; he is a king",
+            "answer": "Uyu mugabo s'umwigisha; n'umwami",
+            "hint": ""
+          },
+          {
+            "prompt": "The very small child wants the woman.",
+            "answer": "Umwana mutoya cyane arashaka umugore",
+            "hint": ""
+          },
+          {
+            "prompt": "This student is working hard.",
+            "answer": "Uyu mwigishwa arakora cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "This teacher has a small child",
+            "answer": "Uyu mwigisha afite umwana mutoya",
+            "hint": ""
+          },
+          {
+            "prompt": "We have very large children",
+            "answer": "Dufite abana banini cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "The king has a very large wife",
+            "answer": "Umwami afite umugore munini cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "It is not boys they have, but girls",
+            "answer": "S'abahungu bafite, ahubwo n'abakobwa",
+            "hint": ""
+          },
+          {
+            "prompt": "These children are not very healthy",
+            "answer": "Aba bana si bazima cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "This [man] is not a student; he is a teacher",
+            "answer": "Uyu s'umwigishwa; n'umwigisha",
+            "hint": ""
+          },
+          {
+            "prompt": "They are working hard",
+            "answer": "Barakora cyane",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

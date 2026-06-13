@@ -1,0 +1,109 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 4",
+    "exercises": [
+      {
+        "name": "Translate into Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "A bad person; the short man; a few people",
+            "answer": "Umunti mubi; umugabo mugufi; abantu bakeya",
+            "hint": ""
+          },
+          {
+            "prompt": "A big girl; the senior men; a healthy boy",
+            "answer": "Umukobwa munini; abagabo bakuru; umuhungu muzima",
+            "hint": ""
+          },
+          {
+            "prompt": "A few people are coming",
+            "answer": "Abantu bakeya baraza",
+            "hint": ""
+          },
+          {
+            "prompt": "The healthy boys are working",
+            "answer": "Abahungu bazima barakora",
+            "hint": ""
+          },
+          {
+            "prompt": "A little old man; a few visitors; short boys",
+            "answer": "Umusaza; abashytsi bakeya; abahungu bagufi",
+            "hint": ""
+          },
+          {
+            "prompt": "A few healthy wives",
+            "answer": "Abagore bazima bakeya",
+            "hint": ""
+          },
+          {
+            "prompt": "The big boys are hoeing; the small girls are reading",
+            "answer": "Abahungu banini barahinga; abakobwa batoya barasoma",
+            "hint": ""
+          },
+          {
+            "prompt": "They are wanting the elderly visitor",
+            "answer": "Barashaka umushytsi mukuru",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate into English",
+        "questions": [
+          {
+            "prompt": "Uyu mugabo arakora",
+            "answer": "This man is working",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bagabo bakuru baragenda",
+            "answer": "These elderly/important men are going",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya bahungu bazima baraza",
+            "answer": "Those healthy boys are coming",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya musaza mugufi; aba bagore banini",
+            "answer": "That short old man, these big women",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya barahinga; aba barasoma",
+            "answer": "Those (people) are hoeing; these are reading",
+            "hint": ""
+          },
+          {
+            "prompt": "Arashaka bariya bagabo",
+            "answer": "He is wanting those important/senior men",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu muhungu mubi aragenda",
+            "answer": "This bad boy is going",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bantu bazima barakora",
+            "answer": "These healthy people are working",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu mukecuru mutoya arashaka umusaza",
+            "answer": "This little old woman is wanting the man",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya muntu muzima araza",
+            "answer": "That healthy person is coming",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}
