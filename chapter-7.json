@@ -1,0 +1,284 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 7",
+    "exercises": [
+      {
+        "name": "Grammar comprehension",
+        "questions": [
+          {
+            "prompt": "How would you tell whether a umu- prefixed noun belongs to Class 1 or Class 2?",
+            "answer": "Nouns of Class 1 are persons; also, their plural begins with aba-, whereas the plural of Class 2 nouns begins with imi-. Furthermore, Class 2 nouns are not the names of people.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda (demonstratives)",
+        "questions": [
+          {
+            "prompt": "this (class 2)",
+            "answer": "uyu",
+            "hint": ""
+          },
+          {
+            "prompt": "that (class 2)",
+            "answer": "uriya",
+            "hint": ""
+          },
+          {
+            "prompt": "these (class 2)",
+            "answer": "iyi",
+            "hint": ""
+          },
+          {
+            "prompt": "those (class 2)",
+            "answer": "iriya",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Pluralize the following",
+        "questions": [
+          {
+            "prompt": "umugabo",
+            "answer": "abagabo",
+            "hint": ""
+          },
+          {
+            "prompt": "umurima",
+            "answer": "imirima",
+            "hint": ""
+          },
+          {
+            "prompt": "umusozi",
+            "answer": "imisozi",
+            "hint": ""
+          },
+          {
+            "prompt": "umwana",
+            "answer": "abana",
+            "hint": ""
+          },
+          {
+            "prompt": "umwenda",
+            "answer": "imyenda",
+            "hint": ""
+          },
+          {
+            "prompt": "umusaza",
+            "answer": "abasaza",
+            "hint": ""
+          },
+          {
+            "prompt": "umutsima",
+            "answer": "imitsima",
+            "hint": ""
+          },
+          {
+            "prompt": "umutwe",
+            "answer": "imitwe",
+            "hint": ""
+          },
+          {
+            "prompt": "umurimo",
+            "answer": "imirimo",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Pluralize with meanings",
+        "questions": [
+          {
+            "prompt": "umwenda wanjye",
+            "answer": "imyenda yanjye/yacu (my/our cloths)",
+            "hint": ""
+          },
+          {
+            "prompt": "umutima we",
+            "answer": "imitima yabo (their hearts)",
+            "hint": ""
+          },
+          {
+            "prompt": "umurimo wacu",
+            "answer": "imirimo yacu (our works)",
+            "hint": ""
+          },
+          {
+            "prompt": "umugabo wawe",
+            "answer": "abagabo bawe (your men)",
+            "hint": ""
+          },
+          {
+            "prompt": "umugore we",
+            "answer": "abagore be/babo (his/their women/wives)",
+            "hint": ""
+          },
+          {
+            "prompt": "uyu murimo we",
+            "answer": "iyi mirimo ye/yabo (these works of his/theirs)",
+            "hint": ""
+          },
+          {
+            "prompt": "umutima we munini",
+            "answer": "imitima ye/yabo minini (these big hearts of his/theirs)",
+            "hint": ""
+          },
+          {
+            "prompt": "umurima w'umugabo",
+            "answer": "imirima y'abagabo (the men's gardens)",
+            "hint": ""
+          },
+          {
+            "prompt": "umutwe wanjye",
+            "answer": "imitwe yanjye (my heads)",
+            "hint": ""
+          },
+          {
+            "prompt": "umurima wanyu",
+            "answer": "imirima yanyu (your gardens)",
+            "hint": ""
+          },
+          {
+            "prompt": "umutsima wabo",
+            "answer": "imitsima yabo (their loaves of bread)",
+            "hint": ""
+          },
+          {
+            "prompt": "umusozi wawe",
+            "answer": "imisozi yawe (your hills)",
+            "hint": ""
+          },
+          {
+            "prompt": "umwami wabo",
+            "answer": "abami babo (their kings)",
+            "hint": ""
+          },
+          {
+            "prompt": "umwenda w'umugore",
+            "answer": "imyenda y'abagore (the women's cloths)",
+            "hint": ""
+          },
+          {
+            "prompt": "umutsima muto wa Petero",
+            "answer": "imitsima mito ya Petero (Peter's small loaves of bread)",
+            "hint": ""
+          },
+          {
+            "prompt": "umutima mubi w'umwana",
+            "answer": "imitima mibi y'abana (the children's bad hearts)",
+            "hint": ""
+          },
+          {
+            "prompt": "umwenda wawe mwiza cyane",
+            "answer": "imyenda yawe/yanyu myiza cyane (your very nice/pretty cloths)",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Iyi mirima yanjye ni mitoya cyane",
+            "answer": "These gardens of mine are very small",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndashaka kureba umurima w'umutware",
+            "answer": "I want to see the chief's garden",
+            "hint": ""
+          },
+          {
+            "prompt": "Yego, umugabo wawe arahinga umurima wabo",
+            "answer": "Yes, your husband/man is hoeing their garden",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria afite umutsima wanjye",
+            "answer": "Mary has my bread",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu benshi bafite imirima myiza",
+            "answer": "Many people have very nice gardens",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bagore bafite imyenda y'abana babo",
+            "answer": "These women have their children's cloths",
+            "hint": ""
+          },
+          {
+            "prompt": "Yego, barashaka umutsima",
+            "answer": "Yes, they want bread",
+            "hint": ""
+          },
+          {
+            "prompt": "Oya, uyu s'umukandara wanjye",
+            "answer": "No, this is not my belt",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "His daughter is your wife",
+            "answer": "Umukobwa we n'umugore wawe",
+            "hint": ""
+          },
+          {
+            "prompt": "My son is not your student",
+            "answer": "Umuhungu wanjye s'umwigishwa wawe",
+            "hint": ""
+          },
+          {
+            "prompt": "These people have many small gardens",
+            "answer": "Aba bantu bafite imirima mito myinshi",
+            "hint": ""
+          },
+          {
+            "prompt": "Those boys are hoeing the many gardens of their chief",
+            "answer": "Aba bahungu barahinga imirima myinshi y'umutware wabo",
+            "hint": ""
+          },
+          {
+            "prompt": "This bread is bad",
+            "answer": "Uyu mutsima ni mubi",
+            "hint": ""
+          },
+          {
+            "prompt": "He has a very large head",
+            "answer": "Afite umutwe munini cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "She has many small cloths",
+            "answer": "Afite imyenda mito myinshi",
+            "hint": ""
+          },
+          {
+            "prompt": "These women have the small (loaves of) bread",
+            "answer": "Aba bagore bafite imitsima mito",
+            "hint": ""
+          },
+          {
+            "prompt": "Yes we have many heads",
+            "answer": "Yego, dufite imitwe myinshi",
+            "hint": ""
+          },
+          {
+            "prompt": "No, this is not my belt. It is his belt.",
+            "answer": "Oya, uyu s'umukandara wanjye. N'umukandara we.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}
