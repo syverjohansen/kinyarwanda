@@ -787,7 +787,7 @@ function importChapter(file) {
       if (existingIndex >= 0) {
         const replace = window.confirm(`"${chapter.name}" already exists. Replace it? Press Cancel to import as a duplicate.`);
         if (replace) {
-          chapter.id = state.lessons[existingIndex].id;
+          preservePracticeDates(state.lessons[existingIndex], chapter);
           state.lessons[existingIndex] = chapter;
         } else {
           chapter.name = makeDuplicateLessonName(chapter.name);
@@ -808,6 +808,23 @@ function importChapter(file) {
     }
   });
   reader.readAsText(file);
+}
+
+function preservePracticeDates(existingChapter, importedChapter) {
+  importedChapter.id = existingChapter.id;
+
+  importedChapter.exercises.forEach((exercise, index) => {
+    const existingExercise =
+      existingChapter.exercises.find((item) => item.name.toLocaleLowerCase() === exercise.name.toLocaleLowerCase()) ||
+      existingChapter.exercises[index];
+
+    if (!existingExercise) return;
+
+    exercise.id = existingExercise.id;
+    if (!exercise.lastPracticed && existingExercise.lastPracticed) {
+      exercise.lastPracticed = existingExercise.lastPracticed;
+    }
+  });
 }
 
 function normalizeImportedChapter(data) {

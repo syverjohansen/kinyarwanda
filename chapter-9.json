@@ -1,0 +1,189 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 9",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Zana imiremire (imigozi)",
+            "answer": "Bring the long ones (strings)",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite umushya (umugozi)",
+            "answer": "I have a new one (string)",
+            "hint": ""
+          },
+          {
+            "prompt": "Barashaka abeza gusa (abantu)",
+            "answer": "They want good ones only (people)",
+            "hint": ""
+          },
+          {
+            "prompt": "Imigisha myinshi",
+            "answer": "Many blessings",
+            "hint": ""
+          },
+          {
+            "prompt": "Imigozi miremire",
+            "answer": "Long strings",
+            "hint": ""
+          },
+          {
+            "prompt": "Bafite imigisha myinshi",
+            "answer": "They have many blessings",
+            "hint": ""
+          },
+          {
+            "prompt": "Umusatsi mwiza",
+            "answer": "Pretty hair",
+            "hint": ""
+          },
+          {
+            "prompt": "Umuhanda mushya",
+            "answer": "A/the new road",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwobo muremure",
+            "answer": "A/the deep pit",
+            "hint": ""
+          },
+          {
+            "prompt": "Imihanda migari",
+            "answer": "Wide roads",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu beza. Abeza",
+            "answer": "Good people. The good ones (people)",
+            "hint": ""
+          },
+          {
+            "prompt": "Afite imigisha myinshi",
+            "answer": "He has many blessings",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "This road is very long. It is not wide",
+            "answer": "Uyu muhanda ni muremure cyane. Si mugari",
+            "hint": ""
+          },
+          {
+            "prompt": "He has a short rope. I want a long one.",
+            "answer": "Afite umugozi mugufi. Ndashaka umuremure",
+            "hint": ""
+          },
+          {
+            "prompt": "The children of Peter have His blessing",
+            "answer": "Abana ba Petero bafite umugisha we.",
+            "hint": ""
+          },
+          {
+            "prompt": "I want the blessing of God today",
+            "answer": "Ndashaka umugisha w'Imana none.",
+            "hint": ""
+          },
+          {
+            "prompt": "Many men; much hair; wide roads; long ropes, and new ones",
+            "answer": "Abagabo benshi; umusatsi mwinshi; imihanda myinshi; imigozi miremire n'imishya",
+            "hint": ""
+          },
+          {
+            "prompt": "I am going to the new road. You are going to the bad one",
+            "answer": "Ngiye ku muhanda mushya. Urajya ku mubi",
+            "hint": ""
+          },
+          {
+            "prompt": "These old men and old women are important people",
+            "answer": "Aba basaza n'abakecuru n'abantu bakuru",
+            "hint": ""
+          },
+          {
+            "prompt": "Men, women, and children are coming",
+            "answer": "Abagabo n'abagore n'abana baraza",
+            "hint": ""
+          },
+          {
+            "prompt": "I want some new string and the cloth. Put the new strings and the cloth in the deep hole",
+            "answer": "Ndashaka umugozi mushya n'umwenda. Shyira imigozi mishya n'umwenda mu mwobo muremure",
+            "hint": ""
+          },
+          {
+            "prompt": "There are many deep holes in the bad road.",
+            "answer": "Hari imyobo miremire myinshi mu muhanda mubi",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English (advanced)",
+        "questions": [
+          {
+            "prompt": "Umugozi s'umusatsi",
+            "answer": "String is not hair",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero, witonde! Ntukwiriye kugwa mu mwobo",
+            "answer": "Peter, be careful! You must not fall into the pit.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mana, ndagusaba umugisha none kuko ngiye gukora mu mugyi munini",
+            "answer": "God, I am asking you for a blessing today, because I'm going to work in the big city.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abana bose bakwiriye kwicara hasi. Abandi bose bakwiriye guhagarara",
+            "answer": "All the children must sit on the ground/floor. All of the others must stand.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese uriya munti ni nde? Simbizi, ariko ngiye kubaza Maria",
+            "answer": "Who is that person over there? I don't know, but I'm going to ask Mary",
+            "hint": ""
+          },
+          {
+            "prompt": "Tugende, Petero, tugende non'aha. Dukwiriye kugura imitsima kugira ngo turye.",
+            "answer": "Let's go Peter; let's go now. We must buy some bread so that we can eat",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria, ukwiriye kumvira ababyeyi bawe kugira ngo ubone umugisha wabo.",
+            "answer": "Mary, you must obey your parents, so that you may receive their blessing",
+            "hint": ""
+          },
+          {
+            "prompt": "Ngiye guhamagara abahungu bose, maze ndashaka kuza mu nzu ngo nteke",
+            "answer": "I'm going to call all the boys, and then I want to come inside the house so as to cook.",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria, ngwino, tugiye kugura imitsima irindwi, maze turajya ku mugezi",
+            "answer": "Mary, come, we are going to buy seven loaves of bread, and then we will go to the stream",
+            "hint": ""
+          },
+          {
+            "prompt": "Mana yanjye, ndashaka imigisha yawe myinshi, kugira ngo nkore umurimo ushaka",
+            "answer": "My God, I want your many blessings, so that I may do the work you want.",
+            "hint": ""
+          },
+          {
+            "prompt": "N'ujya mu mujyi ukwiriye kugura imikandara ine.",
+            "answer": "If you go to the city, you must buy four belts.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

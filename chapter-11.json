@@ -1,0 +1,189 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 11",
+    "exercises": [
+      {
+        "name": "Translate to Kinyarwanda and pluralize",
+        "questions": [
+          {
+            "prompt": "vegetable",
+            "answer": "imboga",
+            "hint": ""
+          },
+          {
+            "prompt": "dish",
+            "answer": "isahane/amasahane",
+            "hint": ""
+          },
+          {
+            "prompt": "goat",
+            "answer": "ihene",
+            "hint": ""
+          },
+          {
+            "prompt": "blind person",
+            "answer": "impumyi",
+            "hint": ""
+          },
+          {
+            "prompt": "dog",
+            "answer": "imbwa",
+            "hint": ""
+          },
+          {
+            "prompt": "chair",
+            "answer": "intebe",
+            "hint": ""
+          },
+          {
+            "prompt": "hoe",
+            "answer": "isuka/amasuka",
+            "hint": ""
+          },
+          {
+            "prompt": "rain",
+            "answer": "imvura",
+            "hint": ""
+          },
+          {
+            "prompt": "fish",
+            "answer": "ifi",
+            "hint": ""
+          },
+          {
+            "prompt": "cow",
+            "answer": "inka",
+            "hint": ""
+          },
+          {
+            "prompt": "house",
+            "answer": "inzu/amazu",
+            "hint": ""
+          },
+          {
+            "prompt": "god",
+            "answer": "imana",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Mfite ifu nziza nyinshi",
+            "answer": "I have much good flour",
+            "hint": ""
+          },
+          {
+            "prompt": "Umusaza n'umukecuru barajya iwabo",
+            "answer": "The old man and the old woman are going home",
+            "hint": ""
+          },
+          {
+            "prompt": "Iyi nyama ni mbisi",
+            "answer": "The meat is raw",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwana arajya iwabo",
+            "answer": "The child is going home",
+            "hint": ""
+          },
+          {
+            "prompt": "Iyi hene n'ihene yanjye",
+            "answer": "This goat is my goat",
+            "hint": ""
+          },
+          {
+            "prompt": "Arashaka iyi ntebe",
+            "answer": "He is wanting this chair",
+            "hint": ""
+          },
+          {
+            "prompt": "Bafite imana nyinshi cyane",
+            "answer": "They have very many gods",
+            "hint": ""
+          },
+          {
+            "prompt": "Umutware n'abakozi be barajya i Kigali",
+            "answer": "The chief and his workers are going to Kigali",
+            "hint": ""
+          },
+          {
+            "prompt": "Iyi mpumyi n'umwana w'Imana",
+            "answer": "This blind person is a child of God",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya bana barashaka intebe zabo",
+            "answer": "Those children are wanting their chairs",
+            "hint": ""
+          },
+          {
+            "prompt": "Imirima myinshi iboneka muri iki gihugu",
+            "answer": "Many gardens are found in this country",
+            "hint": ""
+          },
+          {
+            "prompt": "Ukwiriye gusubira iwabo wa mugenzi wawe",
+            "answer": "You must return to your companion's home",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndagaruka hatoya",
+            "answer": "I'll be back in a little while",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu mukire afite izahabu nyinshi iwe",
+            "answer": "This wealthy person has much gold at his home",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda (home expressions)",
+        "questions": [
+          {
+            "prompt": "I'm going to my home (minor)",
+            "answer": "Ndajya iwacu",
+            "hint": ""
+          },
+          {
+            "prompt": "He is going to his home (minor)",
+            "answer": "Arajya iwabo",
+            "hint": ""
+          },
+          {
+            "prompt": "You are going to your home (minor)",
+            "answer": "Urajya iwanyu",
+            "hint": ""
+          },
+          {
+            "prompt": "I'm going to my home (adult)",
+            "answer": "Ndajya iwanjye",
+            "hint": ""
+          },
+          {
+            "prompt": "He is going to his home (adult)",
+            "answer": "Arajya iwe",
+            "hint": ""
+          },
+          {
+            "prompt": "I'm going to our neighborhood (adult)",
+            "answer": "Ndajya iwacu",
+            "hint": ""
+          },
+          {
+            "prompt": "He is returning to his home (country) (adult)",
+            "answer": "Arasubira iwabo",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

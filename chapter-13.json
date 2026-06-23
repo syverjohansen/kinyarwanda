@@ -1,0 +1,134 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 13",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Mbese uri he? Sini mu mwobo, ndi hano.",
+            "answer": "Where are you? I'm not in the pit, I'm here.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshaka guhinga none. Imuhira mfite imirimo myinshi.",
+            "answer": "I don't want to hoe today. I have much work at home.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu nzu ntiharimo abantu benshi. Ntibakwiriye kugenda ubu",
+            "answer": "There are not many people in the house. They must not go now.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese ntushaka kubiba imbuto none? Oya, sinshaka kuzibiba ubu",
+            "answer": "Don't you want to sow the seeds today? No, I don't want to sow them now.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu nzu yabo harimo umwijima mwinshi. Sinkunda umwijima, nawe ntuwukunda.",
+            "answer": "In their house there is much darkness. I don't like darkness and you don't like it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Hano hariko bake, hariya hariho benshi. Mbese, ntidukwiriye kubafasha bose?",
+            "answer": "Here there are a few (people); over there, there are many. Shouldn't we help them all?",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese imbuto ze ziri he? Ntiziri mu murima we. Ndajya kuzishaka.",
+            "answer": "Where are his seeds? They are not in his garden. I'm going to find them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya basaza benshi ntibazi guhinga. Ndajya kubafasha.",
+            "answer": "Those many old men don't know how to hoe. I am going to help them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ziriya nka ziri mu murima wanjye. S'umurima wawe.",
+            "answer": "Those cows are in my garden. It's not your garden.",
+            "hint": ""
+          },
+          {
+            "prompt": "Inka nyinshi ziri hano; inkeya ziri hariya. Mbese, ntuzireba zose?",
+            "answer": "Many cows are here; a few are over there. Don't you see them all?",
+            "hint": ""
+          },
+          {
+            "prompt": "Hano hariho inka nkeya; hariya hariho nyinshi. Dukwiriye kuzizana?",
+            "answer": "Here there are a few cows; over there, there are many. We must bring them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshaka iyi mitsima; ndashaka iriya. Ukwiriye kuzana imitsima yose.",
+            "answer": "I don't want these loaves of bread; I want those. You must bring them all.",
+            "hint": ""
+          },
+          {
+            "prompt": "Zikwiriye kuva mu murima ubu ngubu. Ntizikwiriye kugaruka.",
+            "answer": "They must get out of the garden right now. They must not come back.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nkwiriye kugenda ubu. Singaruka none. Na bariya ntibagaruka none.",
+            "answer": "I must go now. I won't return today. And those (people) won't come back today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Humura, inka ntizigenda; abantu ntibazi aho ziri.",
+            "answer": "Don't worry/be comforted; the cows are not going. People don't know where they are.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese ingoma y'umwigisha wacu iri hano? Oya, ntiri hano, iri hariya",
+            "answer": "Is our teacher's drum here? No, it is not here; it is over there.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese, Imana iri he? Baravuga yuko iba mu muima y'abantu.",
+            "answer": "Where is God? They are saying that He is in the hearts of people.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese arajya he? Simbizi. Mbese arabizi? Ntakwiriye kugaruka ubu.",
+            "answer": "Where's he going? I don't know. Does he know? He must not come back now.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese inzu yawe nshya iri hariya? Oya, inzu yanjye ntiri hariya. Iriya n'iya Petero.",
+            "answer": "Is your new house over there? No, my house is not over there; that one over there is Peter's.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese muri hehe? Turi mu nzu ya Petero. Iyi nzu n'iya Petero.",
+            "answer": "Where are you? We are in Peter's house. This house is Peter's.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntituri abana; turi abantu bakuru.",
+            "answer": "We are not children; we are grown people.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sindi mu muhanda. Simva mu nzu ubu. Singenda none. Ntidukwiriye kugenda none.",
+            "answer": "I am not in the road. I'm not coming out of the house now. I'm not going today. We must not go today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese impumyi iri he? Iri iwazo. N'imfunya na zo ziri iwazo.",
+            "answer": "Where is the blind child? He/she is at their home. And the stunted (children) are also at their home.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bakuru bose bari iwabo.",
+            "answer": "All the important people are at their homes.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

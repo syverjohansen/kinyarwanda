@@ -1,0 +1,59 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 15",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Muhungu wanjye, ntukwiriye kurya ibyokurya biri munsi ya kiriya kirago",
+            "answer": "My son, you mustn't eat the food that is beneath that rug.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kiriya kiragi kiricara mu gicucu cy'igiti",
+            "answer": "That dumb person is sitting in the shade of the tree.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndi umuntu w'imbaraga nyinshi, ariko sinshobora guhindura ibyaha byanjye",
+            "answer": "I'm a very strong person, but I can't change my sins.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sindeba icyuma cye; kiri munsi y'ikirago cyawe",
+            "answer": "I'm not looking at his knife; it's beneath your rug.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibyokurya byiza ntibishobora guhindura umutima w'umuntu mubi",
+            "answer": "Good food is not able to change the heart of a bad person",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshobora kurya ibijumba kuko dufite ibigori bisa. Iyi minsi ibyokurya ni bikeya cyane",
+            "answer": "I'm not able to eat sweet potatoes because we have corn only. These days food is very scarce.",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bagabo ntibashobora gukora neza. Bose n'imumyi n'ibiragi",
+            "answer": "These men are not able to work well. They are all blind and dumb (men).",
+            "hint": ""
+          },
+          {
+            "prompt": "Nshuti yanjye, ndagushimye cyane. Urumfasha kuba umuntu mushya.",
+            "answer": "My friend, I thank you very much. You are helping me to be a new person.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese ibitabo byawe bishya bari hehe? Biri hanze munsi y'igiti. Hari igicucu cyiza munsi ya kiriya giti.",
+            "answer": "Where are your new books? They are outside under the tree. There is a good shadow under the tree.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

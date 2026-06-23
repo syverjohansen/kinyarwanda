@@ -1,0 +1,244 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 8",
+    "exercises": [
+      {
+        "name": "Translate the following",
+        "questions": [
+          {
+            "prompt": "Into the city",
+            "answer": "Mu mujyi",
+            "hint": ""
+          },
+          {
+            "prompt": "Toward the city",
+            "answer": "Ku mujyi",
+            "hint": ""
+          },
+          {
+            "prompt": "In the hill. To the hill",
+            "answer": "Mu musozi. Ku musozi",
+            "hint": ""
+          },
+          {
+            "prompt": "In/out of the hill",
+            "answer": "Mu musozi",
+            "hint": ""
+          },
+          {
+            "prompt": "At the road (at the side of)",
+            "answer": "Ku muhanda",
+            "hint": ""
+          },
+          {
+            "prompt": "In the road",
+            "answer": "Mu muhanda",
+            "hint": ""
+          },
+          {
+            "prompt": "To the chief",
+            "answer": "Ku mutware",
+            "hint": ""
+          },
+          {
+            "prompt": "Out of/into the hole",
+            "answer": "Mu mwobo",
+            "hint": ""
+          },
+          {
+            "prompt": "To/from the teacher",
+            "answer": "Ku mwigisha",
+            "hint": ""
+          },
+          {
+            "prompt": "Into the darkness. Out of the darkness",
+            "answer": "Mu mwijima",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Umwami arajya mu mujyi. Turajya ku murima wacu.",
+            "answer": "The king is going into the city. We are going to our gardens.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya mwigisha afite umunezero mu mutima we. Uyu mwigisha si mwiza",
+            "answer": "That teacher has happiness in his heart. This teacher is not good.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abahungu bacu barakora mu murima w'umutware. Ndajya ku mwobo munini.",
+            "answer": "Our boys are working in the chief's garden. Im going to the large pit.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu munsi afite umwijima mu mutima we. Mfite umunezero mu mutima wanjye.",
+            "answer": "This day/today he has darkness in his heart. I have happiness in my heart.",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwana wawe arajya ku mwobo munini. Murareba mu mwobo munini.",
+            "answer": "Your child is going to the large pit. You are looking into the large pit.",
+            "hint": ""
+          },
+          {
+            "prompt": "Barajya ku mwigisha wabo mwiza. Turajya ku bigisha bacu beza.",
+            "answer": "They are going to their nice teacher. We are going to our nice teachers.",
+            "hint": ""
+          },
+          {
+            "prompt": "Barajya ku muriro. Barava ku mugezi w'umutware.",
+            "answer": "They are going to/toward the fire. They are coming from the chief's stream.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "The king is going into the city. We are going to our gardens.",
+            "answer": "Umwami arajya mu mujyi. Turajya ku murima wacu.",
+            "hint": ""
+          },
+          {
+            "prompt": "That teacher has happiness in his heart. This teacher is not good.",
+            "answer": "Uriya mwigisha afite umunezero mu mutima we. Uyu mwigisha si mwiza",
+            "hint": ""
+          },
+          {
+            "prompt": "Our boys are working in the chief's garden. Im going to the large pit.",
+            "answer": "Abahungu bacu barakora mu murima w'umutware. Ndajya ku mwobo munini.",
+            "hint": ""
+          },
+          {
+            "prompt": "This day/today he has darkness in his heart. I have happiness in my heart.",
+            "answer": "Uyu munsi afite umwijima mu mutima we. Mfite umunezero mu mutima wanjye.",
+            "hint": ""
+          },
+          {
+            "prompt": "Your child is going to the large pit. You are looking into the large pit.",
+            "answer": "Umwana wawe arajya ku mwobo munini. Murareba mu mwobo munini.",
+            "hint": ""
+          },
+          {
+            "prompt": "They are going to their nice teacher. We are going to our nice teachers.",
+            "answer": "Barajya ku mwigisha wabo mwiza. Turajya ku bigisha bacu beza.",
+            "hint": ""
+          },
+          {
+            "prompt": "They are going to/toward the fire. They are coming from the chief's stream.",
+            "answer": "Barajya ku muriro. Barava ku mugezi w'umutware.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Petero, gira vuba, dukwiriye kugenda ubu; abana baraza none",
+            "answer": "Peter hurry up; we must go now. The children are coming today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nta bantu bari mu nzu. Nta cyo bitwaye. Ahari bari mu mirima yabo.",
+            "answer": "No people are in the house. Never mind. Perhaps they are in their gardens.",
+            "hint": ""
+          },
+          {
+            "prompt": "Witonde, umugozi ni mugufi n'umukanara ni muremure",
+            "answer": "Be careful; the string is short and the belt is long.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ukwiriye guhagarara, nanjye ngiye kwicara",
+            "answer": "You must stand, and I am going to sit",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero, dukwiriye kugira vuba. Dukwiriye kwiruka, abakozi baraza",
+            "answer": "Peter we must hurry up. We must run; the workers are coming.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ngiye gusaba Maria imitsima itandatu, maze nkwiriye gucana umuriro.",
+            "answer": "Im going to ask Mary for six loaves of bread, and then I must light the fire.",
+            "hint": ""
+          },
+          {
+            "prompt": "Witonde Petero, umwobo ni munini cyane",
+            "answer": "Be careful, Peter; the pit is very large.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bakwiriye gutangira gukora mu mirima none",
+            "answer": "They must begin to work in the garden today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria, nta bantu baje. Nta cyo bitwaye; ariko dukwiriye gushaka abandi",
+            "answer": "Mary, no people have come. Never mind; it doesn't matter, but we must look for others.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero, mbese abahungu n'abakobwa bari mu nzu? Nta bo. Nta bantu bari mu nzu.",
+            "answer": "Peter, are the boys and girls in the house? No one. No one is in the house.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abana batoya barakina, ariko Petero na Maria ni bakuru. Bakwiriye gutangira umurimo.",
+            "answer": "The small children are playing, but Peter and Mary are grown up. They must begin to work.",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria uri he? Ndi hano. Na Petero, mbese ari mu nzu? Nta we. Ari he? Simbizi",
+            "answer": "Mary, where are you? I'm here. And Peter, is he in the house? No, he is not. Where is he? I don't know.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nta bantu baro hano. Ngiye kubashake. Ahari bari ku mugezi.",
+            "answer": "No people are here. I'm going to look for them. Perhaps they are at the stream.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya musaza mugufi arasaba abantu umutsima. Nta mutsima dufite, ariko turashaka gufasha uriya musaza.",
+            "answer": "That short old man is asking the people for bread. They dont have any bread, but we are wanting to help that old man.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ahari hari umutsima mu nzu ya Maria. Ngiye kubaza Maria.",
+            "answer": "Perhaps there is (some) bread in Mary's house. I'm going to ask Mary.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese Maria, ufite umutsima? Hanza har'umusaza mugufi. Arashaka umutsima.",
+            "answer": "Mary, do you have any bread? Outside there is a short old man. He is wanting some bread.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ababyeyi b'aba bana bari hanze. Ni byiza, ariko bakwiriye kuza mu nzu",
+            "answer": "The parents of these children are outside. That's fine, but they must come inside the house.",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria gira vuba; ukwiriye gucana umuriro, ariko ukwiriye kwitonda.",
+            "answer": "Mary, jurry. You must light the fire, but you must be careful.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero, hagarara hano. Maria ukwiriye guhagarara mu muhanda.",
+            "answer": "Peter, stand here. Mary, you must stand in the road.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 14",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Mbese igitabo cyawe kiri he? Kiri mu nzu.",
+            "answer": "Where is your book? It's inside the house.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibi bijumba ni bito cyane. Ibinini biri he?",
+            "answer": "These sweet potatoes are very small. Where are the big ones?",
+            "hint": ""
+          },
+          {
+            "prompt": "Iguhugu cy'Abanyarwanda ni gito cyane.",
+            "answer": "The country of the Banyarwanda is very small.",
+            "hint": ""
+          },
+          {
+            "prompt": "Hari ibiti birebire mu murima we. Ibiri hano ni bigufi. Dukwiriye gutera ibinini.",
+            "answer": "There are tall trees in his garden. Those that are here are short. We must plant big ones.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndashaka kurya igice cy'ikijumba.",
+            "answer": "I want to eat a piece of sweet potato.",
+            "hint": ""
+          },
+          {
+            "prompt": "Shyira biriya bigori mu muriro.",
+            "answer": "Put those cobs of corn in the fire.",
+            "hint": ""
+          },
+          {
+            "prompt": "Igihugu cyacu ni cyiza. Umujyi wacu mukuru witwa Kigali.",
+            "answer": "Our country is good. Our capital city is called Kigali.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu muhungu afite igisebe kibi ku kirenge cye.",
+            "answer": "This boy has a bad sore on his foot.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya muhungu afite ibisebe ku mubiri we wose.",
+            "answer": "That boy has sores all over his body.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese uzi kuvuga Ikinyarwanda? Oya, sinzi Ikinyarwanda.",
+            "answer": "Do you know (how) to speak Kinyarwanda? No I don't know Kinyarwanda.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndashaka kumenya Ikinyarwanda, ariko birakomeye!",
+            "answer": "I want to know Kinyarwanda, but it is difficult!",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya bagore ntibakwiriye gutera ibijumba none.",
+            "answer": "Those women should not plant the sweet potatoes today.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "I don't want many things. Just a few pieces of sweet potato.",
+            "answer": "Sinshaka ibintu byinshi. Ibice bikeya by'ikijumba gusa.",
+            "hint": ""
+          },
+          {
+            "prompt": "Put it on the large mat.",
+            "answer": "Gishyire ku kirago kinini.",
+            "hint": ""
+          },
+          {
+            "prompt": "This is only a small part of his book.",
+            "answer": "Iki n'igice gitoya gusa cy'igitabo cye.",
+            "hint": ""
+          },
+          {
+            "prompt": "Come out of their country. There are many thieves in their country.",
+            "answer": "Va mu gihugu cyabo. Mu gihugu cyabo har'ibisambo byinshi.",
+            "hint": ""
+          },
+          {
+            "prompt": "Put your (plural) feet on the mat.",
+            "answer": "Shyira ibirenge byanyu kuri iki kirago.",
+            "hint": ""
+          },
+          {
+            "prompt": "We don't want to read the book now. We want to plant the trees in their gardens.",
+            "answer": "Ntidushaka gusoma igitabo ubu. Turashaka gutera ibiti mu mirima yabo.",
+            "hint": ""
+          },
+          {
+            "prompt": "They don't like thieves. Thieves are not good people.",
+            "answer": "Ntibakunda ibisambo. Ibisambo s'abantu beza.",
+            "hint": ""
+          },
+          {
+            "prompt": "There are many feet in the road. There are only a few in the path.",
+            "answer": "Har'ibirenge byinshi mu muhanda. Har'ibirenge bikeya gusa mu nzira.",
+            "hint": ""
+          },
+          {
+            "prompt": "These children love sweet potatoes and corn. They do not like meat.",
+            "answer": "Aba bana bakunda ibijumba n'ibigori. Ntibakunda inyama.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

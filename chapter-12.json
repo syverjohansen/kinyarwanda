@@ -1,0 +1,354 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 12",
+    "exercises": [
+      {
+        "name": "Theory",
+        "questions": [
+          {
+            "prompt": "Of what two parts do most Kinyarwanda words consist?",
+            "answer": "A prefix and a root or stem",
+            "hint": ""
+          },
+          {
+            "prompt": "What part of speech determines the forms of all the other words in the sentence that are dependent on it?",
+            "answer": "The noun",
+            "hint": ""
+          },
+          {
+            "prompt": "What distinguishes one class of nouns from another?",
+            "answer": "The prefixes",
+            "hint": ""
+          },
+          {
+            "prompt": "What are the class prefixes, singular, and plural, for the class that deals exclusively with people?",
+            "answer": "Umu- and aba-",
+            "hint": ""
+          },
+          {
+            "prompt": "Are any \"people\" nouns contained in any other class? If so which?",
+            "answer": "Class 3",
+            "hint": ""
+          },
+          {
+            "prompt": "If you suppose a noun beginning with umu- is not a personal noun, into which class would you put it?",
+            "answer": "Class 2",
+            "hint": ""
+          },
+          {
+            "prompt": "What are the demonstrative adjectives that go with umu- and aba-? With imi-? With -in?",
+            "answer": "Uyu, uriya, aba, barajya; uyu, uriya, iyi, iriya; iyi, iriya, izi, ziriya",
+            "hint": ""
+          },
+          {
+            "prompt": "What's wrong with Aragenda i Butare? How should it be said? How about umuhungu mubi? Ndajya mw inzu?",
+            "answer": "You can't use -genda with a place concept following it. Arajya i Butare. A demonstrative adjective removes the initial vowel from the noun that follows it: mu nzu",
+            "hint": ""
+          },
+          {
+            "prompt": "When is the vowel of ni, si, and na omitted?",
+            "answer": "When it is followed by a vowel",
+            "hint": ""
+          },
+          {
+            "prompt": "List the possessive adjectives for class 2 (wanjye, etc)",
+            "answer": "Wanjye, wawe, we; wacu, wanyu, wabo; yanjye, yawe, ywe; yacu, yanyu, yabo",
+            "hint": ""
+          },
+          {
+            "prompt": "What happens to r when it follows n? Give a few examples",
+            "answer": "It becomes d. n-ri becomes n-di; n-re-n-re becomes n-d-en-de, n-rabizi becomes n-dabizi",
+            "hint": ""
+          },
+          {
+            "prompt": "When a noun is qualified by an adjective and a possessive pronoun, what is the correct order?",
+            "answer": "Noun possessive pronoun, adjective, as in ibintu byacu nyinshi",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Umugore n'umugabo we barakora mu nzu yabo nziza cyane",
+            "answer": "The woman and her husband are working in their very nice house.",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwana we afite umunezero mwinshi mu mutima we",
+            "answer": "A child of God has much happiness in his/her heart",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndashaka umugisha w'ababyeyi banjye",
+            "answer": "I want the blessing of my parents",
+            "hint": ""
+          },
+          {
+            "prompt": "Abakobwa bakeya barakora mu murima w'umutware wabo",
+            "answer": "A few girls are working in the garden of their chief.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu benshi cyane barashaka kujya imuhira",
+            "answer": "Very many people are wanting to go home",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndajya imuhira (or ndataha). Ndajya iwacu. Iwacu ni mu Rwanda.",
+            "answer": "I'm going home. I'm going to our (home). Our home is in Rwanda",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu musaza mukuru afite inka n'intama n'ihene nyinshi iwe.",
+            "answer": "This senior/important old man has many cows, sheep, and goats in his home.",
+            "hint": ""
+          },
+          {
+            "prompt": "Imitsima yawe mito si mibi. Yego, ndashaka kuyibona none.",
+            "answer": "Your small loaves of bread are not bad. Yes, I want to see/find them today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite indosho nini n'isuka mu nzu. Indosho ziri ku ntebe",
+            "answer": "I have a big spoon and a hoe inside the house. The spoons are on the chair.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abigishwa benshi barakora cyane iwanjye none",
+            "answer": "Many students are working hard at my (home) today",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya n'umutware mwiza. Abantu be baragaruka none",
+            "answer": "That is a good chief. His people are coming back today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Izi n'intebe z'abami b'abantu benshi. Ziriya n'iz abantu babo",
+            "answer": "These are the chairs of many people's kings. Those are those (the chairs) of their people.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya si muzima: n'impumyi. Uyu s'impumyi, n'umuntu muzima.",
+            "answer": "That [man] is not well; he/she is a blind person. This is not a blind person; he/she is not well.",
+            "hint": ""
+          },
+          {
+            "prompt": "Turashaka kujya mu Rwanda; aba na bo barasubira iwabo.",
+            "answer": "We are wanting to go to Rwanda; these (people) also are returning to their home (country)",
+            "hint": ""
+          },
+          {
+            "prompt": "Barareba inzovu nyinshi. Ziri mu muhanda mugari. Ni nini cyane.",
+            "answer": "They are looking at many elephants. They (the elephants) are in the wide road. They are very big ones.",
+            "hint": ""
+          },
+          {
+            "prompt": "Imbwa ziri mu mwobo muremure. Abantu benshi barashaka kuzibona.",
+            "answer": "The dogs are in the deep pit. (Many people) are wanting to see/find them",
+            "hint": ""
+          },
+          {
+            "prompt": "Afite umusatsi mwinshi. Mfite muke.",
+            "answer": "He/she has much hair (on his/her head). I have a little (hair)",
+            "hint": ""
+          },
+          {
+            "prompt": "Imbeba nyinshi ziri mu nzu yacu; oya, s'inzu yanyu; n'iyacu",
+            "answer": "Many mice are in our house (at home); no, it is not your house; it is ours",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya musaza n'umugore we bafite imitsima. Jya kuzana imyiza",
+            "answer": "That old man and his wife have bread. Go and bring the good (loaves)",
+            "hint": ""
+          },
+          {
+            "prompt": "Bakeya bari mu nzira ndende; benshi bari mu nzira ngufi",
+            "answer": "A few (people) are in the long path; many are in the short path",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndajya ku muriro. Ndashaka gushyira inyama mu mwotsi w'umuriro",
+            "answer": "I'm going to the fire. I want to put the meat in the smoke of the fire.",
+            "hint": ""
+          },
+          {
+            "prompt": "Reba uriya mukororombya mwiza. Abantu benshi barawureba. Ni mwiza cyane.",
+            "answer": "Look at that pretty rainbow. Many people are looking at it. It is a very pretty one.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu mugezi mugari urava mu misozi miremire. N'umugezi muremure kandi ni mwiza.",
+            "answer": "This wide stream is coming from the high mountains. It is a long stream and a pretty (one).",
+            "hint": ""
+          },
+          {
+            "prompt": "Abanyamahanga baraza mu mujyi. Barashaka umurimo. Bamwe barawubona.",
+            "answer": "Foreigners are coming to the city. They are wanting work. Some of them are finding it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bakeya barakora mu murima, ariko benshi barakora mu mihanda",
+            "answer": "A few people are working in the gardens, but most of them are working in (on) the roads.",
+            "hint": ""
+          },
+          {
+            "prompt": "Reba uriya mukororombya; imvura iraza vuba. Turayishaka cyane.",
+            "answer": "Look at that rainbow; rain is coming soon. We are wanting it very much.",
+            "hint": ""
+          },
+          {
+            "prompt": "Murashyira imboga n'inyama mbisi n'ifi ku muriro",
+            "answer": "You are putting vegetables, raw meat, and flour beside the fire",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "The woman and her husband are working in their very nice house.",
+            "answer": "Umugore n'umugabo we barakora mu nzu yabo nziza cyane",
+            "hint": ""
+          },
+          {
+            "prompt": "A child of God has much happiness in his/her heart",
+            "answer": "Umwana we afite umunezero mwinshi mu mutima we",
+            "hint": ""
+          },
+          {
+            "prompt": "I want the blessing of my parents",
+            "answer": "Ndashaka umugisha w'ababyeyi banjye",
+            "hint": ""
+          },
+          {
+            "prompt": "A few girls are working in the garden of their chief.",
+            "answer": "Abakobwa bakeya barakora mu murima w'umutware wabo",
+            "hint": ""
+          },
+          {
+            "prompt": "Very many people are wanting to go home",
+            "answer": "Abantu benshi cyane barashaka kujya imuhira",
+            "hint": ""
+          },
+          {
+            "prompt": "I'm going home. I'm going to our (home). Our home is in Rwanda",
+            "answer": "Ndajya imuhira (or ndataha). Ndajya iwacu. Iwacu ni mu Rwanda.",
+            "hint": ""
+          },
+          {
+            "prompt": "This senior/important old man has many cows, sheep, and goats in his home.",
+            "answer": "Uyu musaza mukuru afite inka n'intama n'ihene nyinshi iwe.",
+            "hint": ""
+          },
+          {
+            "prompt": "Your small loaves of bread are not bad. Yes, I want to see/find them today.",
+            "answer": "Imitsima yawe mito si mibi. Yego, ndashaka kuyibona none.",
+            "hint": ""
+          },
+          {
+            "prompt": "I have a big spoon and a hoe inside the house. The spoons are on the chair.",
+            "answer": "Mfite indosho nini n'isuka mu nzu. Indosho ziri ku ntebe",
+            "hint": ""
+          },
+          {
+            "prompt": "Many students are working hard at my (home) today",
+            "answer": "Abigishwa benshi barakora cyane iwanjye none",
+            "hint": ""
+          },
+          {
+            "prompt": "That is a good chief. His people are coming back today.",
+            "answer": "Uriya n'umutware mwiza. Abantu be baragaruka none",
+            "hint": ""
+          },
+          {
+            "prompt": "These are the chairs of many people's kings. Those are those (the chairs) of their people.",
+            "answer": "Izi n'intebe z'abami b'abantu benshi. Ziriya n'iz abantu babo",
+            "hint": ""
+          },
+          {
+            "prompt": "That [man] is not well; he/she is a blind person. This is not a blind person; he/she is not well.",
+            "answer": "Uriya si muzima: n'impumyi. Uyu s'impumyi, n'umuntu muzima.",
+            "hint": ""
+          },
+          {
+            "prompt": "We are wanting to go to Rwanda; these (people) also are returning to their home (country)",
+            "answer": "Turashaka kujya mu Rwanda; aba na bo barasubira iwabo.",
+            "hint": ""
+          },
+          {
+            "prompt": "They are looking at many elephants. They (the elephants) are in the wide road. They are very big ones.",
+            "answer": "Barareba inzovu nyinshi. Ziri mu muhanda mugari. Ni nini cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "The dogs are in the deep pit. (Many people) are wanting to see/find them",
+            "answer": "Imbwa ziri mu mwobo muremure. Abantu benshi barashaka kuzibona.",
+            "hint": ""
+          },
+          {
+            "prompt": "He/she has much hair (on his/her head). I have a little (hair)",
+            "answer": "Afite umusatsi mwinshi. Mfite muke.",
+            "hint": ""
+          },
+          {
+            "prompt": "Many mice are in our house (at home); no, it is not your house; it is ours",
+            "answer": "Imbeba nyinshi ziri mu nzu yacu; oya, s'inzu yanyu; n'iyacu",
+            "hint": ""
+          },
+          {
+            "prompt": "That old man and his wife have bread. Go and bring the good (loaves)",
+            "answer": "Uriya musaza n'umugore we bafite imitsima. Jya kuzana imyiza",
+            "hint": ""
+          },
+          {
+            "prompt": "A few (people) are in the long path; many are in the short path",
+            "answer": "Bakeya bari mu nzira ndende; benshi bari mu nzira ngufi",
+            "hint": ""
+          },
+          {
+            "prompt": "I'm going to the fire. I want to put the meat in the smoke of the fire.",
+            "answer": "Ndajya ku muriro. Ndashaka gushyira inyama mu mwotsi w'umuriro",
+            "hint": ""
+          },
+          {
+            "prompt": "Look at that pretty rainbow. Many people are looking at it. It is a very pretty one.",
+            "answer": "Reba uriya mukororombya mwiza. Abantu benshi barawureba. Ni mwiza cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "This wide stream is coming from the high mountains. It is a long stream and a pretty (one).",
+            "answer": "Uyu mugezi mugari urava mu misozi miremire. N'umugezi muremure kandi ni mwiza.",
+            "hint": ""
+          },
+          {
+            "prompt": "Foreigners are coming to the city. They are wanting work. Some of them are finding it.",
+            "answer": "Abanyamahanga baraza mu mujyi. Barashaka umurimo. Bamwe barawubona.",
+            "hint": ""
+          },
+          {
+            "prompt": "A few people are working in the gardens, but most of them are working in (on) the roads.",
+            "answer": "Abantu bakeya barakora mu murima, ariko benshi barakora mu mihanda",
+            "hint": ""
+          },
+          {
+            "prompt": "Look at that rainbow; rain is coming soon. We are wanting it very much.",
+            "answer": "Reba uriya mukororombya; imvura iraza vuba. Turayishaka cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "You are putting vegetables, raw meat, and flour beside the fire",
+            "answer": "Murashyira imboga n'inyama mbisi n'ifi ku muriro",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

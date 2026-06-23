@@ -1,0 +1,179 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 10",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Inka zabo; Imana yanjye",
+            "answer": "Their cows, my God",
+            "hint": ""
+          },
+          {
+            "prompt": "Imbwa nziza; intebe ndende",
+            "answer": "A good dog, high chairs",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite inka nyinshi. Izi nka zirajya mu nzu ye",
+            "answer": "I have many cows. These cows are going into his house.",
+            "hint": ""
+          },
+          {
+            "prompt": "Izi ntebe n'intebe z'umubyeyi wanjye",
+            "answer": "These chairs are my parent's chairs",
+            "hint": ""
+          },
+          {
+            "prompt": "Imana yanjye ifite umutima mwiza",
+            "answer": "My God has a good heart",
+            "hint": ""
+          },
+          {
+            "prompt": "Inka z'umwami nyinshi ziri mu muhanda",
+            "answer": "The king's many cows are in the road",
+            "hint": ""
+          },
+          {
+            "prompt": "Ziriya nka ni nzima cyane. Izi si nzima",
+            "answer": "Those cows over there are very healthy/well. These are not healthy",
+            "hint": ""
+          },
+          {
+            "prompt": "Iyi n'intebe ye; iriya n'iyanjye, ziriya n'izabo",
+            "answer": "This is his chair; that one is mine; those are theirs",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwana afite ivunja. S'umwana wanjye, n'umwana we w'imfura",
+            "answer": "The child has a chigger. It's not my child; it's a noble person's child",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndajya mu nzu yacu nziza. Iyabo si nziza",
+            "answer": "I'm going into our nice house. Their (house) is not nice.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iriya n'imbwa y'umutware wabo. Izi mbwa n'izacu.",
+            "answer": "That is their chief's dog. These dogs are ours",
+            "hint": ""
+          },
+          {
+            "prompt": "Iyi nzovu nini iri mu nzira; ziriya ziri mu muhanda munini",
+            "answer": "This large elephant is in the path; those are in the big road",
+            "hint": ""
+          },
+          {
+            "prompt": "Arashaka kureba inka z'umwami nziza",
+            "answer": "He is wanting to see the king's good cows",
+            "hint": ""
+          },
+          {
+            "prompt": "Izi s'imbwa nziza; ni mbi",
+            "answer": "These are not good dogs; they are bad ones",
+            "hint": ""
+          },
+          {
+            "prompt": "Indosho zabo ziri ku ntebe. Izacu ziri hano.",
+            "answer": "Their spoons are on the chair. Ours are here.",
+            "hint": ""
+          },
+          {
+            "prompt": "Inkoko ziri mu nzu yazo",
+            "answer": "The chickens are in their hutches.",
+            "hint": ""
+          },
+          {
+            "prompt": "Shyira indosho ku ntebe ye",
+            "answer": "Put the spoon on the chair",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Mama, urateka ryari? Ndashonje. Mwana wanjye, ngiye guteka ubu, maze tujye kurya.",
+            "answer": "Mom, when will you cook? I'm hungry. My child, I'm going to cook now; then let's go eat",
+            "hint": ""
+          },
+          {
+            "prompt": "Maria, ukwiriye gukubura mu nzu, ariko Petero agiye kwandika urwandiko",
+            "answer": "Mary, you must sweep in the house, but Peter is going to write a letter.",
+            "hint": ""
+          },
+          {
+            "prompt": "Tugiye ku kugezi kuko dufite intoya. Maria, ngwino, tujyane. Oya ndashaka gusinzira",
+            "answer": "We are going to the stream because we are thirsty. Mary come let's go (together). No, I want to sleep.",
+            "hint": ""
+          },
+          {
+            "prompt": "Data aravuga ati \"Maria intebe iri he? Ndashaka kwicara.\" Nanjye ndavuga nti \"Data intebe iri hano. Ngwino wicare\"",
+            "answer": "Father is saying, \"Mary where is the chair? I want to sit\". And I am saying, \"Dad the chair is here. Come, be seated\"",
+            "hint": ""
+          },
+          {
+            "prompt": "Data n'umubyeyi wanjye, kandi n'umusaza. Ndifuza gufasha data kugira ngo anezerwe.",
+            "answer": "Father is my parent, and he is an old man. I desire to help my father so that he can be happy.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bamwe baraboneza imodoka yabo, abandi barakubura mu nzu. Data na mama barasinzira.",
+            "answer": "Some are cleaning their car; others are sweeping inside the house. My father and mother will sleep.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero, izi nka zifite inyota. Zikwiriye kunywa ubu. Inka za Sesoni na zo zifite inyota.",
+            "answer": "Peter, these cows are thirsty. They must drink now. Sesoni's cows also are thirsty.",
+            "hint": ""
+          },
+          {
+            "prompt": "Izindi nka za Yohana ziri he? Nta zo. Sinzi aho ziri. Ndatekereza yuko inshemusi zifite inka za Yohana. Mbese ntizifite inyota? Simbizi.",
+            "answer": "Where are John's other cows. Are they not thirsty? I don't know",
+            "hint": ""
+          },
+          {
+            "prompt": "Baravuga yuko hari inzovu nyinshi mu misozi none. Reka tujye kuzireba",
+            "answer": "They are saying that there are many elephants in the hills today. Let's go and see them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndashaka rwose kugerageza nka Petero. Nawe ukwiriye kugerageza nka we. N'umuntu mwiza.",
+            "answer": "I really want to try like Peter. You must also try like him. He is a good person.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero, ukwiriye kuboneza inkweto zawe nk'abandi kugira ngo bose banezerwe.",
+            "answer": "Peter, you must clean your shoes like the others (do), so that all may be pleased",
+            "hint": ""
+          },
+          {
+            "prompt": "Tugiye gukora mu mujyi w'i Bujumbura. Ndagira ngo har'abantu benshi cyane i Bujumbura.",
+            "answer": "We are going to work in the city of Bujumbura. I suppose there are many people in Bujumbura.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu mujyi nk'i Bujumbura. Nagira ngo har'abantu benshi cyane i Bujumbura",
+            "answer": "In a city such as Bujumbura, there are people of many nations. The Banyarwanda are few.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya muhungu ni Sembeba; n'Umunyarwanda. Uyu mukobwa ni Niyonteze.",
+            "answer": "That boy is Sembebe; he is a Munyarwanda. This girl is Niyonteze.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nishimye kukubona, Niyonteza. Ndi Bizimana.",
+            "answer": "I'm happy to meet you, Niyonteze. I'm Bizimana.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}
