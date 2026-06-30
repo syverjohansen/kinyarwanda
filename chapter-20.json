@@ -1,0 +1,264 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 20",
+    "exercises": [
+      {
+        "name": "Pluralize these words",
+        "questions": [
+          {
+            "prompt": "ibuye",
+            "answer": "amabuye",
+            "hint": ""
+          },
+          {
+            "prompt": "ikintu",
+            "answer": "ibintu",
+            "hint": ""
+          },
+          {
+            "prompt": "umwana",
+            "answer": "abana",
+            "hint": ""
+          },
+          {
+            "prompt": "ishyamba",
+            "answer": "amashyamba",
+            "hint": ""
+          },
+          {
+            "prompt": "inka",
+            "answer": "inka",
+            "hint": ""
+          },
+          {
+            "prompt": "inzu",
+            "answer": "amazu",
+            "hint": ""
+          },
+          {
+            "prompt": "isahane",
+            "answer": "amahane",
+            "hint": ""
+          },
+          {
+            "prompt": "ishuri",
+            "answer": "amashuri",
+            "hint": ""
+          },
+          {
+            "prompt": "umugabo",
+            "answer": "abagabo",
+            "hint": ""
+          },
+          {
+            "prompt": "ijambo",
+            "answer": "amagambo",
+            "hint": ""
+          },
+          {
+            "prompt": "ifi",
+            "answer": "amafi",
+            "hint": ""
+          },
+          {
+            "prompt": "umuhanda",
+            "answer": "imihanda",
+            "hint": ""
+          },
+          {
+            "prompt": "izuba",
+            "answer": "amazuba",
+            "hint": ""
+          },
+          {
+            "prompt": "igi",
+            "answer": "amagi",
+            "hint": ""
+          },
+          {
+            "prompt": "ijisho",
+            "answer": "amaso",
+            "hint": ""
+          },
+          {
+            "prompt": "ifaranga",
+            "answer": "amafranga",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Pluralize these phrases",
+        "questions": [
+          {
+            "prompt": "umwana mubi",
+            "answer": "abana babi",
+            "hint": ""
+          },
+          {
+            "prompt": "igi ribisi",
+            "answer": "amagi mabisi",
+            "hint": ""
+          },
+          {
+            "prompt": "iri gi ribi",
+            "answer": "aya magi mabi",
+            "hint": ""
+          },
+          {
+            "prompt": "iyi nzu yanjye",
+            "answer": "aya mazu yacu",
+            "hint": ""
+          },
+          {
+            "prompt": "kiriya gitabo cyiza",
+            "answer": "biriya bitabo byiza",
+            "hint": ""
+          },
+          {
+            "prompt": "ishuri ryiza",
+            "answer": "amashuri meza",
+            "hint": ""
+          },
+          {
+            "prompt": "ibuye rigari",
+            "answer": "amabuye magari",
+            "hint": ""
+          },
+          {
+            "prompt": "umwana mwiza",
+            "answer": "abana beza",
+            "hint": ""
+          },
+          {
+            "prompt": "isahane nziza",
+            "answer": "amasahane meza",
+            "hint": ""
+          },
+          {
+            "prompt": "izuba rinini",
+            "answer": "amazuba manini",
+            "hint": ""
+          },
+          {
+            "prompt": "ikintu kigufi",
+            "answer": "ibintu bigufi",
+            "hint": ""
+          },
+          {
+            "prompt": "ijambo rirerire",
+            "answer": "amagambo maremare",
+            "hint": ""
+          },
+          {
+            "prompt": "umuhanda muremure",
+            "answer": "imihanda miremire",
+            "hint": ""
+          },
+          {
+            "prompt": "ijambo rizima",
+            "answer": "amagambo mazima",
+            "hint": ""
+          },
+          {
+            "prompt": "ishyamba rinini",
+            "answer": "amashyamba manini",
+            "hint": ""
+          },
+          {
+            "prompt": "ijisho ribi",
+            "answer": "amaso mabi",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate",
+        "questions": [
+          {
+            "prompt": "Mbese umugabo we afite amafranga menshi?",
+            "answer": "Does her husband have much money?",
+            "hint": ""
+          },
+          {
+            "prompt": "Ijambo ry'Imana ni rizima",
+            "answer": "The word of God is alive.",
+            "hint": ""
+          },
+          {
+            "prompt": "Izuba riri hehe none?",
+            "answer": "Where is the sun today?",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwigisha aravuga amagambo menshi kugira ngo abigishwa be bamenye ibyigisho byabo.",
+            "answer": "The teacher is saying many words, so that his students may know their lessons.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu murima har'amabuye manini.",
+            "answer": "In the garden there are big stones",
+            "hint": ""
+          },
+          {
+            "prompt": "Amagi n'ibijumba n'amafi biri mw isahane.",
+            "answer": "Eggs, sweet potatoes, and fish are in the dish.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu gihugu cy'iwacu abantu bafite amafranga menshi",
+            "answer": "In our home country, people have much money",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu gihugu cy'umwijima, uyu mugabo ameze nk'izuba ryiza.",
+            "answer": "In a country of darkness, this man is like a good sun.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese ziriya nka zirajya mw ishyamba?",
+            "answer": "Are those cows going into the forest?",
+            "hint": ""
+          },
+          {
+            "prompt": "Zana ibuye. Riri hariya mu muhanda.",
+            "answer": "Bring the stone. It's over there in the road.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndashaka kujya mw ishuri ryawe none.",
+            "answer": "I want to go to your school today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Turajya mw ishyamba none nijoro kuko dufite itara.",
+            "answer": "We are going into the forest tonight because we have a lamp.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu s'umunsi mwiza; mbese izuba riri he none? Riri mw ijuru ariko ntituribona",
+            "answer": "This is not a good day; where is the sun today? It is in the sky, but we do not see it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite ifaranga rimwe; nawe ufite menshi. Ariko iryanjye ni ryo ryiza.",
+            "answer": "I have one franc, and you have many. But mine is the better [one].",
+            "hint": ""
+          },
+          {
+            "prompt": "Ijambo ry'umubyeyi wanjye ni nka itara. Nkunfa gusoma amagambo ye mu bihe by'umwijima.",
+            "answer": "The word of my parent is like a lamp in a world of darkness. I love to read his words in times of darkness.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya mwigisha avuga amagambo menshi, ariko abigishwa be nta cyo biga (long i).",
+            "answer": "That teacher says many words, but his/her students don't learn anything.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

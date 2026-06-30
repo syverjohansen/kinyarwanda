@@ -1,0 +1,141 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 21",
+    "exercises": [
+      {
+        "name": "Is the following noun in class 5?",
+        "questions": [
+          { "prompt": "ishyamba", "answer": "Yes", "hint": "" },
+          { "prompt": "icyansi", "answer": "No", "hint": "" },
+          { "prompt": "imyuka", "answer": "No", "hint": "" },
+          { "prompt": "ibuye", "answer": "Yes", "hint": "" },
+          { "prompt": "ijisho", "answer": "Yes", "hint": "" },
+          { "prompt": "inzira", "answer": "No", "hint": "" },
+          { "prompt": "isake", "answer": "No", "hint": "" },
+          { "prompt": "igi", "answer": "Yes", "hint": "" },
+          { "prompt": "ibikombe", "answer": "No", "hint": "" },
+          { "prompt": "igiti", "answer": "No", "hint": "" },
+          { "prompt": "igufwa", "answer": "Yes", "hint": "" },
+          { "prompt": "izuba", "answer": "Yes", "hint": "" }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Nta mahoro aba mwi isi; ariko ntukwiriye kugira ubwoba; umubyeyi wacu wo mw ijuru azadufasha mu nzira zacu zose.",
+            "answer": "There is no peace on earth, but you must not be afraid; our heavenly parent will help us in all our ways.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ukwiriye gusuka amata mu cyansi; ntukwiriye gushyira amagufwa mu cyansi.",
+            "answer": "You must pour milk into the milk container; you must not put bones in the container.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibijumba n'amagi biri mw isahane; dukwiriye kubivanamo no kubiteka.",
+            "answer": "Sweet potatoes and eggs are in the dish; we must take them out and cook them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndagira ngo aya n'amaraso ye. Sinzi uko byabaye.",
+            "answer": "I think this is his blood. I don't know what happened.",
+            "hint": ""
+          },
+          {
+            "prompt": "Si byiza rwose, dore uriya muhungu aragerageza gushyira ibuye mu zuru ry'umwana wa Marita. Gira vuba, urivanemo!",
+            "answer": "It's not good at all; look he's putting a stone in the nostril of Martha's child. Take it out!",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni tugera mu kindi gihugu, tuzarya amatunda y'igitangaza",
+            "answer": "When we reach the other country, we will eat the wonderful fruit.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu benshi n'Abakristo kw izina gusa. Bamwe batanga amaturo, ariko ntibatanga imitima yabo.",
+            "answer": "Many people are Christians in name only, some give offerings, but do not give their hearts.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshaka gutuma ugira ubwoba, ariko dukwiriye kwitonda.",
+            "answer": "I don't want to make you afraid, but we must be careful.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni bagera mw ishuri, abigishwa bamwe baziga gusoma, nahw abandi bazajya hanze kugira ngo bakine.",
+            "answer": "When they reach the school, the students will learn to read, whereas the others will go outside so as to play.",
+            "hint": ""
+          },
+          {
+            "prompt": "Hari amavuta mw itara ryanjye. Ndayashyiramo kugira ngo mbone umucyo nijoro.",
+            "answer": "There is oil in my lamp. I put it in so that I have light at night.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibi n'ibihe bibi, ariko amagambo mugenzi wanjye ambwira atuma ngira amahoro mur'ibi bihe bibi.",
+            "answer": "These are bad times, but the words my comrade tells me cause me to be at peace (have peace)",
+            "hint": ""
+          },
+          {
+            "prompt": "Nta n'umwe uzemera kugenda ejo ku bwende bwe. Ku mpamvu z'ibyo rero, dukwiriye gutuma Yohana none.",
+            "answer": "Not even one will agree to go tomorrow, of his own will. Because of that, then, we must send John today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Simfite ituro none, ariko ndatanga umutima wanjye.",
+            "answer": "I don't have an offering today, but I will give my heart.",
+            "hint": ""
+          },
+          {
+            "prompt": "Dore! Har'amagufwa n'amaraso y'inyamaswa munsi ya kiriya giti.",
+            "answer": "Look! There are the bones and blood of an animal below that tree.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "I do not like bad water. It causes sickness to spread throughout the vicinity.",
+            "answer": "Sinkunda amazi mabi. Atuma indware zigwira mu'iyi mihana yose.",
+            "hint": ""
+          },
+          {
+            "prompt": "The children are going to school. When they arrive there they will find blood on the ground everywhere.",
+            "answer": "Abana barajya mw ishuri. Ni bagerayo barabona amaraso hose.",
+            "hint": ""
+          },
+          {
+            "prompt": "Their church will have a new preacher soon. I suppose he will cause his people to hear a new message.",
+            "answer": "Itorero ryabo rizagira umubwiriza mushya vub'aha. Ndagira ngo azatuma abantu be bumva ubutumwa bushya.",
+            "hint": ""
+          },
+          {
+            "prompt": "These (people) are a people of joy and peace.",
+            "answer": "Aba n'abantu b'umunezero n'amahoro.",
+            "hint": ""
+          },
+          {
+            "prompt": "Do you see the blood beneath that tree over there?",
+            "answer": "Mbese urareba amaraso ari hariya munsi ya kiriya giti?",
+            "hint": ""
+          },
+          {
+            "prompt": "Do you have an offering today? No, I have no money but I'll give my heart.",
+            "answer": "Mbese ufite ituro none? Oya, nta mafranga mfite, ariko ndatanga umutima wanjye.",
+            "hint": ""
+          },
+          {
+            "prompt": "I am going to see a good country of peace and happiness. It is beyond those mountains over there.",
+            "answer": "Ngiye kubona igihugu cyiza cy'amahoro n'umunezero. Kiri hirya y'iriya misozi.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

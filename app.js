@@ -719,41 +719,84 @@ function getShortcutKey(event) {
   return "";
 }
 
-function exportLessons() {
-  const file = new Blob([JSON.stringify(state.lessons, null, 2)], { type: "application/json" });
+async function exportLessons() {
+  const content = JSON.stringify(state.lessons, null, 2);
+  const filename = "kinyarwanda-lessons.json";
+
+  // Try modern File System Access API (allows choosing save location)
+  if (window.showSaveFilePicker) {
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: filename,
+        types: [{
+          description: "JSON Files",
+          accept: { "application/json": [".json"] }
+        }]
+      });
+      const writable = await handle.createWritable();
+      await writable.write(content);
+      await writable.close();
+      return;
+    } catch (err) {
+      if (err.name === "AbortError") return; // User cancelled
+      // Fall through to legacy method
+    }
+  }
+
+  // Fallback for browsers without File System Access API
+  const file = new Blob([content], { type: "application/json" });
   const url = URL.createObjectURL(file);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "kinyarwanda-lessons.json";
+  link.download = filename;
   link.click();
   URL.revokeObjectURL(url);
 }
 
-function exportChapter() {
+async function exportChapter() {
   const lesson = getActiveLesson();
   if (!lesson) {
     window.alert("Select a chapter before exporting.");
     return;
   }
 
-  const file = new Blob(
-    [
-      JSON.stringify(
-        {
-          type: "kinyarwanda-chapter",
-          version: 1,
-          chapter: lesson,
-        },
-        null,
-        2,
-      ),
-    ],
-    { type: "application/json" },
+  const content = JSON.stringify(
+    {
+      type: "kinyarwanda-chapter",
+      version: 1,
+      chapter: lesson,
+    },
+    null,
+    2,
   );
+  const filename = `${slugify(lesson.name)}.json`;
+
+  // Try modern File System Access API (allows choosing save location)
+  if (window.showSaveFilePicker) {
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: filename,
+        types: [{
+          description: "JSON Files",
+          accept: { "application/json": [".json"] }
+        }]
+      });
+      const writable = await handle.createWritable();
+      await writable.write(content);
+      await writable.close();
+      return;
+    } catch (err) {
+      if (err.name === "AbortError") return; // User cancelled
+      // Fall through to legacy method
+    }
+  }
+
+  // Fallback for browsers without File System Access API
+  const file = new Blob([content], { type: "application/json" });
   const url = URL.createObjectURL(file);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `${slugify(lesson.name)}.json`;
+  link.download = filename;
   link.click();
   URL.revokeObjectURL(url);
 }

@@ -1,0 +1,69 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 18",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Hari abagabo muri iza nka. Nanjye ndashaka kuzibamo.",
+            "answer": "There are men among these cows. I also want to be among them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kubiteka no kubibika ubu ni byo byiza. Biri he? Simbibona.",
+            "answer": "It's best to cook them and put them away now. Where are they? I don't see them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Simbibona rwose, ntabwo biri hano. Oya, ntibiri hariya, bari hano. Ngwino ubirebe.",
+            "answer": "I don't see them at all; they are surely not here. No they are not there; they are here. Come and see them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese uri Petero? Oya, sindi we rwose!",
+            "answer": "Are you Peter? No I certainly am not him!",
+            "hint": ""
+          },
+          {
+            "prompt": "Zana intebe. Zana n'ikirago. Mbese biri mu nzu? Yego, nzi ko birimo.",
+            "answer": "Bring a chair (or chairs) . Bring a rug also. Are they inside the house? Yes, I know they are inside.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bakuru barabakunda. Na twe turabakunda. Tuzi ko muri abana beza.",
+            "answer": "The adults love you (plural). We also love you. We know that you are good children.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese, har'abana mu murima? Oya, ntabwo bawurimo. Ndagira ngo bari mu nzu.",
+            "answer": "Are there children in the garden? No, they are not in it. I suppose they are inside (the house).",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndagira ngo umuhanda ni mugari, kandi si mugufi.",
+            "answer": "I suppose the road is wide, and it is not short.",
+            "hint": ""
+          },
+          {
+            "prompt": "Niba ukomeza kwiba ntabwo uzabona umunezero. Gukora neza ni byo bizana amahoro.",
+            "answer": "If you continue to steal, you will never never find happiness. Doing well is what brings peace.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese urashaka iki? Ntabwo uzabona umugore ejo; ntabwo uzamubona n'ejo bundi.",
+            "answer": "What do you want? You will definitely not find a wife tomorrow; and you will certainly not find one the day after tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese uragira ngo ndi nde? Nawe uri nde? (Namwe muri bande?)",
+            "answer": "Who do you suppose I am? And who are you? (In the singular and plural)",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

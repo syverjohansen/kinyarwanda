@@ -1,0 +1,59 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 19",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Ntibazagaruka ejo. Ni bagaruka, ntibazaguma ino, ahubwo bazasubira i Kigali",
+            "answer": "They will not return tomorrow. When/if they return, they will not remain here but will go back to Kigali.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntabwo tuzababona. Ntituzabafasha.",
+            "answer": "We will certainly not see them. We will not help them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese ntuzabikora ejo? Oya, ndabikora none. Sinshaka kubikora ubundi.",
+            "answer": "Will you not do it tomorrow? No, I will do it today. I don't want to do it some other day.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya bantu benshi ntibazakora ejo cyangwa ejo bundi.",
+            "answer": "Those (many) people will not work tomorrow or the day after tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinzava mu mujyi kuko nkunda kuba ino.",
+            "answer": "I will not leave the city because I like to live here.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntimuzi guteka nka Abanyarwanda kuko muri abazungu.",
+            "answer": "Yo don't know how to cook like the Banyarwanda because you are white people.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntabwo azamufasha. Nanjye sinzamufasha. Abandi bakwiriye kubikora.",
+            "answer": "He will never help her. And I will not help her. Others will have to do it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntuzagira ubwoba. Inshuti yawe ntizaguhana.",
+            "answer": "You will not be afraid. Your friend will not punish you.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntituzagira ishyari kuko tumukunda cyane.",
+            "answer": "We will not be jealous because we love her very much.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

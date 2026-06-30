@@ -1,0 +1,109 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 17",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Nzi yuko bazagaruka ejo. Bazasubira i Kigali ejo bundi.",
+            "answer": "I know they will return tomorrow. They will go back to Kigali day after tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Tuzabareba kuko bazaba benshi, ariko abandi bazaba bake.",
+            "answer": "We will see them because they will be many, but the others will be (only) a few.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese uzabikora ejo? Oya, ndabikora none.",
+            "answer": "Will you do it tomorrow? No, I will do it today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nona arabikora kinyarwanda. Ejo azobikora kizungu. Mbese, si byiza?",
+            "answer": "Today he does it in Kinyarwanda style. Tomorrow he will do it like the other white people. Isn't that good?",
+            "hint": ""
+          },
+          {
+            "prompt": "Bariya bantu benshi bazakora ejo ku manywa. Aba barakora none.",
+            "answer": "Those mahy people will work tomorrow in the afternoon. These (people) will work today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nzashaka kuva mu mujyi. Nzi yuko nzabikora.",
+            "answer": "I will want to leave the city. I know that I will do so.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibi bijumba si byiza; azashaka ibinini kuko azabibika mu gikoni.",
+            "answer": "These sweet potatoes are not good; he/she will want big ones, because he/she will store them in the kitchen.",
+            "hint": ""
+          },
+          {
+            "prompt": "Si byiza kurya umutsima gusa; ukwiriye kurya n'(a) imboga",
+            "answer": "It's not good to eat bread only; you must eat vegetables also.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bamwe bazaba hanze; abandi bazaba mu nzu y'umutware.",
+            "answer": "Some (people) will be outside; others will be in the chief's house.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese, ejo ntimuzaba muri aha? Oya, tuzagaruka ejo bundi.",
+            "answer": "Will you not be here tomorrow? No, we will return the day after tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Dukunda kurya imboga n'umutsima, ariko abandi ntibabikunda.",
+            "answer": "We like to eat vegetables and bread, but other's don't like it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bantu ndabizi. Bazakora kigabo. N'abakozi beza cyane.",
+            "answer": "I know these people. They work like men. They are very good workers.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kirya kigabo kiravuga kigabo, ariko kizakora kigore. Ndakizi.",
+            "answer": "That hulk of a man is speaking like a man, but he will work like a woman. I know him.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nzagaruka ejo mu gitondo kuko ubu nkwiriye gusubira iwacu.",
+            "answer": "I'll come back tomorrow in the morning, because I must return home now.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nzi neza yuko Imana yacu izadukiza. Impumyi zizareba.",
+            "answer": "I well know that our God will save us. The blind will see, and the dumb will hear.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero ari he? Simbizi, ariko nzi yuko azagaruka.",
+            "answer": "Where is Peter? I don't know, but I know that he will return [far future].",
+            "hint": ""
+          },
+          {
+            "prompt": "Isake izabika ejo mu gitondo. Tuzayumva twese.",
+            "answer": "The rooster will crow tomorrow morning. We will all hear it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bazi yuko abana bazasakuza cyane. Abantu bose bazabumva.",
+            "answer": "They know that the children will make a lot of noise. Everyone will hear them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Va mu nzira, umwami aragaruka none.",
+            "answer": "Get out of the way; the king is coming back today.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

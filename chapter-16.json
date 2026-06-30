@@ -1,0 +1,109 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 16",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Bamwe bari hanze. Bari mu gicucu cy'igiti kinini. Ndagira abandi bari mu nzu.",
+            "answer": "Some (people) are outside. They are in the shadow of the big tree. I suppose the others are inside (the house).",
+            "hint": ""
+          },
+          {
+            "prompt": "Dukunda kurya imboga n'umutsima. Abandi ntibabikunda.",
+            "answer": "We like to eat vegetables and bread. Others don't like it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bimwe biri hano, ibindi biri ku meza. Ni byo; bibike mu gikoni",
+            "answer": "Some are here; others are on the table. That's right; store them in the kitchen.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu bitondo byose umuhungu we arakora kigabo. Abandi ntibakora cyane, ariko aba bazakora ku manywa na nijoro.",
+            "answer": "Every morning his son works like a man. The others don't work hard, but these will work day and night.",
+            "hint": ""
+          },
+          {
+            "prompt": "Si byo, singaruka none. Ndashaka kuva mu mujyi. Sinywukunda.",
+            "answer": "That's not so; I'm not returning today. I am wanting to leave the city. I don't like it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibi si byiza. Ndashaka ibinini. Jya kubishaka hanze.",
+            "answer": "These (things) are not good. I want large ones. Go and look for them outside.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iki kigozi ni kirekire cyane; ariko uriya ni mugufi.",
+            "answer": "This thick string is very long, but that one is short.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya muhungu arakora gisaza, na kiriya kigabo kiravuga kigore.",
+            "answer": "That boy is working like an old man, and that hulk of a man speaks like a woman.",
+            "hint": ""
+          },
+          {
+            "prompt": "Isake yacu ikunda kubika ku manywa na nijoro.",
+            "answer": "Our rooster likes to crow day and night.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uzagaruka ejo mu gitondo. Ubu ukwiriye gusubira iwanyu.",
+            "answer": "You will come back tomorrow morning. Now you must go back to your home.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni byo; urakora kigabo pe! Ni byiza cyane.",
+            "answer": "That's it; you are working just like a man! That's very good.",
+            "hint": ""
+          },
+          {
+            "prompt": "Umutsima n'ifi biri mu gikoni, ariko ibyuma biri hanze ku kirago.",
+            "answer": "The bread and fish are in the kitchen, but the knives are outside on the rug.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu benshi ntibakunda kiriya kigabo. Abandi bakeya n'inshuti zacyo.",
+            "answer": "Many people don't like that hulk of a man. A few others are his friends.",
+            "hint": ""
+          },
+          {
+            "prompt": "Isake irabika. Abantu bose barayumva.",
+            "answer": "The rooster is crowing. Everyone is hearing it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abana barasakuza cyane. Abantu bose barabumva.",
+            "answer": "The children are making a lot of noise. Everyone is hearing them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bamwe barava mu gikoni, ariko abandi barasubira mu gikoni.",
+            "answer": "Some (people) are coming out of the kitchen, but others are going back into the kitchen.",
+            "hint": ""
+          },
+          {
+            "prompt": "Petero ari he? Ndabizi se? Sindi umubyeyi we.",
+            "answer": "Where is Peter? Do I know (or Should I know)? I'm not his parent.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni byo! Jya hanze. Urabibona kuko bimwe biri hafi, ibindi biri kure.",
+            "answer": "That's fine! Go outside. You will find them because some are nearby; the others are far away.",
+            "hint": ""
+          },
+          {
+            "prompt": "Va mu nzu! Abandi barashaka kwinjira.",
+            "answer": "Get out of the house! Others (people) are wanting to enter.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

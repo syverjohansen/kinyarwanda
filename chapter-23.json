@@ -1,0 +1,131 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 23",
+    "exercises": [
+      {
+        "name": "Grammar Review",
+        "questions": [
+          {
+            "prompt": "When the verb 'is' couplesnouns and adjectives what form will it take? Translate the sentence: This egg is exceedingly large.",
+            "answer": "Ni. Iri gi ni rinini cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "Supposing that 'is' is followed by a word of place, what form will it be translated by then? Translate the sentence: The egg is in the dish.",
+            "answer": "-ri. Igi riri mw isahane.",
+            "hint": ""
+          },
+          {
+            "prompt": "Conjugate the verb 'to be' for all persons in the first class. For example, I am: ndi; you are: uri; etc",
+            "answer": "Ndi, uri, ari; turi, muri, bari",
+            "hint": ""
+          },
+          {
+            "prompt": "Do the same for all the other noun classes you have covered, both singular and plural. Here are the prefixes: umu-, imi-, in-, iki-, ibi-, i-, ama-",
+            "answer": "Uri, iri; iri, ziri; kiri, biri; riri, ari",
+            "hint": ""
+          },
+          {
+            "prompt": "Give the rule that governs the relationship between n and r when r immediately follows n. In other words, (n+r=?). Can you give an example of this in a word?",
+            "answer": "R following n becomes d, as in ndende",
+            "hint": ""
+          },
+          {
+            "prompt": "Does the word hehe occupy any particular position in the structure of a sentence?",
+            "answer": "It always comes at the end of the sentence, e.g. Umwami ari he?",
+            "hint": ""
+          },
+          {
+            "prompt": "What changes take place in class 4 noun prefixes when they precede a vowel. In other words, what do iki- and ibi- become before a vowel? Give typical examples.",
+            "answer": "The iki- becomes icy- and ibi- becomes iby-. Icyaha, ibyaha",
+            "hint": ""
+          },
+          {
+            "prompt": "Explain the difference between kugaruka and gusubira.",
+            "answer": "Kugaruka means to return towards, whereas gusubira means to go back, or return away from.",
+            "hint": ""
+          },
+          {
+            "prompt": "He is working like a man. How do you translate that sentence using on of the noun affixes?",
+            "answer": "Arakora kigabo",
+            "hint": ""
+          },
+          {
+            "prompt": "How do you amplify these nouns making them huge? imisozi, imvuro, umugabo, ibuye",
+            "answer": "Ibisozi, ikivura, ikigabo, ikibuye",
+            "hint": ""
+          },
+          {
+            "prompt": "Here are four verb stems: -genda, -gira, -iba, -kora. Giving each a class 4 noun subject of your choosing, place them in the (a) far-future positive and negative and (b) the present continuous tense.",
+            "answer": "Ikintu kizagenda, ntikizagenda, kiragenda; kizagira, ntikizagira, kiragira; kiziba, ntikiziba, kiriba, ikiragi kizakora, ikiragi ntizakora, ikiragi kirakora",
+            "hint": ""
+          },
+          {
+            "prompt": "Give the four demonstrative adjectives for Class 5 (igi, amagi)?",
+            "answer": "Iri, ririya; aya, ariya",
+            "hint": ""
+          },
+          {
+            "prompt": "When do mu and ku become mw and kw? Can you explain why?",
+            "answer": "When they precede a singular Class 5 noun. Because Class 5 nouns characteristically have a double vowel in their prefix.",
+            "hint": ""
+          },
+          {
+            "prompt": "How would you be able to distinguish Class 5 nouns from those in other classes also beginning with \"i\"? Use the following examples in your answer: intama, ibuye, ijambo, impamvu.",
+            "answer": "Concerning intama: Class 5 nouns generally do not have in- as their prefix; furthermore in the plural the prefix becomes ama-. Exceptional Class 5 nouns would be those like isahane whose plural is amasahane. There is no separate plural form for intama. Thus intama must be a Class 3 noun. Ibuye forms its plural with ama- thus it cannot be a Class 3 noun.",
+            "hint": ""
+          },
+          {
+            "prompt": "In this sentence, They will work and play, there are two infinitives with a conjunction in between them. How do you translate this sentence?",
+            "answer": "Bazakora no gukina.",
+            "hint": ""
+          },
+          {
+            "prompt": "What is the Law of Dissimilation? How does it operate in such words as igiti, igitabo, gusoma, gushaka?",
+            "answer": "No two unvoiced consonants can be in juxtaposition. Before unvoiced initial consonants in words such as ikitabo and kusoma, the k- changes to g-, thus: igiti, igitabo, and gusoma.",
+            "hint": ""
+          },
+          {
+            "prompt": "This book; these trees. Does the Law of Dissimilation operate in these examples?",
+            "answer": "It does in the word igitabo, but not with ibi biti, not only because of the value of the initial consonant of the noun, but the demonstrative adjective ibi does not change down any way.",
+            "hint": ""
+          },
+          {
+            "prompt": "Complete the translation of this sentence: Amazi n'imboga are in the bowl.",
+            "answer": "Amazi n'imboga biri mw isahane.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ejo can mean tomorrow or yesterday in Kinyarwanda. How is that possible?",
+            "answer": "The meaning of ejo is determined by the tense of the verb governing it.",
+            "hint": ""
+          },
+          {
+            "prompt": "How do you make a command in Kinyarwanda, such as Go now? What is the principle involved?",
+            "answer": "Genda ubu. The prefix is removed from the verb stem in making a command.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Supply the pronoun fixes needed to complete these sentences",
+        "questions": [
+          { "prompt": "Umwami -ri he?", "answer": "Umwami ari he?", "hint": "" },
+          { "prompt": "Abantu -ri mu nzu.", "answer": "Abantu bari mu nzu", "hint": "" },
+          { "prompt": "Umugozi -ri hano.", "answer": "Umugozi uri hano.", "hint": "" },
+          { "prompt": "Imigozi -ri hariya", "answer": "Imigozi iri hariya.", "hint": "" },
+          { "prompt": "Inka (singular) -ragenda.", "answer": "Inka iragenda", "hint": "" },
+          { "prompt": "Inka (plural) -ragenda", "answer": "Inka ziragenda", "hint": "" },
+          { "prompt": "Inka yanjye -ir hehe?", "answer": "Inka yanye iri hehe?", "hint": "" },
+          { "prompt": "Isahane -ri mu nzu", "answer": "Isahane iri mu nzu", "hint": "" },
+          { "prompt": "Ikintu -ri mu mazi", "answer": "Ikintu kiri mu nzu", "hint": "" },
+          { "prompt": "Ibintu -ri mu masahane", "answer": "Ibintu biri mu masahane", "hint": "" },
+          { "prompt": "Ibuye -ri mu ngofero ye", "answer": "Ibuye riri mu ngofero ye.", "hint": "" },
+          { "prompt": "Amabuye -ri he?", "answer": "Amabuye ari he?", "hint": "" }
+        ]
+      }
+    ]
+  }
+}
