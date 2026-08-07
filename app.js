@@ -556,6 +556,7 @@ function resetCurrentCard() {
   if (!state.practiceSession) return;
   state.practiceSession.answer = "";
   state.practiceSession.answers = {};
+  state.practiceSession.grammarGrades = {};
   state.practiceSession.revealed = false;
   state.practiceSession.showHint = false;
 }
@@ -602,6 +603,7 @@ function makePracticeSession(exercise) {
     completedInitialIds: [],
     answer: "",
     answers: {},
+    grammarGrades: {},
     revealed: false,
     showHint: false,
     done: false,
@@ -709,9 +711,9 @@ function getPhaseTitle(session) {
 }
 
 function getPhaseDescription(session) {
-  if (session.phase === "initial") return "Go through this exercise in order. Correct cards are done for the day.";
+  if (session.phase === "initial") return "Go through this exercise in order. Correct items are done for the day.";
   if (session.phase === "drill3") return "Practice first-pass misses until each one is correct 3 times.";
-  if (session.phase === "review") return "One final pass on first-pass misses. Only this round clears a card.";
+  if (session.phase === "review") return "One final pass on first-pass misses. Only this round clears an item.";
   return "This exercise is complete for today.";
 }
 
@@ -778,6 +780,85 @@ function gradeCurrentCard(isCorrect, exercise) {
       session.remainingReviewIds = session.remainingReviewIds.filter((item) => item !== questionId);
     }
     moveToNextQueuedCard(session, exercise);
+    render();
+  }
+}
+
+function setGrammarGrade(cellId, grade, exercise) {
+  const session = getPracticeSession(exercise);
+  if (!session.revealed || !session.queue.includes(cellId)) return;
+
+  session.grammarGrades[cellId] = grade;
+  render();
+}
+
+function setVisibleGrammarGrades(grade, exercise) {
+  const session = getPracticeSession(exercise);
+  if (!session.revealed) return;
+
+  session.queue.forEach((cellId) => {
+    if (!session.grammarGrades[cellId]) {
+      session.grammarGrades[cellId] = grade;
+    }
+  });
+  render();
+}
+
+function gradeGrammarRound(exercise) {
+  const session = getPracticeSession(exercise);
+  if (session.done || !session.revealed) return;
+
+  const hasUngraded = session.queue.some((cellId) => !session.grammarGrades[cellId]);
+  if (hasUngraded) return;
+
+  if (session.phase === "initial") {
+    session.queue.forEach((cellId) => {
+      if (session.grammarGrades[cellId] === "correct") {
+        session.completedInitialIds.push(cellId);
+      } else if (!session.originalMissedIds.includes(cellId)) {
+        session.originalMissedIds.push(cellId);
+      }
+    });
+
+    session.queue = [];
+    session.index = 0;
+    advancePracticePhase(session, exercise);
+    resetCurrentCard();
+    render();
+    return;
+  }
+
+  if (session.phase === "drill3") {
+    const required = getDrillRequiredCount(session);
+
+    session.queue.forEach((cellId) => {
+      if (session.grammarGrades[cellId] === "correct") {
+        session.drillCounts[cellId] = (session.drillCounts[cellId] || 0) + 1;
+      }
+    });
+
+    session.queue = session.queue.filter((cellId) => (session.drillCounts[cellId] || 0) < required);
+
+    if (session.queue.length === 0) {
+      advancePracticePhase(session, exercise);
+    }
+
+    resetCurrentCard();
+    render();
+    return;
+  }
+
+  if (session.phase === "review") {
+    session.queue.forEach((cellId) => {
+      if (session.grammarGrades[cellId] === "correct") {
+        session.remainingReviewIds = session.remainingReviewIds.filter((item) => item !== cellId);
+      }
+    });
+
+    session.queue = [];
+    session.index = 0;
+    advancePracticePhase(session, exercise);
+    resetCurrentCard();
     render();
   }
 }
@@ -978,18 +1059,13 @@ function renderGrammarPractice(active) {
 
   const form = document.createElement("form");
   form.className = "grammar-practice";
-  const itemId = session.queue[session.index];
-  const activeCell = getGrammarCellByKey(exercise, itemId);
-
-  if (!activeCell) {
-    resetPracticeSession();
-    render();
-    return;
-  }
-
+  const activeIds = new Set(session.queue);
   const required = getDrillRequiredCount(session);
-  const drillCount = session.drillCounts[itemId] || 0;
-  const progress = session.phase === "drill3" ? `${drillCount}/${required} correct` : `${session.index + 1}/${session.queue.length}`;
+  const progress =
+    session.phase === "drill3"
+      ? `${session.queue.length} squares due`
+      : `${session.queue.length} squares`;
+  const hasUngraded = session.revealed && session.queue.some((cellId) => !session.grammarGrades[cellId]);
 
   form.innerHTML = `
     <div class="flashcard-topline">
@@ -1000,10 +1076,6 @@ function renderGrammarPractice(active) {
       <p class="eyebrow">${escapeHtml(getPhaseTitle(session))}</p>
       <p>${escapeHtml(getPhaseDescription(session))}</p>
       <p class="practice-last-date">${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
-    </div>
-    <div class="flashcard-prompt grammar-cell-prompt">
-      <p>${escapeHtml(activeCell.row.label)} · ${escapeHtml(activeCell.column.label)}</p>
-      <h3>${escapeHtml(exercise.name)}</h3>
     </div>
     <div class="grammar-table-wrap">
       <table class="grammar-practice-table">
@@ -1021,6 +1093,7 @@ function renderGrammarPractice(active) {
       <button class="reveal-answer" type="submit" ${session.revealed ? "disabled" : ""}>Show answers</button>
       <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct 1</button>
       <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong 2</button>
+      <button class="continue-grammar" type="submit" ${session.revealed && !hasUngraded ? "" : "disabled"}>Continue</button>
       <button class="restart-section secondary-button" type="button">Restart exercise</button>
     </div>
   `;
@@ -1034,13 +1107,18 @@ function renderGrammarPractice(active) {
         .map((column) => {
           const key = getGrammarCellKey(row.id, column.id);
           const expected = row.cells?.[column.id] || "";
-          const isActive = key === itemId;
+          const isActive = activeIds.has(key);
+          const grade = session.grammarGrades[key] || "";
           return `
             <td class="${isActive ? "active-grammar-cell" : ""}">
               ${
                 isActive
-                  ? `<textarea rows="3" name="practiceAnswer" ${session.revealed ? "disabled" : ""}>${escapeHtml(session.answer)}</textarea>
-                     <p class="grammar-answer" ${session.revealed ? "" : "hidden"}>${escapeHtml(expected)}</p>`
+                  ? `<textarea rows="3" name="${escapeHtml(key)}" ${session.revealed ? "disabled" : ""}>${escapeHtml(session.answers[key] || "")}</textarea>
+                     <p class="grammar-answer" ${session.revealed ? "" : "hidden"}>${escapeHtml(expected)}</p>
+                     <div class="grammar-grade-actions" ${session.revealed ? "" : "hidden"}>
+                       <button class="${grade === "correct" ? "selected" : ""}" type="button" data-cell-id="${escapeHtml(key)}" data-grade="correct">Correct</button>
+                       <button class="danger-button ${grade === "wrong" ? "selected" : ""}" type="button" data-cell-id="${escapeHtml(key)}" data-grade="wrong">Wrong</button>
+                     </div>`
                   : `<p class="grammar-cell-placeholder">${expected ? "" : " "}</p>`
               }
             </td>
@@ -1052,31 +1130,51 @@ function renderGrammarPractice(active) {
   });
 
   const result = form.querySelector(".practice-result");
-  result.textContent = session.revealed ? "Compare your answer, then mark this square correct or wrong." : "";
+  result.textContent = session.revealed
+    ? hasUngraded
+      ? "Mark each revealed square correct or wrong."
+      : "All visible squares are graded. Continue to the next round."
+    : "";
 
-  const answerInput = form.querySelector("[name='practiceAnswer']");
-  answerInput.addEventListener("input", () => {
-    session.answer = answerInput.value;
+  form.querySelectorAll("textarea").forEach((input) => {
+    input.addEventListener("input", () => {
+      session.answers[input.name] = input.value;
+    });
   });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    session.answer = answerInput.value.trim();
+    if (session.revealed) {
+      gradeGrammarRound(exercise);
+      return;
+    }
+
+    form.querySelectorAll("textarea").forEach((input) => {
+      session.answers[input.name] = input.value.trim();
+    });
     session.revealed = true;
     render();
   });
 
-  answerInput.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" || event.shiftKey || session.revealed) return;
+  form.querySelectorAll("textarea").forEach((input) => {
+    input.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" || event.shiftKey || session.revealed) return;
 
-    event.preventDefault();
-    session.answer = answerInput.value.trim();
-    session.revealed = true;
-    render();
+      event.preventDefault();
+      form.querySelectorAll("textarea").forEach((item) => {
+        session.answers[item.name] = item.value.trim();
+      });
+      session.revealed = true;
+      render();
+    });
   });
 
-  form.querySelector(".mark-correct").addEventListener("click", () => gradeCurrentCard(true, exercise));
-  form.querySelector(".mark-wrong").addEventListener("click", () => gradeCurrentCard(false, exercise));
+  form.querySelectorAll("[data-grade]").forEach((button) => {
+    button.addEventListener("click", () => setGrammarGrade(button.dataset.cellId, button.dataset.grade, exercise));
+  });
+
+  form.querySelector(".mark-correct").addEventListener("click", () => setVisibleGrammarGrades("correct", exercise));
+  form.querySelector(".mark-wrong").addEventListener("click", () => setVisibleGrammarGrades("wrong", exercise));
   form.querySelector(".restart-section").addEventListener("click", () => {
     resetPracticeSession();
     render();
@@ -1084,30 +1182,17 @@ function renderGrammarPractice(active) {
 
   elements.practiceCard.append(form);
 
-  if (!session.revealed) {
+  const firstAnswerInput = form.querySelector("textarea");
+  if (!session.revealed && firstAnswerInput) {
     requestAnimationFrame(() => {
-      answerInput.focus();
-      answerInput.setSelectionRange(answerInput.value.length, answerInput.value.length);
+      firstAnswerInput.focus();
+      firstAnswerInput.setSelectionRange(firstAnswerInput.value.length, firstAnswerInput.value.length);
     });
   }
 }
 
 function getGrammarCellKey(rowId, columnId) {
   return `${rowId}__${columnId}`;
-}
-
-function getGrammarCellByKey(exercise, key) {
-  const [rowId, columnId] = String(key || "").split("__");
-  const row = getGrammarRows(exercise).find((item) => item.id === rowId);
-  const column = getGrammarColumns(exercise).find((item) => item.id === columnId);
-
-  if (!row || !column || !row.cells?.[column.id]) return null;
-
-  return {
-    row,
-    column,
-    answer: row.cells[column.id],
-  };
 }
 
 function handlePracticeShortcut(event) {
@@ -1127,12 +1212,12 @@ function handlePracticeShortcut(event) {
 
     if (key === "1") {
       event.preventDefault();
-      gradeCurrentCard(true, active.exercise);
+      setVisibleGrammarGrades("correct", active.exercise);
     }
 
     if (key === "2") {
       event.preventDefault();
-      gradeCurrentCard(false, active.exercise);
+      setVisibleGrammarGrades("wrong", active.exercise);
     }
 
     return;
@@ -1161,7 +1246,6 @@ function handlePracticeShortcut(event) {
     gradeCurrentCard(false, active.exercise);
   }
 }
-
 function getShortcutKey(event) {
   if (event.key === "1" || event.code === "Digit1" || event.code === "Numpad1") return "1";
   if (event.key === "2" || event.code === "Digit2" || event.code === "Numpad2") return "2";
