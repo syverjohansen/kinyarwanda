@@ -444,6 +444,20 @@ label {
   gap: 1rem;
 }
 
+.grammar-cell-prompt h3 {
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+}
+
+.grammar-practice-table td.active-grammar-cell {
+  background: #edf5f2;
+  box-shadow: inset 0 0 0 2px #afd2c5;
+}
+
+.grammar-cell-placeholder {
+  min-height: 5.7rem;
+  margin: 0;
+}
+
 .grammar-answer {
   color: var(--accent-strong);
   font-weight: 900;
