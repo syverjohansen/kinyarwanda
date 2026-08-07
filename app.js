@@ -73,8 +73,25 @@ function makeSyncData() {
   return {
     app: "kinyarwanda-lessons",
     version: 1,
-    lessons: state.lessons,
+    lessons: makeCleanLessons(state.lessons),
     lastSynced: new Date().toISOString(),
+  };
+}
+
+function makeCleanLessons(lessons) {
+  return lessons.map((lesson) => ({
+    ...lesson,
+    exercises: lesson.exercises.map(makeCleanExercise),
+  }));
+}
+
+function makeCleanExercise(exercise) {
+  if (getExerciseType(exercise) !== "grammar-table") return exercise;
+
+  const columns = Array.isArray(exercise.columns) ? exercise.columns : [];
+  return {
+    ...exercise,
+    rows: getGrammarRows(exercise).filter((row) => !isGrammarRowEmpty(row, columns)),
   };
 }
 
@@ -177,15 +194,19 @@ function addGrammarRow(exerciseId, formData) {
   if (!exercise) return;
 
   const columns = getGrammarColumns(exercise);
+  const label = formData.get("label").trim();
   const row = {
     id: makeId("row"),
-    label: formData.get("label").trim(),
+    label,
     cells: {},
   };
 
   columns.forEach((column) => {
     row.cells[column.id] = formData.get(column.id).trim();
   });
+
+  if (isGrammarRowEmpty(row, columns)) return;
+  if (!row.label) row.label = `Row ${getGrammarRows(exercise).length + 1}`;
 
   exercise.rows.push(row);
   resetPracticeSession();
@@ -258,7 +279,8 @@ function updateGrammarRowLabel(exercise, rowId, label) {
   const row = getGrammarRows(exercise).find((item) => item.id === rowId);
   if (!row) return;
 
-  row.label = label.trim() || "Row";
+  row.label = label.trim();
+  resetPracticeSession();
   saveLessons();
   render();
 }
@@ -330,9 +352,16 @@ function getGrammarRows(exercise) {
   return exercise.rows;
 }
 
+function isGrammarRowEmpty(row, columns = []) {
+  const hasLabel = Boolean(String(row.label || "").trim());
+  const hasCell = columns.some((column) => String(row.cells?.[column.id] || "").trim());
+  return !hasLabel && !hasCell;
+}
+
 function getExerciseItemCount(exercise) {
   if (getExerciseType(exercise) === "grammar-table") {
-    return getGrammarRows(exercise).reduce((count, row) => count + getGrammarColumns(exercise).filter((column) => row.cells?.[column.id]).length, 0);
+    const columns = getGrammarColumns(exercise);
+    return getGrammarRows(exercise).filter((row) => !isGrammarRowEmpty(row, columns)).length * columns.length;
   }
 
   return Array.isArray(exercise.questions) ? exercise.questions.length : 0;
@@ -508,14 +537,14 @@ function renderGrammarBuilder(exercise) {
   addForm.innerHTML = `
     <label>
       Prompt
-      <input name="label" placeholder="Class Prefixes" autocomplete="off" required />
+      <input name="label" placeholder="Class Prefixes" autocomplete="off" />
     </label>
     ${columns
       .map(
         (column) => `
           <label>
             ${escapeHtml(column.label)}
-            <textarea name="${escapeHtml(column.id)}" rows="3" placeholder="umu-\numu-sozi (hill)" required></textarea>
+            <textarea name="${escapeHtml(column.id)}" rows="3" placeholder="umu-\numu-sozi (hill)"></textarea>
           </label>
         `,
       )
@@ -632,10 +661,9 @@ function getPracticeSession(exercise) {
 
 function getPracticeItemIds(exercise) {
   if (getExerciseType(exercise) === "grammar-table") {
+    const columns = getGrammarColumns(exercise);
     return getGrammarRows(exercise).flatMap((row) =>
-      getGrammarColumns(exercise)
-        .filter((column) => row.cells?.[column.id])
-        .map((column) => getGrammarCellKey(row.id, column.id)),
+      isGrammarRowEmpty(row, columns) ? [] : columns.map((column) => getGrammarCellKey(row.id, column.id)),
     );
   }
 
@@ -1254,7 +1282,7 @@ function getShortcutKey(event) {
 }
 
 async function exportLessons() {
-  const content = JSON.stringify(state.lessons, null, 2);
+  const content = JSON.stringify(makeCleanLessons(state.lessons), null, 2);
   const filename = "kinyarwanda-lessons.json";
 
   // Try modern File System Access API (allows choosing save location)
@@ -1298,7 +1326,10 @@ async function exportChapter() {
     {
       type: "kinyarwanda-chapter",
       version: 1,
-      chapter: lesson,
+      chapter: {
+        ...lesson,
+        exercises: lesson.exercises.map(makeCleanExercise),
+      },
     },
     null,
     2,
@@ -1471,17 +1502,22 @@ function normalizeImportedGrammarExercise(exercise, name) {
     lastPracticed: typeof exercise.lastPracticed === "string" ? exercise.lastPracticed : "",
     questions: [],
     columns,
-    rows: exercise.rows.map((row, index) => {
+    rows: exercise.rows.reduce((rows, row, index) => {
       if (!row || typeof row !== "object" || Array.isArray(row)) {
         throw new Error(`Row ${index + 1} in "${name}" is not valid.`);
       }
 
-      return {
+      const normalizedRow = {
         id: String(row.id || makeId("row")),
-        label: String(row.label || `Row ${index + 1}`).trim(),
+        label: String(row.label || "").trim(),
         cells: Object.fromEntries(columns.map((column) => [column.id, String(row.cells?.[column.id] || "").trim()])),
       };
-    }),
+
+      if (isGrammarRowEmpty(normalizedRow, columns)) return rows;
+      if (!normalizedRow.label) normalizedRow.label = `Row ${rows.length + 1}`;
+      rows.push(normalizedRow);
+      return rows;
+    }, []),
   };
 }
 
