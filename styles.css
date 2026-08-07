@@ -456,6 +456,10 @@ label {
   margin-top: 0.55rem;
 }
 
+.grammar-grade-actions[hidden] {
+  display: none;
+}
+
 .grammar-grade-actions button {
   padding: 0.55rem 0.7rem;
 }
