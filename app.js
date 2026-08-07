@@ -272,17 +272,17 @@ function removeGrammarColumn(exerciseId, columnId) {
   render();
 }
 
-function updateGrammarRowLabel(exercise, rowId, label) {
+function updateGrammarRowLabel(exercise, rowId, label, shouldRender = true) {
   const row = getGrammarRows(exercise).find((item) => item.id === rowId);
   if (!row) return;
 
   row.label = label.trim();
   resetPracticeSession();
   saveLessons();
-  render();
+  if (shouldRender) render();
 }
 
-function updateGrammarCell(exercise, rowId, columnId, value) {
+function updateGrammarCell(exercise, rowId, columnId, value, shouldRender = true) {
   const row = getGrammarRows(exercise).find((item) => item.id === rowId);
   if (!row) return;
 
@@ -290,7 +290,7 @@ function updateGrammarCell(exercise, rowId, columnId, value) {
   row.cells[columnId] = value.trim();
   resetPracticeSession();
   saveLessons();
-  render();
+  if (shouldRender) render();
 }
 
 function removeQuestion(exerciseId, questionId) {
@@ -535,10 +535,10 @@ function renderGrammarBuilder(exercise) {
     `;
 
     const rowLabel = tr.querySelector(".grammar-row-label");
-    rowLabel.addEventListener("change", (event) => updateGrammarRowLabel(exercise, row.id, event.target.value));
+    rowLabel.addEventListener("change", (event) => updateGrammarRowLabel(exercise, row.id, event.target.value, false));
     rowLabel.addEventListener("keydown", (event) => moveFocusWithinList(event, ".grammar-edit-table .grammar-row-label, .grammar-edit-table textarea"));
     tr.querySelectorAll("[data-column-id]").forEach((input) => {
-      input.addEventListener("change", () => updateGrammarCell(exercise, row.id, input.dataset.columnId, input.value));
+      input.addEventListener("change", () => updateGrammarCell(exercise, row.id, input.dataset.columnId, input.value, false));
       input.addEventListener("keydown", (event) => moveFocusWithinList(event, ".grammar-edit-table .grammar-row-label, .grammar-edit-table textarea"));
     });
     tr.querySelector(".remove-grammar-row").addEventListener("click", () => removeGrammarRow(exercise.id, row.id));
