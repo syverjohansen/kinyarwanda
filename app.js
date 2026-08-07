@@ -205,9 +205,6 @@ function addGrammarRow(exerciseId, formData) {
     row.cells[column.id] = formData.get(column.id).trim();
   });
 
-  if (isGrammarRowEmpty(row, columns)) return;
-  if (!row.label) row.label = `Row ${getGrammarRows(exercise).length + 1}`;
-
   exercise.rows.push(row);
   resetPracticeSession();
   saveLessons();
