@@ -444,16 +444,6 @@ label {
   gap: 1rem;
 }
 
-.grammar-practice-table td.correct textarea {
-  border-color: #71b095;
-  background: #effaf5;
-}
-
-.grammar-practice-table td.incorrect textarea {
-  border-color: #d98781;
-  background: #fff4f2;
-}
-
 .grammar-answer {
   color: var(--accent-strong);
   font-weight: 900;

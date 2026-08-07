@@ -555,6 +555,7 @@ function resetPracticeSession() {
 function resetCurrentCard() {
   if (!state.practiceSession) return;
   state.practiceSession.answer = "";
+  state.practiceSession.answers = {};
   state.practiceSession.revealed = false;
   state.practiceSession.showHint = false;
 }
@@ -590,8 +591,9 @@ function selectPracticeExercise(exerciseId) {
 function makePracticeSession(exercise) {
   return {
     exerciseId: exercise.id,
+    kind: getExerciseType(exercise),
     phase: "initial",
-    queue: exercise.questions.map((question) => question.id),
+    queue: getPracticeItemIds(exercise),
     index: 0,
     originalMissedIds: [],
     remainingReviewIds: [],
@@ -599,6 +601,7 @@ function makePracticeSession(exercise) {
     drillCounts: {},
     completedInitialIds: [],
     answer: "",
+    answers: {},
     revealed: false,
     showHint: false,
     done: false,
@@ -606,11 +609,11 @@ function makePracticeSession(exercise) {
 }
 
 function getPracticeSession(exercise) {
-  if (!state.practiceSession || state.practiceSession.exerciseId !== exercise.id) {
+  if (!state.practiceSession || state.practiceSession.exerciseId !== exercise.id || state.practiceSession.kind !== getExerciseType(exercise)) {
     state.practiceSession = makePracticeSession(exercise);
   }
 
-  const questionIds = new Set(exercise.questions.map((question) => question.id));
+  const questionIds = new Set(getPracticeItemIds(exercise));
   const session = state.practiceSession;
   session.queue = session.queue.filter((questionId) => questionIds.has(questionId));
   session.originalMissedIds = session.originalMissedIds.filter((questionId) => questionIds.has(questionId));
@@ -623,6 +626,14 @@ function getPracticeSession(exercise) {
   }
 
   return session;
+}
+
+function getPracticeItemIds(exercise) {
+  if (getExerciseType(exercise) === "grammar-table") {
+    return getExerciseItemCount(exercise) > 0 ? ["grammar-table"] : [];
+  }
+
+  return exercise.questions.map((question) => question.id);
 }
 
 function startDrillPhase(session, ids) {
@@ -940,37 +951,42 @@ function renderPracticeView() {
   }
 }
 
-function getGrammarPracticeSession(exercise) {
-  if (!state.practiceSession || state.practiceSession.exerciseId !== exercise.id || state.practiceSession.kind !== "grammar-table") {
-    state.practiceSession = {
-      kind: "grammar-table",
-      exerciseId: exercise.id,
-      answers: {},
-      checked: false,
-      revealed: false,
-      done: false,
-    };
-  }
-
-  return state.practiceSession;
-}
-
 function renderGrammarPractice(active) {
   const exercise = active.exercise;
   const columns = getGrammarColumns(exercise);
   const rows = getGrammarRows(exercise);
-  const session = getGrammarPracticeSession(exercise);
+  const session = getPracticeSession(exercise);
+
+  if (session.done) {
+    elements.practiceCard.innerHTML = `
+      <div class="flashcard-empty complete">
+        <h3>Exercise complete</h3>
+        <p>${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
+        <button id="restart-practice" type="button">Practice again</button>
+      </div>
+    `;
+    elements.practiceCard.querySelector("#restart-practice").addEventListener("click", () => {
+      resetPracticeSession();
+      render();
+    });
+    return;
+  }
+
   const form = document.createElement("form");
   form.className = "grammar-practice";
+  const required = getDrillRequiredCount(session);
+  const itemId = session.queue[session.index] || "grammar-table";
+  const drillCount = session.drillCounts[itemId] || 0;
+  const progress = session.phase === "drill3" ? `${drillCount}/${required} correct` : `${session.index + 1}/${session.queue.length}`;
 
   form.innerHTML = `
     <div class="flashcard-topline">
       <span>${escapeHtml(active.label)}</span>
-      <span>${getExerciseItemCount(exercise)} cells</span>
+      <span>${escapeHtml(progress)}</span>
     </div>
     <div class="practice-phase">
-      <p class="eyebrow">Grammar table</p>
-      <p>Fill the table, then check your answers.</p>
+      <p class="eyebrow">${escapeHtml(getPhaseTitle(session))}</p>
+      <p>${escapeHtml(getPhaseDescription(session))}</p>
       <p class="practice-last-date">${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
     </div>
     <div class="grammar-table-wrap">
@@ -986,9 +1002,10 @@ function renderGrammarPractice(active) {
     </div>
     <p class="practice-result" role="status"></p>
     <div class="flashcard-actions">
-      <button class="check-grammar" type="submit">Check table</button>
-      <button class="show-grammar-answers secondary-button" type="button">Show answers</button>
-      <button class="restart-section secondary-button" type="button">Reset</button>
+      <button class="reveal-answer" type="submit" ${session.revealed ? "disabled" : ""}>Show answers</button>
+      <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct 1</button>
+      <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong 2</button>
+      <button class="restart-section secondary-button" type="button">Restart exercise</button>
     </div>
   `;
 
@@ -1001,12 +1018,11 @@ function renderGrammarPractice(active) {
         .map((column) => {
           const key = getGrammarCellKey(row.id, column.id);
           const expected = row.cells?.[column.id] || "";
-          const value = session.revealed ? expected : session.answers[key] || "";
-          const status = getGrammarCellStatus(value, expected, session);
+          const value = session.answers[key] || "";
           return `
-            <td class="${escapeHtml(status)}">
+            <td>
               <textarea rows="3" name="${escapeHtml(key)}" ${session.revealed ? "disabled" : ""}>${escapeHtml(value)}</textarea>
-              <p class="grammar-answer" ${session.checked || session.revealed ? "" : "hidden"}>${escapeHtml(expected)}</p>
+              <p class="grammar-answer" ${session.revealed ? "" : "hidden"}>${escapeHtml(expected)}</p>
             </td>
           `;
         })
@@ -1016,12 +1032,11 @@ function renderGrammarPractice(active) {
   });
 
   const result = form.querySelector(".practice-result");
-  updateGrammarResult(result, exercise, session);
+  result.textContent = session.revealed ? "Compare your answers, then mark the table correct or wrong." : "";
 
   form.querySelectorAll("textarea").forEach((input) => {
     input.addEventListener("input", () => {
       session.answers[input.name] = input.value;
-      session.checked = false;
     });
   });
 
@@ -1030,23 +1045,12 @@ function renderGrammarPractice(active) {
     form.querySelectorAll("textarea").forEach((input) => {
       session.answers[input.name] = input.value.trim();
     });
-    session.checked = true;
-    session.revealed = false;
-
-    if (getGrammarScore(exercise, session).wrong === 0) {
-      exercise.lastPracticed = new Date().toISOString();
-      session.done = true;
-      saveLessons();
-    }
-
-    render();
-  });
-
-  form.querySelector(".show-grammar-answers").addEventListener("click", () => {
-    session.checked = true;
     session.revealed = true;
     render();
   });
+
+  form.querySelector(".mark-correct").addEventListener("click", () => gradeCurrentCard(true, exercise));
+  form.querySelector(".mark-wrong").addEventListener("click", () => gradeCurrentCard(false, exercise));
   form.querySelector(".restart-section").addEventListener("click", () => {
     resetPracticeSession();
     render();
@@ -1059,52 +1063,6 @@ function getGrammarCellKey(rowId, columnId) {
   return `${rowId}__${columnId}`;
 }
 
-function getGrammarCellStatus(value, expected, session) {
-  if (!session.checked && !session.revealed) return "";
-  if (normalizeAnswer(value) === normalizeAnswer(expected)) return "correct";
-  return "incorrect";
-}
-
-function getGrammarScore(exercise, session) {
-  let correct = 0;
-  let wrong = 0;
-
-  getGrammarRows(exercise).forEach((row) => {
-    getGrammarColumns(exercise).forEach((column) => {
-      const expected = row.cells?.[column.id] || "";
-      if (!expected) return;
-
-      const value = session.answers[getGrammarCellKey(row.id, column.id)] || "";
-      if (normalizeAnswer(value) === normalizeAnswer(expected)) {
-        correct += 1;
-      } else {
-        wrong += 1;
-      }
-    });
-  });
-
-  return { correct, wrong };
-}
-
-function updateGrammarResult(result, exercise, session) {
-  if (!session.checked && !session.revealed) {
-    result.textContent = "";
-    result.className = "practice-result";
-    return;
-  }
-
-  const score = getGrammarScore(exercise, session);
-  result.textContent = score.wrong === 0 ? "All correct. Exercise marked practiced." : `${score.correct} correct, ${score.wrong} to review.`;
-  result.className = `practice-result ${score.wrong === 0 ? "correct" : "incorrect"}`;
-}
-
-function normalizeAnswer(value) {
-  return String(value || "")
-    .trim()
-    .toLocaleLowerCase()
-    .replace(/\s+/g, " ");
-}
-
 function handlePracticeShortcut(event) {
   if (state.activeMode !== "practice" || event.metaKey || event.ctrlKey || event.altKey) return;
 
@@ -1112,10 +1070,26 @@ function handlePracticeShortcut(event) {
   if (!key) return;
 
   const active = getActivePracticeExercise();
-  if (!active || getExerciseItemCount(active.exercise) === 0 || getExerciseType(active.exercise) === "grammar-table") return;
+  if (!active || getExerciseItemCount(active.exercise) === 0) return;
 
   const session = getPracticeSession(active.exercise);
   if (session.done) return;
+
+  if (getExerciseType(active.exercise) === "grammar-table") {
+    if (!session.revealed) return;
+
+    if (key === "1") {
+      event.preventDefault();
+      gradeCurrentCard(true, active.exercise);
+    }
+
+    if (key === "2") {
+      event.preventDefault();
+      gradeCurrentCard(false, active.exercise);
+    }
+
+    return;
+  }
 
   const questionId = session.queue[session.index];
   const question = getQuestionById(active.exercise, questionId);
