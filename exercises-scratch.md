@@ -1,74 +1,92 @@
-Chapter 23
-Exercise 1: Grammar Review
+Chapter 24
+Exercise 1: Translate the following
 Questions:
-1. When the verb 'is' couplesnouns and adjectives what form will it take?  Translate the sentence: This egg is exceedingly large.
-2. Supposing that 'is' is followed by a word of place, what form will it be translated by then?  Translate the sentence: The egg is in the dish.
-3. Conjugate the verb 'to be' for all persons in the first class.  For example, I am: ndi; you are: uri; etc
-4. Do the same for all the other noun classes you have covered, both singular and plural.  Here are the prefixes: umu-, imi-, in-, iki-, ibi-, i-, ama-
-5. Give the rule that governs the relationship between n and r when r immediately follows n.  In other words, (n+r=?).  Can you give an example of this in a word?
-6. Does the word hehe occupy any particular position in the structure of a sentence?
-7. What changes take place in class 4 noun prefixes when they precede a vowel.  In other words, what do iki- and ibi- become before a vowel?  Give typical examples.
-8. Explain the difference between kugaruka and gusubira.
-9. He is working like a man.  How do you translate that sentence using on of the noun affixes?
-10. How do you amplify these nouns making them huge?  imisozi, imvuro, umugabo, ibuye
-11. Here are four verb stems: -genda, -gira, -iba, -kora.  Giving each a class 4 noun subject of your choosing, place them in the (a) far-future positive and negative and (b) the present continuous tense.
-12. Give the four demonstrative adjectives for Class 5 (igi, amagi)?
-13. When do mu and ku become mw and kw?  Can you explain why?
-14. How would you be able to distinguish Class 5 nouns from those in other classes also beginning with "i"?  Use the following examples in your answer: intama, ibuye, ijambo, impamvu.
-15. In this sentence, They will work and play, there are two infinitives with a conjunction in between them.  How do you translate this sentence?
-16. What is the Law of Dissimilation?  How does it operate in such words as igiti, igitabo, gusoma, gushaka?
-17. This book; these trees.  Does the Law of Dissimilation operate in these examples?
-18. Complete the translation of this sentence: Amazi n'imboga are in the bowl.
-19. Ejo can mean tomorrow or yesterday in Kinyarwanda.  How is that possible?
-20. How do you make a command in Kinyarwanda, such as Go now?  What is the principle involved?
+1. Urupfu rw'urukwavu.  Urago rwa bariya bagabo.  Urugendo rurerure rw'inyoni.
+2. Igihugu ni kigari rwose.  Hariho ingo nyinshi, n'abantu bavuga indimi nyinshi.
+3. Urukundo rw'abantu, barugira none, n'ejo bakarwibagirwa.
+4. Reba uru rufunguzo rurerure.  Mbese, n'urwawe?  Oya, s'urwanjye, n'urwe.
+5. Bizaba urujya n'uruza umunsi wose.
+6. Urubaho ruri hanze.  Ejo uzarushyira mu rusengero.  Mu rusengero hariho izindi mbaho.
+7. Genda uru rwandiko ukwiriye kurumuha.  Ukwiriye kurumuha none.
+8. Urukundo rw'abantu si rumwe.  Urwa bamwe ni rwinshi; naho urw'abandi ni ruke cyane.
+9. Impinja n'abana batoya cyane, ariko bose n'abantu.
+10. Urugendo rwabo n'urujya n'uruza.  Nta bwo bicara hamwe.
+11. Mbese turajya kureba uruzi none, cyangwa ejo?  Oya, tuzarureba ejo bundi.
+12. Mbese izi n'impinja zawe?  Oya s'izanjye, n'ize.
+13. Ejo nzandika urwandiko rurerure.  Sinzarwandika ejo bundi.  Sinshaka kurwandika none.
 
 Answers:
-1. Ni.  Iri gi ni rinini cyane.
-2. -ri.  Igi riri mw isahane.
-3. Ndi, uri, ari; turi, muri, bari
-4. Uri, iri; iri, ziri; kiri, biri; riri, ari
-5. R following n becomes d, as in ndende
-6. It always comes at the end of the sentence, e.g. Umwami ari he?
-7. The iki- becomes icy- and ibi- becomes iby-.  Icyaha, ibyaha
-8. Kugaruka means to return towards, whereas gusubira means to go back, or return away from.
-9. Arakora kigabo
-10. Ibisozi, ikivura, ikigabo, ikibuye
-11. Ikintu kizagenda, ntikizagenda, kiragenda; kizagira, ntikizagira, kiragira; kiziba, ntikiziba, kiriba, ikiragi kizakora, ikiragi ntizakora, ikiragi kirakora
-12. Iri, ririya; aya, ariya
-13. When they precede a singular Class 5 noun.  Because Class 5 nouns characteristically have a double vowel in their prefix.
-14. Concerning intama: Class 5 nouns generally do not have in- as their prefix; furthermore in the plural the prefix becomes ama-.  Exceptional Class 5 nouns would be those like isahane whose plural is amasahane.  There is no separate plural form for intama.  Thus intama must be a Class 3 noun.  Ibuye forms its plural with ama- thus it cannot be a Class 3 noun.
-15. Bazakora no gukina.
-16. No two unvoiced consonants can be in juxtaposition.  Before unvoiced initial consonants in words such as ikitabo and kusoma, the k- changes to g-, thus: igiti, igitabo, and gusoma.
-17. It does in the word igitabo, but not with ibi biti, not only because of the value of the initial consonant of the noun, but the demonstrative adjective ibi does not change down any way.
-18. Amazi n'imboga biri mw isahane.
-19. The meaning of ejo is determined by the tense of the verb governing it.
-20. Genda ubu.  The prefix is removed from the verb stem in making a command.
+1. The rabbit's death.  The home of those men.  The bird's long journey.
+2. The country is very wide.  There are many homes, and the people speak many languages.
+3. People's love: they have it today, and tomorrow they forget it.
+4. Look at this long key.  Is it yours?  No it's not mine; it is his.
+5. It will be a coming and going the whole day.
+6. The board is outside.  Tomorrow you will put it in the church.  There are others in the church.
+7. Go; you must give him this letter.  You must give it to him today.
+8. The love of people are not the same.  Some have much; and that of others is very little.
+9. Infants are very small people, but all are people.
+10. Their journey is a constant coming and going.  They never stay in one place.
+11. Are we going to see the river today, or tomorrow?  No, we will see it the day after tomorrow.
+12. Are these your infants?  No, they are not mine; they are hers.
+13. Tomorrow I shall write a long letter.  I shall not write it the day after tomorrow.  I don't want to write it today.
 
-Exercise 2: Supply the pronoun fixes needed to complete these sentences
+Exercise 2: Translate to Kinyarwanda
 Questions:
-1. Umwami -ri he?
-2. Abantu -ri mu nzu.
-3. Umugozi -ri hano.
-4. Imigozi -ri hariya
-5. Inka (singular) -ragenda.
-6. Inka (plural) -ragenda
-7. Inka yanjye -ir hehe?
-8. Isahane -ri mu nzu
-9. Ikintu -ri mu mazi
-10. Ibintu -ri mu masahane
-11. Ibuye -ri mu ngofero ye
-12. Amabuye -ri he?
+1. 1. The rabbit's death.  The home of those men.  The bird's long journey.
+2. The country is very wide.  There are many homes, and the people speak many languages.
+3. People's love: they have it today, and tomorrow they forget it.
+4. Look at this long key.  Is it yours?  No it's not mine; it is his.
+5. It will be a coming and going the whole day.
+6. The board is outside.  Tomorrow you will put it in the church.  There are others in the church.
+7. Go; you must give him this letter.  You must give it to him today.
+8. The love of people are not the same.  Some have much; and that of others is very little.
+9. Infants are very small people, but all are people.
+10. Their journey is a constant coming and going.  They never stay in one place.
+11. Are we going to see the river today, or tomorrow?  No, we will see it the day after tomorrow.
+12. Are these your infants?  No, they are not mine; they are hers.
+13. Tomorrow I shall write a long letter.  I shall not write it the day after tomorrow.  I don't want to write it today.
 
 Answers:
-1. Umwami ari he?
-2. Abantu bari mu nzu
-3. Umugozi uri hano.
-4. Imigozi iri hariya.
-5. Inka iragenda
-6. Inka ziragenda
-7. Inka yanye iri hehe?
-8. Isahane iri mu nzu
-9. Ikintu kiri mu nzu
-10. Ibintu biri mu masahane
-11. Ibuye riri mu ngofero ye.
-12. Amabuye ari he?
+1. Urupfu rw'urukwavu.  Urago rwa bariya bagabo.  Urugendo rurerure rw'inyoni.
+2. Igihugu ni kigari rwose.  Hariho ingo nyinshi, n'abantu bavuga indimi nyinshi.
+3. Urukundo rw'abantu, barugira none, n'ejo bakarwibagirwa.
+4. Reba uru rufunguzo rurerure.  Mbese, n'urwawe?  Oya, s'urwanjye, n'urwe.
+5. Bizaba urujya n'uruza umunsi wose.
+6. Urubaho ruri hanze.  Ejo uzarushyira mu rusengero.  Mu rusengero hariho izindi mbaho.
+7. Genda uru rwandiko ukwiriye kurumuha.  Ukwiriye kurumuha none.
+8. Urukundo rw'abantu si rumwe.  Urwa bamwe ni rwinshi; naho urw'abandi ni ruke cyane.
+9. Impinja n'abana batoya cyane, ariko bose n'abantu.
+10. Urugendo rwabo n'urujya n'uruza.  Nta bwo bicara hamwe.
+11. Mbese turajya kureba uruzi none, cyangwa ejo?  Oya, tuzarureba ejo bundi.
+12. Mbese izi n'impinja zawe?  Oya s'izanjye, n'ize.
+13. Ejo nzandika urwandiko rurerure.  Sinzarwandika ejo bundi.  Sinshaka kurwandika none.
+
+Exercise 3: Extra Sentences: Kinyarwanda to Engliah
+Questions:
+1. Urupfu rw'impinja rutera agahinda cyane.
+2. Ejo, n'ugera mu misozi, uzabona urugo rwe.  Ruri hakurya y'uruzi rugari cyane.
+3. Azakwereka uburyo bandika ku mpu z'inyamaswa.
+4. Ejobundi, n'uduha urufunguzo, tuzakingura urugi rw'urusengero, kuko benshi bazashaka kwinjiramo ngo basenge.
+5. Kubwo kubura ibyokurya bibakwiriye mu minsi myinshi, benshi bararwaye kandi bose bafite ibisebe ku ngingo z'imbiri yabo.
+
+Answers:
+1. The death of infants causes much sadness.
+2. Tomorrow, when you reach the hills, you will see his home.  It's beyond the very wide river.
+3. He will show you how they write on the skins of animals.
+4. If you give us the key the day after tomorrow, we will open the door of the church, because many will want to enter in, so as to worship.
+5. Because of a lack of proper food for many days, many are sick and all have sores on the limbs of their bodies.
+
+Exercise 4: Extra Sentences: English to Kinyarwanda
+Questions:
+1. The death of infants causes much sadness.
+2. Tomorrow, when you reach the hills, you will see his home.  It's beyond the very wide river.
+3. He will show you how they write on the skins of animals.
+4. If you give us the key the day after tomorrow, we will open the door of the church, because many will want to enter in, so as to worship.
+5. Because of a lack of proper food for many days, many are sick and all have sores on the limbs of their bodies.
+
+Answers:
+1. Urupfu rw'impinja rutera agahinda cyane.
+2. Ejo, n'ugera mu misozi, uzabona urugo rwe.  Ruri hakurya y'uruzi rugari cyane.
+3. Azakwereka uburyo bandika ku mpu z'inyamaswa.
+4. Ejobundi, n'uduha urufunguzo, tuzakingura urugi rw'urusengero, kuko benshi bazashaka kwinjiramo ngo basenge.
+5. Kubwo kubura ibyokurya bibakwiriye mu minsi myinshi, benshi bararwaye kandi bose bafite ibisebe ku ngingo z'imbiri yabo.

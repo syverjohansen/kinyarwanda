@@ -26,6 +26,7 @@ body {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
@@ -48,6 +49,7 @@ button:hover,
 }
 
 input,
+select,
 textarea {
   width: 100%;
   border: 1px solid var(--line);
@@ -367,6 +369,101 @@ label {
 .question-list {
   display: grid;
   gap: 0.65rem;
+}
+
+.grammar-builder {
+  display: grid;
+  gap: 1rem;
+}
+
+.grammar-column-editor,
+.grammar-row-form {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  padding: 1rem;
+}
+
+.grammar-column-control {
+  align-items: end;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.add-grammar-column {
+  align-self: end;
+}
+
+.grammar-row-form button {
+  align-self: end;
+}
+
+.grammar-table-wrap {
+  overflow-x: auto;
+}
+
+.grammar-edit-table,
+.grammar-practice-table {
+  border-collapse: collapse;
+  min-width: 42rem;
+  width: 100%;
+}
+
+.grammar-edit-table th,
+.grammar-edit-table td,
+.grammar-practice-table th,
+.grammar-practice-table td {
+  border: 1px solid var(--line);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.grammar-edit-table th,
+.grammar-practice-table th {
+  background: var(--surface-strong);
+  font-weight: 900;
+}
+
+.grammar-edit-table th:first-child,
+.grammar-practice-table th:first-child {
+  min-width: 11rem;
+}
+
+.grammar-edit-table textarea,
+.grammar-practice-table textarea {
+  min-width: 13rem;
+}
+
+.grammar-practice {
+  display: grid;
+  gap: 1rem;
+}
+
+.grammar-practice-table td.correct textarea {
+  border-color: #71b095;
+  background: #effaf5;
+}
+
+.grammar-practice-table td.incorrect textarea {
+  border-color: #d98781;
+  background: #fff4f2;
+}
+
+.grammar-answer {
+  color: var(--accent-strong);
+  font-weight: 900;
+  margin: 0.45rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.grammar-answer::before {
+  color: var(--muted);
+  content: "Answer: ";
 }
 
 .practice-view {
@@ -739,6 +836,8 @@ label {
 
   .editor-grid,
   .field-row,
+  .grammar-column-editor,
+  .grammar-row-form,
   .inline-form {
     grid-template-columns: 1fr;
   }

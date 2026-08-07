@@ -1,0 +1,209 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 24",
+    "exercises": [
+      {
+        "name": "Translate the following",
+        "questions": [
+          {
+            "prompt": "Urupfu rw'urukwavu. Urago rwa bariya bagabo. Urugendo rurerure rw'inyoni.",
+            "answer": "The rabbit's death. The home of those men. The bird's long journey.",
+            "hint": ""
+          },
+          {
+            "prompt": "Igihugu ni kigari rwose. Hariho ingo nyinshi, n'abantu bavuga indimi nyinshi.",
+            "answer": "The country is very wide. There are many homes, and the people speak many languages.",
+            "hint": ""
+          },
+          {
+            "prompt": "Urukundo rw'abantu, barugira none, n'ejo bakarwibagirwa.",
+            "answer": "People's love: they have it today, and tomorrow they forget it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Reba uru rufunguzo rurerure. Mbese, n'urwawe? Oya, s'urwanjye, n'urwe.",
+            "answer": "Look at this long key. Is it yours? No it's not mine; it is his.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bizaba urujya n'uruza umunsi wose.",
+            "answer": "It will be a coming and going the whole day.",
+            "hint": ""
+          },
+          {
+            "prompt": "Urubaho ruri hanze. Ejo uzarushyira mu rusengero. Mu rusengero hariho izindi mbaho.",
+            "answer": "The board is outside. Tomorrow you will put it in the church. There are others in the church.",
+            "hint": ""
+          },
+          {
+            "prompt": "Genda uru rwandiko ukwiriye kurumuha. Ukwiriye kurumuha none.",
+            "answer": "Go; you must give him this letter. You must give it to him today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Urukundo rw'abantu si rumwe. Urwa bamwe ni rwinshi; naho urw'abandi ni ruke cyane.",
+            "answer": "The love of people is not the same. Some have much; and that of others is very little.",
+            "hint": ""
+          },
+          {
+            "prompt": "Impinja n'abana batoya cyane, ariko bose n'abantu.",
+            "answer": "Infants are very small people, but all are people.",
+            "hint": ""
+          },
+          {
+            "prompt": "Urugendo rwabo n'urujya n'uruza. Nta bwo bicara hamwe.",
+            "answer": "Their journey is a constant coming and going. They never stay in one place.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese turajya kureba uruzi none, cyangwa ejo? Oya, tuzarureba ejo bundi.",
+            "answer": "Are we going to see the river today, or tomorrow? No, we will see it the day after tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese izi n'impinja zawe? Oya s'izanjye, n'ize.",
+            "answer": "Are these your infants? No, they are not mine; they are hers.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ejo nzandika urwandiko rurerure. Sinzarwandika ejo bundi. Sinshaka kurwandika none.",
+            "answer": "Tomorrow I shall write a long letter. I shall not write it the day after tomorrow. I don't want to write it today.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "The rabbit's death. The home of those men. The bird's long journey.",
+            "answer": "Urupfu rw'urukwavu. Urago rwa bariya bagabo. Urugendo rurerure rw'inyoni.",
+            "hint": ""
+          },
+          {
+            "prompt": "The country is very wide. There are many homes, and the people speak many languages.",
+            "answer": "Igihugu ni kigari rwose. Hariho ingo nyinshi, n'abantu bavuga indimi nyinshi.",
+            "hint": ""
+          },
+          {
+            "prompt": "People's love: they have it today, and tomorrow they forget it.",
+            "answer": "Urukundo rw'abantu, barugira none, n'ejo bakarwibagirwa.",
+            "hint": ""
+          },
+          {
+            "prompt": "Look at this long key. Is it yours? No it's not mine; it is his.",
+            "answer": "Reba uru rufunguzo rurerure. Mbese, n'urwawe? Oya, s'urwanjye, n'urwe.",
+            "hint": ""
+          },
+          {
+            "prompt": "It will be a coming and going the whole day.",
+            "answer": "Bizaba urujya n'uruza umunsi wose.",
+            "hint": ""
+          },
+          {
+            "prompt": "The board is outside. Tomorrow you will put it in the church. There are others in the church.",
+            "answer": "Urubaho ruri hanze. Ejo uzarushyira mu rusengero. Mu rusengero hariho izindi mbaho.",
+            "hint": ""
+          },
+          {
+            "prompt": "Go; you must give him this letter. You must give it to him today.",
+            "answer": "Genda uru rwandiko ukwiriye kurumuha. Ukwiriye kurumuha none.",
+            "hint": ""
+          },
+          {
+            "prompt": "The love of people is not the same. Some have much; and that of others is very little.",
+            "answer": "Urukundo rw'abantu si rumwe. Urwa bamwe ni rwinshi; naho urw'abandi ni ruke cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "Infants are very small people, but all are people.",
+            "answer": "Impinja n'abana batoya cyane, ariko bose n'abantu.",
+            "hint": ""
+          },
+          {
+            "prompt": "Their journey is a constant coming and going. They never stay in one place.",
+            "answer": "Urugendo rwabo n'urujya n'uruza. Nta bwo bicara hamwe.",
+            "hint": ""
+          },
+          {
+            "prompt": "Are we going to see the river today, or tomorrow? No, we will see it the day after tomorrow.",
+            "answer": "Mbese turajya kureba uruzi none, cyangwa ejo? Oya, tuzarureba ejo bundi.",
+            "hint": ""
+          },
+          {
+            "prompt": "Are these your infants? No, they are not mine; they are hers.",
+            "answer": "Mbese izi n'impinja zawe? Oya s'izanjye, n'ize.",
+            "hint": ""
+          },
+          {
+            "prompt": "Tomorrow I shall write a long letter. I shall not write it the day after tomorrow. I don't want to write it today.",
+            "answer": "Ejo nzandika urwandiko rurerure. Sinzarwandika ejo bundi. Sinshaka kurwandika none.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          {
+            "prompt": "Urupfu rw'impinja rutera agahinda cyane.",
+            "answer": "The death of infants causes much sadness.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ejo, n'ugera mu misozi, uzabona urugo rwe. Ruri hakurya y'uruzi rugari cyane.",
+            "answer": "Tomorrow, when you reach the hills, you will see his home. It's beyond the very wide river.",
+            "hint": ""
+          },
+          {
+            "prompt": "Azakwereka uburyo bandika ku mpu z'inyamaswa.",
+            "answer": "He will show you how they write on the skins of animals.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ejobundi, n'uduha urufunguzo, tuzakingura urugi rw'urusengero, kuko benshi bazashaka kwinjiramo ngo basenge.",
+            "answer": "If you give us the key the day after tomorrow, we will open the door of the church, because many will want to enter in, so as to worship.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kubwo kubura ibyokurya bibakwiriye mu minsi myinshi, benshi bararwaye kandi bose bafite ibisebe ku ngingo z'imibiri yabo.",
+            "answer": "Because of a lack of proper food for many days, many are sick and all have sores on the limbs of their bodies.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "The death of infants causes much sadness.",
+            "answer": "Urupfu rw'impinja rutera agahinda cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "Tomorrow, when you reach the hills, you will see his home. It's beyond the very wide river.",
+            "answer": "Ejo, n'ugera mu misozi, uzabona urugo rwe. Ruri hakurya y'uruzi rugari cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "He will show you how they write on the skins of animals.",
+            "answer": "Azakwereka uburyo bandika ku mpu z'inyamaswa.",
+            "hint": ""
+          },
+          {
+            "prompt": "If you give us the key the day after tomorrow, we will open the door of the church, because many will want to enter in, so as to worship.",
+            "answer": "Ejobundi, n'uduha urufunguzo, tuzakingura urugi rw'urusengero, kuko benshi bazashaka kwinjiramo ngo basenge.",
+            "hint": ""
+          },
+          {
+            "prompt": "Because of a lack of proper food for many days, many are sick and all have sores on the limbs of their bodies.",
+            "answer": "Kubwo kubura ibyokurya bibakwiriye mu minsi myinshi, benshi bararwaye kandi bose bafite ibisebe ku ngingo z'imibiri yabo.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

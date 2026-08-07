@@ -116,6 +116,11 @@
                 </div>
                 <form id="exercise-form" class="stacked-form">
                   <label for="exercise-name">Exercise name</label>
+                  <label for="exercise-type">Exercise type</label>
+                  <select id="exercise-type" name="exerciseType">
+                    <option value="flashcard">Question cards</option>
+                    <option value="grammar-table">Grammar table</option>
+                  </select>
                   <div class="inline-form">
                     <input id="exercise-name" name="exerciseName" type="text" placeholder="Translate into Kinyarwanda" autocomplete="off" required />
                     <button type="submit">Add</button>

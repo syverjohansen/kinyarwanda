@@ -32,6 +32,7 @@ const elements = {
   deleteLesson: document.querySelector("#delete-lesson"),
   exerciseForm: document.querySelector("#exercise-form"),
   exerciseName: document.querySelector("#exercise-name"),
+  exerciseType: document.querySelector("#exercise-type"),
   exerciseList: document.querySelector("#exercise-list"),
   syncToggle: document.querySelector("#sync-toggle"),
   syncPanel: document.querySelector("#sync-panel"),
@@ -115,16 +116,25 @@ function removeLesson() {
   render();
 }
 
-function addExercise(name) {
+function addExercise(name, type = "flashcard") {
   const lesson = getActiveLesson();
   if (!lesson) return;
 
   const exercise = {
     id: makeId("exercise"),
     name: name.trim(),
+    type,
     questions: [],
     lastPracticed: "",
   };
+
+  if (type === "grammar-table") {
+    exercise.columns = [
+      { id: makeId("column"), label: "Singular" },
+      { id: makeId("column"), label: "Plural" },
+    ];
+    exercise.rows = [];
+  }
 
   lesson.exercises.push(exercise);
   state.activePracticeExerciseId = exercise.id;
@@ -157,6 +167,108 @@ function addQuestion(exerciseId, formData) {
     hint: formData.get("hint").trim(),
   });
 
+  resetPracticeSession();
+  saveLessons();
+  render();
+}
+
+function addGrammarRow(exerciseId, formData) {
+  const exercise = findExercise(exerciseId);
+  if (!exercise) return;
+
+  const columns = getGrammarColumns(exercise);
+  const row = {
+    id: makeId("row"),
+    label: formData.get("label").trim(),
+    cells: {},
+  };
+
+  columns.forEach((column) => {
+    row.cells[column.id] = formData.get(column.id).trim();
+  });
+
+  exercise.rows.push(row);
+  resetPracticeSession();
+  saveLessons();
+  render();
+}
+
+function removeGrammarRow(exerciseId, rowId) {
+  const exercise = findExercise(exerciseId);
+  if (!exercise) return;
+
+  exercise.rows = getGrammarRows(exercise).filter((row) => row.id !== rowId);
+  resetPracticeSession();
+  saveLessons();
+  render();
+}
+
+function updateGrammarColumn(exercise, columnId, label) {
+  const column = getGrammarColumns(exercise).find((item) => item.id === columnId);
+  if (!column) return;
+
+  column.label = label.trim() || "Column";
+  resetPracticeSession();
+  saveLessons();
+  render();
+}
+
+function addGrammarColumn(exerciseId) {
+  const exercise = findExercise(exerciseId);
+  if (!exercise) return;
+
+  const columns = getGrammarColumns(exercise);
+  const column = {
+    id: makeId("column"),
+    label: `Column ${columns.length + 1}`,
+  };
+
+  columns.push(column);
+  getGrammarRows(exercise).forEach((row) => {
+    row.cells = row.cells || {};
+    row.cells[column.id] = "";
+  });
+
+  resetPracticeSession();
+  saveLessons();
+  render();
+}
+
+function removeGrammarColumn(exerciseId, columnId) {
+  const exercise = findExercise(exerciseId);
+  if (!exercise) return;
+
+  const columns = getGrammarColumns(exercise);
+  if (columns.length <= 1) {
+    window.alert("A grammar table needs at least one column.");
+    return;
+  }
+
+  exercise.columns = columns.filter((column) => column.id !== columnId);
+  getGrammarRows(exercise).forEach((row) => {
+    if (row.cells) delete row.cells[columnId];
+  });
+
+  resetPracticeSession();
+  saveLessons();
+  render();
+}
+
+function updateGrammarRowLabel(exercise, rowId, label) {
+  const row = getGrammarRows(exercise).find((item) => item.id === rowId);
+  if (!row) return;
+
+  row.label = label.trim() || "Row";
+  saveLessons();
+  render();
+}
+
+function updateGrammarCell(exercise, rowId, columnId, value) {
+  const row = getGrammarRows(exercise).find((item) => item.id === rowId);
+  if (!row) return;
+
+  row.cells = row.cells || {};
+  row.cells[columnId] = value.trim();
   resetPracticeSession();
   saveLessons();
   render();
@@ -196,6 +308,34 @@ function editQuestion(exerciseId, questionId) {
 function findExercise(exerciseId) {
   const lesson = getActiveLesson();
   return lesson?.exercises.find((exercise) => exercise.id === exerciseId) || null;
+}
+
+function getExerciseType(exercise) {
+  return exercise.type || "flashcard";
+}
+
+function getGrammarColumns(exercise) {
+  if (!Array.isArray(exercise.columns) || exercise.columns.length === 0) {
+    exercise.columns = [
+      { id: makeId("column"), label: "Singular" },
+      { id: makeId("column"), label: "Plural" },
+    ];
+  }
+
+  return exercise.columns;
+}
+
+function getGrammarRows(exercise) {
+  if (!Array.isArray(exercise.rows)) exercise.rows = [];
+  return exercise.rows;
+}
+
+function getExerciseItemCount(exercise) {
+  if (getExerciseType(exercise) === "grammar-table") {
+    return getGrammarRows(exercise).reduce((count, row) => count + getGrammarColumns(exercise).filter((column) => row.cells?.[column.id]).length, 0);
+  }
+
+  return Array.isArray(exercise.questions) ? exercise.questions.length : 0;
 }
 
 function render() {
@@ -252,9 +392,10 @@ function renderExercise(exercise) {
   const removeButton = node.querySelector(".remove-exercise");
   const questionForm = node.querySelector(".question-form");
   const questionList = node.querySelector(".question-list");
+  const isGrammarTable = getExerciseType(exercise) === "grammar-table";
 
   titleInput.value = exercise.name;
-  practiceMeta.textContent = formatPracticeDate(exercise.lastPracticed);
+  practiceMeta.textContent = `${isGrammarTable ? "Grammar table" : "Question cards"} · ${formatPracticeDate(exercise.lastPracticed)}`;
   titleInput.addEventListener("change", () => {
     exercise.name = titleInput.value.trim() || "Untitled exercise";
     saveLessons();
@@ -262,6 +403,13 @@ function renderExercise(exercise) {
   });
 
   removeButton.addEventListener("click", () => removeExercise(exercise.id));
+
+  if (isGrammarTable) {
+    questionForm.remove();
+    questionList.replaceWith(renderGrammarBuilder(exercise));
+    return node;
+  }
+
   questionForm.addEventListener("submit", (event) => {
     event.preventDefault();
     addQuestion(exercise.id, new FormData(questionForm));
@@ -272,6 +420,116 @@ function renderExercise(exercise) {
   });
 
   return node;
+}
+
+function renderGrammarBuilder(exercise) {
+  const columns = getGrammarColumns(exercise);
+  const rows = getGrammarRows(exercise);
+  const wrapper = document.createElement("div");
+  wrapper.className = "grammar-builder";
+
+  const columnEditor = document.createElement("div");
+  columnEditor.className = "grammar-column-editor";
+  columnEditor.innerHTML = `
+    ${columns
+      .map(
+        (column) => `
+          <div class="grammar-column-control">
+            <label>
+              Column
+              <input data-column-id="${escapeHtml(column.id)}" value="${escapeHtml(column.label)}" autocomplete="off" />
+            </label>
+            <button class="remove-grammar-column danger-button" type="button" data-column-id="${escapeHtml(column.id)}">Delete</button>
+          </div>
+        `,
+      )
+      .join("")}
+    <button class="add-grammar-column secondary-button" type="button">Add column</button>
+  `;
+  wrapper.append(columnEditor);
+
+  columnEditor.querySelectorAll("[data-column-id]").forEach((input) => {
+    if (input.tagName !== "INPUT") return;
+    input.addEventListener("change", () => updateGrammarColumn(exercise, input.dataset.columnId, input.value));
+  });
+  columnEditor.querySelectorAll(".remove-grammar-column").forEach((button) => {
+    button.addEventListener("click", () => removeGrammarColumn(exercise.id, button.dataset.columnId));
+  });
+  columnEditor.querySelector(".add-grammar-column").addEventListener("click", () => addGrammarColumn(exercise.id));
+
+  const tableWrap = document.createElement("div");
+  tableWrap.className = "grammar-table-wrap";
+
+  const table = document.createElement("table");
+  table.className = "grammar-edit-table";
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>Prompt</th>
+        ${columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join("")}
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+
+  const tbody = table.querySelector("tbody");
+  rows.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <th scope="row">
+        <input class="grammar-row-label" value="${escapeHtml(row.label)}" autocomplete="off" />
+      </th>
+      ${columns
+        .map(
+          (column) => `
+            <td>
+              <textarea rows="3" data-column-id="${escapeHtml(column.id)}">${escapeHtml(row.cells?.[column.id] || "")}</textarea>
+            </td>
+          `,
+        )
+        .join("")}
+      <td><button class="remove-grammar-row danger-button" type="button">Delete</button></td>
+    `;
+
+    tr.querySelector(".grammar-row-label").addEventListener("change", (event) => updateGrammarRowLabel(exercise, row.id, event.target.value));
+    tr.querySelectorAll("[data-column-id]").forEach((input) => {
+      input.addEventListener("change", () => updateGrammarCell(exercise, row.id, input.dataset.columnId, input.value));
+    });
+    tr.querySelector(".remove-grammar-row").addEventListener("click", () => removeGrammarRow(exercise.id, row.id));
+    tbody.append(tr);
+  });
+
+  tableWrap.append(table);
+  wrapper.append(tableWrap);
+
+  const addForm = document.createElement("form");
+  addForm.className = "grammar-row-form";
+  addForm.innerHTML = `
+    <label>
+      Prompt
+      <input name="label" placeholder="Class Prefixes" autocomplete="off" required />
+    </label>
+    ${columns
+      .map(
+        (column) => `
+          <label>
+            ${escapeHtml(column.label)}
+            <textarea name="${escapeHtml(column.id)}" rows="3" placeholder="umu-\numu-sozi (hill)" required></textarea>
+          </label>
+        `,
+      )
+      .join("")}
+    <button type="submit">Add row</button>
+  `;
+
+  addForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addGrammarRow(exercise.id, new FormData(addForm));
+  });
+  wrapper.append(addForm);
+
+  return wrapper;
 }
 
 function renderQuestion(exerciseId, question) {
@@ -313,7 +571,7 @@ function getPracticeExercises() {
 }
 
 function getActivePracticeExercise(items = getPracticeExercises()) {
-  const available = items.filter((item) => item.exercise.questions.length > 0);
+  const available = items.filter((item) => getExerciseItemCount(item.exercise) > 0);
   if (available.length === 0) return items[0] || null;
 
   const selected = available.find((item) => item.exercise.id === state.activePracticeExerciseId);
@@ -543,24 +801,30 @@ function renderPracticeView() {
       <span>${item.label}</span>
       <span>
         <strong>${escapeHtml(item.exercise.name)}</strong>
-        <small>${item.exercise.questions.length} questions · ${escapeHtml(formatPracticeDate(item.exercise.lastPracticed))}</small>
+        <small>${getExerciseItemCount(item.exercise)} ${getExerciseType(item.exercise) === "grammar-table" ? "cells" : "questions"} · ${escapeHtml(formatPracticeDate(item.exercise.lastPracticed))}</small>
       </span>
     `;
     button.addEventListener("click", () => selectPracticeExercise(item.exercise.id));
     elements.practiceNav.append(button);
   });
 
-  if (!active || active.exercise.questions.length === 0) {
+  if (!active || getExerciseItemCount(active.exercise) === 0) {
     elements.practiceCard.innerHTML = `
       <div class="flashcard-empty">
-        <h3>No questions in this exercise</h3>
-        <p>Add questions in Build mode before practicing this exercise.</p>
+        <h3>Nothing to practice in this exercise</h3>
+        <p>Add questions or table rows in Build mode before practicing this exercise.</p>
       </div>
     `;
     return;
   }
 
   const exercise = active.exercise;
+
+  if (getExerciseType(exercise) === "grammar-table") {
+    renderGrammarPractice(active);
+    return;
+  }
+
   const session = getPracticeSession(exercise);
 
   if (session.done) {
@@ -676,6 +940,171 @@ function renderPracticeView() {
   }
 }
 
+function getGrammarPracticeSession(exercise) {
+  if (!state.practiceSession || state.practiceSession.exerciseId !== exercise.id || state.practiceSession.kind !== "grammar-table") {
+    state.practiceSession = {
+      kind: "grammar-table",
+      exerciseId: exercise.id,
+      answers: {},
+      checked: false,
+      revealed: false,
+      done: false,
+    };
+  }
+
+  return state.practiceSession;
+}
+
+function renderGrammarPractice(active) {
+  const exercise = active.exercise;
+  const columns = getGrammarColumns(exercise);
+  const rows = getGrammarRows(exercise);
+  const session = getGrammarPracticeSession(exercise);
+  const form = document.createElement("form");
+  form.className = "grammar-practice";
+
+  form.innerHTML = `
+    <div class="flashcard-topline">
+      <span>${escapeHtml(active.label)}</span>
+      <span>${getExerciseItemCount(exercise)} cells</span>
+    </div>
+    <div class="practice-phase">
+      <p class="eyebrow">Grammar table</p>
+      <p>Fill the table, then check your answers.</p>
+      <p class="practice-last-date">${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
+    </div>
+    <div class="grammar-table-wrap">
+      <table class="grammar-practice-table">
+        <thead>
+          <tr>
+            <th>${escapeHtml(exercise.name)}</th>
+            ${columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join("")}
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="practice-result" role="status"></p>
+    <div class="flashcard-actions">
+      <button class="check-grammar" type="submit">Check table</button>
+      <button class="show-grammar-answers secondary-button" type="button">Show answers</button>
+      <button class="restart-section secondary-button" type="button">Reset</button>
+    </div>
+  `;
+
+  const tbody = form.querySelector("tbody");
+  rows.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <th scope="row">${escapeHtml(row.label)}</th>
+      ${columns
+        .map((column) => {
+          const key = getGrammarCellKey(row.id, column.id);
+          const expected = row.cells?.[column.id] || "";
+          const value = session.revealed ? expected : session.answers[key] || "";
+          const status = getGrammarCellStatus(value, expected, session);
+          return `
+            <td class="${escapeHtml(status)}">
+              <textarea rows="3" name="${escapeHtml(key)}" ${session.revealed ? "disabled" : ""}>${escapeHtml(value)}</textarea>
+              <p class="grammar-answer" ${session.checked || session.revealed ? "" : "hidden"}>${escapeHtml(expected)}</p>
+            </td>
+          `;
+        })
+        .join("")}
+    `;
+    tbody.append(tr);
+  });
+
+  const result = form.querySelector(".practice-result");
+  updateGrammarResult(result, exercise, session);
+
+  form.querySelectorAll("textarea").forEach((input) => {
+    input.addEventListener("input", () => {
+      session.answers[input.name] = input.value;
+      session.checked = false;
+    });
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    form.querySelectorAll("textarea").forEach((input) => {
+      session.answers[input.name] = input.value.trim();
+    });
+    session.checked = true;
+    session.revealed = false;
+
+    if (getGrammarScore(exercise, session).wrong === 0) {
+      exercise.lastPracticed = new Date().toISOString();
+      session.done = true;
+      saveLessons();
+    }
+
+    render();
+  });
+
+  form.querySelector(".show-grammar-answers").addEventListener("click", () => {
+    session.checked = true;
+    session.revealed = true;
+    render();
+  });
+  form.querySelector(".restart-section").addEventListener("click", () => {
+    resetPracticeSession();
+    render();
+  });
+
+  elements.practiceCard.append(form);
+}
+
+function getGrammarCellKey(rowId, columnId) {
+  return `${rowId}__${columnId}`;
+}
+
+function getGrammarCellStatus(value, expected, session) {
+  if (!session.checked && !session.revealed) return "";
+  if (normalizeAnswer(value) === normalizeAnswer(expected)) return "correct";
+  return "incorrect";
+}
+
+function getGrammarScore(exercise, session) {
+  let correct = 0;
+  let wrong = 0;
+
+  getGrammarRows(exercise).forEach((row) => {
+    getGrammarColumns(exercise).forEach((column) => {
+      const expected = row.cells?.[column.id] || "";
+      if (!expected) return;
+
+      const value = session.answers[getGrammarCellKey(row.id, column.id)] || "";
+      if (normalizeAnswer(value) === normalizeAnswer(expected)) {
+        correct += 1;
+      } else {
+        wrong += 1;
+      }
+    });
+  });
+
+  return { correct, wrong };
+}
+
+function updateGrammarResult(result, exercise, session) {
+  if (!session.checked && !session.revealed) {
+    result.textContent = "";
+    result.className = "practice-result";
+    return;
+  }
+
+  const score = getGrammarScore(exercise, session);
+  result.textContent = score.wrong === 0 ? "All correct. Exercise marked practiced." : `${score.correct} correct, ${score.wrong} to review.`;
+  result.className = `practice-result ${score.wrong === 0 ? "correct" : "incorrect"}`;
+}
+
+function normalizeAnswer(value) {
+  return String(value || "")
+    .trim()
+    .toLocaleLowerCase()
+    .replace(/\s+/g, " ");
+}
+
 function handlePracticeShortcut(event) {
   if (state.activeMode !== "practice" || event.metaKey || event.ctrlKey || event.altKey) return;
 
@@ -683,7 +1112,7 @@ function handlePracticeShortcut(event) {
   if (!key) return;
 
   const active = getActivePracticeExercise();
-  if (!active || active.exercise.questions.length === 0) return;
+  if (!active || getExerciseItemCount(active.exercise) === 0 || getExerciseType(active.exercise) === "grammar-table") return;
 
   const session = getPracticeSession(active.exercise);
   if (session.done) return;
@@ -895,17 +1324,59 @@ function normalizeImportedExercise(exercise, index) {
     throw new Error(`Exercise ${index + 1} is not valid.`);
   }
 
+  const name = String(exercise.name || "").trim() || `Exercise ${index + 1}`;
+  const type = exercise.type === "grammar-table" ? "grammar-table" : "flashcard";
+
+  if (type === "grammar-table") {
+    return normalizeImportedGrammarExercise(exercise, name);
+  }
+
   if (!Array.isArray(exercise.questions)) {
     throw new Error(`Exercise ${index + 1} needs a questions array.`);
   }
 
-  const name = String(exercise.name || "").trim() || `Exercise ${index + 1}`;
+  return {
+    id: makeId("exercise"),
+    name,
+    type: "flashcard",
+    lastPracticed: typeof exercise.lastPracticed === "string" ? exercise.lastPracticed : "",
+    questions: exercise.questions.map(normalizeImportedQuestion),
+  };
+}
+
+function normalizeImportedGrammarExercise(exercise, name) {
+  const columns = Array.isArray(exercise.columns)
+    ? exercise.columns.map((column, index) => ({
+        id: String(column.id || makeId("column")),
+        label: String(column.label || `Column ${index + 1}`).trim(),
+      }))
+    : [
+        { id: makeId("column"), label: "Singular" },
+        { id: makeId("column"), label: "Plural" },
+      ];
+
+  if (!Array.isArray(exercise.rows)) {
+    throw new Error(`"${name}" needs a rows array.`);
+  }
 
   return {
     id: makeId("exercise"),
     name,
+    type: "grammar-table",
     lastPracticed: typeof exercise.lastPracticed === "string" ? exercise.lastPracticed : "",
-    questions: exercise.questions.map(normalizeImportedQuestion),
+    questions: [],
+    columns,
+    rows: exercise.rows.map((row, index) => {
+      if (!row || typeof row !== "object" || Array.isArray(row)) {
+        throw new Error(`Row ${index + 1} in "${name}" is not valid.`);
+      }
+
+      return {
+        id: String(row.id || makeId("row")),
+        label: String(row.label || `Row ${index + 1}`).trim(),
+        cells: Object.fromEntries(columns.map((column) => [column.id, String(row.cells?.[column.id] || "").trim()])),
+      };
+    }),
   };
 }
 
@@ -1160,7 +1631,7 @@ elements.loadSync.addEventListener("click", loadFromGist);
 
 elements.exerciseForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  addExercise(elements.exerciseName.value);
+  addExercise(elements.exerciseName.value, elements.exerciseType.value);
   elements.exerciseForm.reset();
 });
 
