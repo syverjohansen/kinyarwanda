@@ -364,6 +364,22 @@ function getExerciseItemCount(exercise) {
   return Array.isArray(exercise.questions) ? exercise.questions.length : 0;
 }
 
+function moveFocusWithinList(event, selector) {
+  if (event.key !== "Tab") return;
+
+  const items = [...document.querySelectorAll(selector)].filter((item) => !item.disabled && !item.hidden);
+  const currentIndex = items.indexOf(event.target);
+  if (currentIndex < 0) return;
+
+  const nextIndex = currentIndex + (event.shiftKey ? -1 : 1);
+  const next = items[nextIndex];
+  if (!next) return;
+
+  event.preventDefault();
+  next.focus();
+  if (typeof next.select === "function") next.select();
+}
+
 function render() {
   renderLessonList();
   renderLessonEditor();
@@ -518,9 +534,12 @@ function renderGrammarBuilder(exercise) {
       <td><button class="remove-grammar-row danger-button" type="button">Delete</button></td>
     `;
 
-    tr.querySelector(".grammar-row-label").addEventListener("change", (event) => updateGrammarRowLabel(exercise, row.id, event.target.value));
+    const rowLabel = tr.querySelector(".grammar-row-label");
+    rowLabel.addEventListener("change", (event) => updateGrammarRowLabel(exercise, row.id, event.target.value));
+    rowLabel.addEventListener("keydown", (event) => moveFocusWithinList(event, ".grammar-edit-table .grammar-row-label, .grammar-edit-table textarea"));
     tr.querySelectorAll("[data-column-id]").forEach((input) => {
       input.addEventListener("change", () => updateGrammarCell(exercise, row.id, input.dataset.columnId, input.value));
+      input.addEventListener("keydown", (event) => moveFocusWithinList(event, ".grammar-edit-table .grammar-row-label, .grammar-edit-table textarea"));
     });
     tr.querySelector(".remove-grammar-row").addEventListener("click", () => removeGrammarRow(exercise.id, row.id));
     tbody.append(tr);
@@ -1183,6 +1202,11 @@ function renderGrammarPractice(active) {
 
   form.querySelectorAll("textarea").forEach((input) => {
     input.addEventListener("keydown", (event) => {
+      if (event.key === "Tab") {
+        moveFocusWithinList(event, ".grammar-practice-table textarea");
+        return;
+      }
+
       if (event.key !== "Enter" || event.shiftKey || session.revealed) return;
 
       event.preventDefault();
