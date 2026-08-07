@@ -365,9 +365,25 @@ function getExerciseItemCount(exercise) {
 }
 
 function moveFocusWithinList(event, selector) {
-  if (event.key !== "Tab") return;
+  if (event.key !== "Tab" || event.defaultPrevented) return;
 
   const items = [...document.querySelectorAll(selector)].filter((item) => !item.disabled && !item.hidden);
+  const currentIndex = items.indexOf(event.target);
+  if (currentIndex < 0) return;
+
+  const nextIndex = currentIndex + (event.shiftKey ? -1 : 1);
+  const next = items[nextIndex];
+  if (!next) return;
+
+  event.preventDefault();
+  next.focus();
+  if (typeof next.select === "function") next.select();
+}
+
+function moveFocusWithinContainer(event, container, selector) {
+  if (event.key !== "Tab" || event.defaultPrevented) return;
+
+  const items = [...container.querySelectorAll(selector)].filter((item) => !item.disabled && !item.hidden);
   const currentIndex = items.indexOf(event.target);
   if (currentIndex < 0) return;
 
@@ -469,6 +485,9 @@ function renderGrammarBuilder(exercise) {
   const rows = getGrammarRows(exercise);
   const wrapper = document.createElement("div");
   wrapper.className = "grammar-builder";
+  wrapper.addEventListener("keydown", (event) => {
+    moveFocusWithinContainer(event, wrapper, ".grammar-edit-table .grammar-row-label, .grammar-edit-table textarea, .grammar-row-form input, .grammar-row-form textarea");
+  });
 
   const columnEditor = document.createElement("div");
   columnEditor.className = "grammar-column-editor";
