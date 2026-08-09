@@ -668,6 +668,7 @@ function makePracticeSession(exercise) {
     answer: "",
     answers: {},
     grammarGrades: {},
+    grammarRound: 1,
     revealed: false,
     showHint: false,
     done: false,
@@ -886,6 +887,7 @@ function gradeGrammarRound(exercise) {
     session.queue = [];
     session.index = 0;
     advancePracticePhase(session, exercise);
+    session.grammarRound += 1;
     resetCurrentCard();
     render();
     return;
@@ -906,6 +908,7 @@ function gradeGrammarRound(exercise) {
       advancePracticePhase(session, exercise);
     }
 
+    session.grammarRound += 1;
     resetCurrentCard();
     render();
     return;
@@ -921,6 +924,7 @@ function gradeGrammarRound(exercise) {
     session.queue = [];
     session.index = 0;
     advancePracticePhase(session, exercise);
+    session.grammarRound += 1;
     resetCurrentCard();
     render();
   }
@@ -1133,7 +1137,7 @@ function renderGrammarPractice(active) {
   form.innerHTML = `
     <div class="flashcard-topline">
       <span>${escapeHtml(active.label)}</span>
-      <span>${escapeHtml(progress)}</span>
+      <span>${escapeHtml(progress)} · Round ${session.grammarRound || 1}</span>
     </div>
     <div class="practice-phase">
       <p class="eyebrow">${escapeHtml(getPhaseTitle(session))}</p>
@@ -1156,7 +1160,7 @@ function renderGrammarPractice(active) {
       <button class="reveal-answer" type="submit" ${session.revealed ? "disabled" : ""}>Show answers</button>
       <button class="mark-correct" type="button" ${session.revealed ? "" : "disabled"}>Correct 1</button>
       <button class="mark-wrong danger-button" type="button" ${session.revealed ? "" : "disabled"}>Wrong 2</button>
-      <button class="continue-grammar" type="submit" ${session.revealed && !hasUngraded ? "" : "disabled"}>Continue</button>
+      <button class="continue-grammar" type="button" ${session.revealed && !hasUngraded ? "" : "disabled"}>Continue</button>
       <button class="restart-section secondary-button" type="button">Restart exercise</button>
     </div>
   `;
@@ -1207,10 +1211,7 @@ function renderGrammarPractice(active) {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (session.revealed) {
-      gradeGrammarRound(exercise);
-      return;
-    }
+    if (session.revealed) return;
 
     form.querySelectorAll("textarea").forEach((input) => {
       session.answers[input.name] = input.value.trim();
@@ -1251,6 +1252,7 @@ function renderGrammarPractice(active) {
 
   form.querySelector(".mark-correct").addEventListener("click", () => setVisibleGrammarGrades("correct", exercise));
   form.querySelector(".mark-wrong").addEventListener("click", () => setVisibleGrammarGrades("wrong", exercise));
+  form.querySelector(".continue-grammar").addEventListener("click", () => gradeGrammarRound(exercise));
   form.querySelector(".restart-section").addEventListener("click", () => {
     resetPracticeSession();
     render();
