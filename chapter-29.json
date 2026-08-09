@@ -1,0 +1,294 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 29",
+    "exercises": [
+      {
+        "name": "Translate into Kinyarwanda using the diminutive form",
+        "questions": [
+          {
+            "prompt": "this little stone",
+            "answer": "aka kabuye",
+            "hint": ""
+          },
+          {
+            "prompt": "my little cow",
+            "answer": "agaka kanjye",
+            "hint": ""
+          },
+          {
+            "prompt": "a little water",
+            "answer": "utuzi duke",
+            "hint": ""
+          },
+          {
+            "prompt": "much sorrow",
+            "answer": "agahinda kenshi",
+            "hint": ""
+          },
+          {
+            "prompt": "their little loaves",
+            "answer": "udutsima twabo",
+            "hint": ""
+          },
+          {
+            "prompt": "101 little books",
+            "answer": "udutabo ijana na kamwe",
+            "hint": ""
+          },
+          {
+            "prompt": "He has seven little fish.",
+            "answer": "Afite udufi turindwi",
+            "hint": ""
+          },
+          {
+            "prompt": "Our little church",
+            "answer": "agasengero kacu",
+            "hint": ""
+          },
+          {
+            "prompt": "little man",
+            "answer": "akagabo",
+            "hint": ""
+          },
+          {
+            "prompt": "three little streams",
+            "answer": "utugezi dutatu",
+            "hint": ""
+          },
+          {
+            "prompt": "these three little saplings",
+            "answer": "utu duti dutatu",
+            "hint": ""
+          },
+          {
+            "prompt": "our little sins",
+            "answer": "utwaha twacu",
+            "hint": ""
+          },
+          {
+            "prompt": "his few little cows",
+            "answer": "uduka twe dukeya",
+            "hint": ""
+          },
+          {
+            "prompt": "her one little infant",
+            "answer": "agahinja ke kamwe",
+            "hint": ""
+          },
+          {
+            "prompt": "their little city",
+            "answer": "akajyi kabo",
+            "hint": ""
+          },
+          {
+            "prompt": "those little letters of theirs",
+            "answer": "turiya twandiko twabo",
+            "hint": ""
+          },
+          {
+            "prompt": "my boat",
+            "answer": "ubwato bwanjye",
+            "hint": ""
+          },
+          {
+            "prompt": "their little key",
+            "answer": "agafunguzo kabo",
+            "hint": ""
+          },
+          {
+            "prompt": "our mouths",
+            "answer": "akanwa kacu",
+            "hint": ""
+          },
+          {
+            "prompt": "my little word",
+            "answer": "akajambo kanjye",
+            "hint": ""
+          },
+          {
+            "prompt": "one hundred little eggs",
+            "answer": "utugi ijana",
+            "hint": ""
+          },
+          {
+            "prompt": "his little mistake",
+            "answer": "agakosa ke",
+            "hint": ""
+          },
+          {
+            "prompt": "Give me a little cob of corn.",
+            "answer": "mpa akagori.",
+            "hint": ""
+          },
+          {
+            "prompt": "his little thing",
+            "answer": "akantu ke",
+            "hint": ""
+          },
+          {
+            "prompt": "I heard his little voice.",
+            "answer": "Numvise akajwi ke",
+            "hint": ""
+          },
+          {
+            "prompt": "many little sweet potatoes",
+            "answer": "utujumba duto (ya)",
+            "hint": ""
+          },
+          {
+            "prompt": "our eleven little children",
+            "answer": "utwana twacu cumi na kamwe",
+            "hint": ""
+          },
+          {
+            "prompt": "one little bee",
+            "answer": "akayuki kamwe",
+            "hint": ""
+          },
+          {
+            "prompt": "their two little cows",
+            "answer": "uduka twabo tubiri",
+            "hint": ""
+          },
+          {
+            "prompt": "ninety-two little stones",
+            "answer": "utubuye mirongurwenda na tubiri",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          {
+            "prompt": "Dore kariya kana gatoya rwose ukuntu kazi kwiruka!",
+            "answer": "Just look at how that tiny little child is able [knows how] to run!",
+            "hint": ""
+          },
+          {
+            "prompt": "Dufite agahinda kenshi kubwa amakuba uriya mugore ahora agira",
+            "answer": "We are so sorry because of all the troubles that woman constantly experiences.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kariya kana ntigashobora kurya ibijumba binini, kuko gafit' akanwa gatoya cyane.",
+            "answer": "That little child cannot eat big sweet potatoes, because he has a very small mouth.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nshuti yanjye nkunda, nzi yuko utazibagirwa kwandika akandiko kambwira uk'umeze.",
+            "answer": "My dear friend, I know that you will not forget to write a note telling me how you are doing.",
+            "hint": ""
+          },
+          {
+            "prompt": "Urugendo rwabaye rurerure cyane; ni cyo gituma udutsinsino twanjye tubabara",
+            "answer": "The journey has been very long; that's why my heels hurt.",
+            "hint": ""
+          },
+          {
+            "prompt": "Utu twigishwa dutoya cyane tuzi kubara guhera kuri kimwe kugeza kuri makumyabiri",
+            "answer": "These very little students know how to count from one to twenty.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinzarya ku tyokurya twe.",
+            "answer": "I won't eat any [some] of his meager food.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iki n'igisebe cya kane kiri ku rugingo rwe",
+            "answer": "This is the fourth sore [which is] on his limb",
+            "hint": ""
+          },
+          {
+            "prompt": "Izi nka maganatatu n'eybiri n'ize; iki ni cyo gihe cya mbere nzibona",
+            "answer": "These 302 cows are his; this is the first time [that] I am seeing them",
+            "hint": ""
+          },
+          {
+            "prompt": "Utu tubuto sinzadutera mu gicucu kuko dukwiriye izuba.",
+            "answer": "I won't plant these little seeds in the shade because they need the sun.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mpa ku matunda yawe, nanjye ndaguha ku twanjye.",
+            "answer": "Give me some of your fruit, and I'll give you some of the few/small ones [I have].",
+            "hint": ""
+          },
+          {
+            "prompt": "Aka n'agahungu ka makumyabiri na gatatu; kariya n'aka makumyabiri na kane.",
+            "answer": "This is the twenty-third little boy; that one is the twenty-fourth.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "Just look at how that tiny little child is able [knows how] to run!",
+            "answer": "Dore kariya kana gatoya rwose ukuntu kazi kwiruka!",
+            "hint": ""
+          },
+          {
+            "prompt": "We are so sorry because of all the troubles that woman constantly experiences.",
+            "answer": "Dufite agahinda kenshi kubwa amakuba uriya mugore ahora agira",
+            "hint": ""
+          },
+          {
+            "prompt": "That little child cannot eat big sweet potatoes, because he has a very small mouth.",
+            "answer": "Kariya kana ntigashobora kurya ibijumba binini, kuko gafit' akanwa gatoya cyane.",
+            "hint": ""
+          },
+          {
+            "prompt": "My dear friend, I know that you will not forget to write a note telling me how you are doing.",
+            "answer": "Nshuti yanjye nkunda, nzi yuko utazibagirwa kwandika akandiko kambwira uk'umeze.",
+            "hint": ""
+          },
+          {
+            "prompt": "The journey has been very long; that's why my heels hurt.",
+            "answer": "Urugendo rwabaye rurerure cyane; ni cyo gituma udutsinsino twanjye tubabara",
+            "hint": ""
+          },
+          {
+            "prompt": "These very little students know how to count from one to twenty.",
+            "answer": "Utu twigishwa dutoya cyane tuzi kubara guhera kuri kimwe kugeza kuri makumyabiri",
+            "hint": ""
+          },
+          {
+            "prompt": "I won't eat any [some] of his meager food.",
+            "answer": "Sinzarya ku tyokurya twe.",
+            "hint": ""
+          },
+          {
+            "prompt": "This is the fourth sore [which is] on his limb",
+            "answer": "Iki n'igisebe cya kane kiri ku rugingo rwe",
+            "hint": ""
+          },
+          {
+            "prompt": "These 302 cows are his; this is the first time [that] I am seeing them",
+            "answer": "Izi nka maganatatu n'eybiri n'ize; iki ni cyo gihe cya mbere nzibona",
+            "hint": ""
+          },
+          {
+            "prompt": "I won't plant these little seeds in the shade because they need the sun.",
+            "answer": "Utu tubuto sinzadutera mu gicucu kuko dukwiriye izuba.",
+            "hint": ""
+          },
+          {
+            "prompt": "Give me some of your fruit, and I'll give you some of the few/small ones [I have].",
+            "answer": "Mpa ku matunda yawe, nanjye ndaguha ku twanjye.",
+            "hint": ""
+          },
+          {
+            "prompt": "This is the twenty-third little boy; that one is the twenty-fourth.",
+            "answer": "Aka n'agahungu ka makumyabiri na gatatu; kariya n'aka makumyabiri na kane.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

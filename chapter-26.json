@@ -1,0 +1,204 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 26",
+    "exercises": [
+      {
+        "name": "Translate the following",
+        "questions": [
+          {
+            "prompt": "Ntasinzira rwose; ahubwo akora ku manywa na nijoro. Sinzi uko abishobora.",
+            "answer": "He doesn't sleep at all; to the contrary he works day and night. I don't know how he does it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Gerageza kwibuka aho wabishyize. Oya, simbishobora.",
+            "answer": "Try to remember where you put them. No, I can't/am not able.",
+            "hint": ""
+          },
+          {
+            "prompt": "Aya magambo aramukwiriye kuko ar'umuntu ugerageza rwose.",
+            "answer": "These words befit her, because she is a person who really tries.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntituzi aho akura imbaraga yo gukora atyo. N'igitangaza rwose! Tuzareba uko abirangiza.",
+            "answer": "We don't know where she gets the energy to work like that. It's truly amazing! We'll see how she finishes it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinibuka ubwo asinzira, kuko atabibwira umuntu wese.",
+            "answer": "I don't remember when he sleeps, because he doesn't tell anyone.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu muntu ntasinzira ku manywa cyangwa nijoro, ahubwo ahora agira umurimo akora.",
+            "answer": "This person does not sleep day nor night; to the contrary, he constantly has work he does.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntibazi yuko batabishobora, ariko bazabigerageza nubwo badafite imbaraga yo kubikora.",
+            "answer": "They don't know that they cannot do it, but they will try even though they don't have the energy to do it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kuko ari umuntu ukora ibitangaza, abantu benshi bazizera yuko ari Kristo.",
+            "answer": "Because he is a person who does wonders, many people will believe that he is Christ.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinkwiriye kugenda ubu; ahubwo nkwiriye gusinzira. Ni nsinzira none, ejo nzagira imbaraga yo gutangira urugendo.",
+            "answer": "I should not go now; to the contrary, I should sleep. If I sleep today, tomorrow I'll have the energy to begin the journey.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nkwiriye kurya, kuko ari he nkura imbaraga.",
+            "answer": "I must eat, because that's where I derive (my) energy.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntabwo amenya byose biri mw isi. Hariho umwe wabimenye uhereye kera, kandi azabimenya iteka. Iyi si n'ishira azamenya itangiriro ryayo.",
+            "answer": "He certainly doesn't know everything on earth. There is one who knew it from long ago, and he will know it forever. When this earth ends, He will know its beginning.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntidushobora gukora kuruta Petero. N'ukuri akora ibitangaza kuruta abandi bose.",
+            "answer": "We can't do better than Peter. Truly he does greater wonders than everyone else.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntashobora gukora ibitangaza kuko atar'Imana.",
+            "answer": "She can't work miracles, because she is not God.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mukwiriye kwibuka izina rye, kuko ar'umuntu mukuru, kandi afite imbaraga zo kubafasha.",
+            "answer": "You should remember his name, because he is an important person, and he has the power to help you.",
+            "hint": ""
+          },
+          {
+            "prompt": "Simpinga mu gitondo, ahubwo nsinzira kugira ngo mbone imbaraga zo kubishobora nimunsi.",
+            "answer": "I don't hoe in the morning; to the contrary, I sleep so that I can find the energy to be able to do it in the afternoon.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iri juru n'iyi si bizashira, ariko har'ibiriho bizahoraho iteka ryose.",
+            "answer": "Heaven and earth will pass away, but there are things that exist which will continue to exist forever.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinzi uko nzabishobora, ariko nzabigerageza. Ni mbikora ntyo, ndagira ngo nzabishobora nanjye.",
+            "answer": "I don't know how I will be able (to do it), but I will try (it). If I do it like this, I suppose I will be able (to do it).",
+            "hint": ""
+          },
+          {
+            "prompt": "Bibiliya ivuga yuko ntaho Imana itari/itaba, ahubwo ngo ituzi twese; ndetse ibara n'umusatsi wose wo ku mitwe yacu.",
+            "answer": "The Bible says that there is nowhere that God is not; to the contrary, He knows all of us; He even knows each hair on our heads.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinakibitse munsi y'ikirago; ahubwo kiri hejuru yacyo.",
+            "answer": "I didn't store it under the rug; to the contrary, it is on top of it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nkwiriye kuvuga amagambo amukwiriye, kuko ar'umuntu ugerageza cyane.",
+            "answer": "I must say words that are worthy of her, because she is a person who tries hard.",
+            "hint": ""
+          },
+          {
+            "prompt": "Gira utya, oya, s'utyo. Niba utabikora utya ntuzabishobora.",
+            "answer": "Do (it) like this; no, not like that. If you don't do it like this, you will not succeed.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nkura imbaraga mu magambo ambwira. Sinzi yuko nzashobora gukomeza niba ntayumva iminsi yose.",
+            "answer": "I derive strength from the words he tells me. I don't know if I will be able to continue if I don't hear them every day.",
+            "hint": ""
+          },
+          {
+            "prompt": "Amagambo ambwira ni yo mbaraga ngira ku manywa na nijoro.",
+            "answer": "The words he tells me are the strength I have by day and by night.",
+            "hint": ""
+          },
+          {
+            "prompt": "Oya, sindabigerageza; ariko nzi yuko nzabishobora kuko ampa imbaraga zinkwiriye.",
+            "answer": "No, I have not tried (it) yet; but I know that I will succeed because he gives me the strength I need (must (have)).",
+            "hint": ""
+          },
+          {
+            "prompt": "Nubwo, batazi yuko batabishobora, bazabigerageza kuko bizera yuko bafite imbaraga zo kubikora.",
+            "answer": "Even though they don't know that they are not able (to do it), they will try (to do it), because they believe they have the strength to do it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Barigisha yuko Satani azakora ibitangaza, ndetse ngo azashobora gukora ibintu abantu badashobora.",
+            "answer": "They are teaching that Satan will work miracles, even that he will even be able to do things people cannot do.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nubwo atari byiza, tuzabigerageza ejo mu gitondo. Ndetse na none turabigerageza.",
+            "answer": "Even though it is not good, we will try (to do it) tomorrow morning. We will even try today (to do it).",
+            "hint": ""
+          },
+          {
+            "prompt": "Ndamukunda kuruta byose; ndetse ndamukunda kuruta uko nkunda Imana nubwo nzi yuko atari byiza.",
+            "answer": "I love her more than everything, I even love her more than I love God, even though I know that is not good.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          {
+            "prompt": "Nta muntu n'umwe uzemera kubikora ejo. Ku mpamvu z'ibyo rero, dukwiriye gutuma Yohana none abandi bataraza.",
+            "answer": "Not a single person will agree to do it tomorrow. For that reason, then, we must send John today before the others come.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshaka kugutera ubwoba, ariko dukwiriye kwitonda cyane ngo tutayoba inzira, kuko har'inyamaswa nyinshi mur'iri shyamba.",
+            "answer": "I don't want to make you afraid, but we must be very careful not to lose [our] way, because there are many animals in this forest.",
+            "hint": ""
+          },
+          {
+            "prompt": "Dukwiriye kumvira itegeko ryose riva mu biro bye, kuko bizatuma amahoro agaruka.",
+            "answer": "We should obey every command/law that comes from his office, because it will cause peace to return.",
+            "hint": ""
+          },
+          {
+            "prompt": "Si byiza gukorana imitima ibiri; ahubwo dukwiriye gushyira umutima wose ku murimo dukora.",
+            "answer": "It's not good to have two minds about what we're doing; instead we should put our whole heart into the work we are doing.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "Not a single person will agree to do it tomorrow. For that reason, then, we must send John today before the others come.",
+            "answer": "Nta muntu n'umwe uzemera kubikora ejo. Ku mpamvu z'ibyo rero, dukwiriye gutuma Yohana none abandi bataraza.",
+            "hint": ""
+          },
+          {
+            "prompt": "I don't want to make you afraid, but we must be very careful not to lose [our] way, because there are many animals in this forest.",
+            "answer": "Sinshaka kugutera ubwoba, ariko dukwiriye kwitonda cyane ngo tutayoba inzira, kuko har'inyamaswa nyinshi mur'iri shyamba.",
+            "hint": ""
+          },
+          {
+            "prompt": "We should obey every command/law that comes from his office, because it will cause peace to return.",
+            "answer": "Dukwiriye kumvira itegeko ryose riva mu biro bye, kuko bizatuma amahoro agaruka.",
+            "hint": ""
+          },
+          {
+            "prompt": "It's not good to have two minds about what we're doing; instead we should put our whole heart into the work we are doing.",
+            "answer": "Si byiza gukorana imitima ibiri; ahubwo dukwiriye gushyira umutima wose ku murimo dukora.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 30",
+    "exercises": [
+      {
+        "name": "Translate the following",
+        "questions": [
+          {
+            "prompt": "a word to say",
+            "answer": "Ijambo ryo kuvuga",
+            "hint": ""
+          },
+          {
+            "prompt": "a voice to speak (with)",
+            "answer": "ijwi ryo kuvuga",
+            "hint": ""
+          },
+          {
+            "prompt": "little sticks to light the fire",
+            "answer": "uduti two gucana umuriro",
+            "hint": ""
+          },
+          {
+            "prompt": "books to read",
+            "answer": "ibitabo byo gusoma",
+            "hint": ""
+          },
+          {
+            "prompt": "little things to bring",
+            "answer": "utuntu two kuzana",
+            "hint": ""
+          },
+          {
+            "prompt": "a word to listen (to)",
+            "answer": "ijambo ryo kumva",
+            "hint": ""
+          },
+          {
+            "prompt": "a door to enter (through)",
+            "answer": "umuryango wo kwinjiramo",
+            "hint": ""
+          },
+          {
+            "prompt": "a mountain to climb",
+            "answer": "umusozi wo kuzamuka",
+            "hint": ""
+          },
+          {
+            "prompt": "seeds to sow",
+            "answer": "imbuto zo gutera",
+            "hint": ""
+          },
+          {
+            "prompt": "water to drink",
+            "answer": "amazi yo kunywa",
+            "hint": ""
+          },
+          {
+            "prompt": "a child to love",
+            "answer": "umwana wo gukunda",
+            "hint": ""
+          },
+          {
+            "prompt": "seedlings to plant",
+            "answer": "utubuto two gutera",
+            "hint": ""
+          },
+          {
+            "prompt": "a garden to hoe",
+            "answer": "umurima wo guhinga",
+            "hint": ""
+          },
+          {
+            "prompt": "work to do",
+            "answer": "umurimo wo gukora",
+            "hint": ""
+          },
+          {
+            "prompt": "a road to go up on",
+            "answer": "umuhanda wo kuzamuka",
+            "hint": ""
+          },
+          {
+            "prompt": "a stone to throw",
+            "answer": "ibuye ryo kujugunya",
+            "hint": ""
+          },
+          {
+            "prompt": "Did they not bring the hoes with which to hoe the garden?",
+            "answer": "Mbese, ntibazanye amasuka yo guhinga umurima?",
+            "hint": ""
+          },
+          {
+            "prompt": "They will bring the vegetables to buy today.",
+            "answer": "Barazana imboga zo kugura none.",
+            "hint": ""
+          },
+          {
+            "prompt": "Where are the children to bring the water?",
+            "answer": "Abana bo kuzana amazi bari he?",
+            "hint": ""
+          },
+          {
+            "prompt": "They have the flour with which to make the bread.",
+            "answer": "Bafite ifu yo kuvuga umutsima",
+            "hint": ""
+          },
+          {
+            "prompt": "Tomorrow I will give you a new book to read.",
+            "answer": "Ejo nzaguha igitabo gishya cyo gusoma.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Ntabwo bazi n'itangiriro ryo gusoma",
+            "answer": "They don't even know the elements of reading",
+            "hint": ""
+          },
+          {
+            "prompt": "Dukwiriye kugura udutabo cumi na kamwe two gusoma",
+            "answer": "We should buy 11 little books to read.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nshima data yuko mfite umutima wo gufasha abandi.",
+            "answer": "I thank my father that I have a heart to help others",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite ibyifuzo byo kubikoresha ngo mbone umumaro wabyo",
+            "answer": "I have the desire to use them so as to discover their value (use)",
+            "hint": ""
+          },
+          {
+            "prompt": "Azakwereka inzira yo kuzamuka umusozi.",
+            "answer": "He will show you the path (way) to climb the mountain",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite inama yo kugenda vuba, kuko urugendo ruzaba rurerure",
+            "answer": "I plan (have a plan) to go soon, because the journey will be long",
+            "hint": ""
+          },
+          {
+            "prompt": "Umwigisha aratwigisha iby'akamaro ko kutanywa itabi",
+            "answer": "The teacher is teaching us about the value of not smoking tobacco.",
+            "hint": ""
+          },
+          {
+            "prompt": "Arazana mw ishuri udutabo mirongwitatu na tubiri two gusoma.",
+            "answer": "She will bring to school 32 little books to read.",
+            "hint": ""
+          },
+          {
+            "prompt": "Har'inzira esheshatu zo kujya imuhira",
+            "answer": "There are six ways to go home",
+            "hint": ""
+          },
+          {
+            "prompt": "Umufundi aratwereka uburyo bushya bwo gukoresha icyuma",
+            "answer": "The craftsman is showing us a new way to use iron.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iyi mbwa ntizi uburyo bwo kunkurikira",
+            "answer": "This dog doesn't know how to follow me.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bafite agahinda ko kugenda",
+            "answer": "They are sorry (have sorrow) to leave (to go)",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu muti umpa imbaraga zo gukomeza.",
+            "answer": "This medicine gives me the strength to continue.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

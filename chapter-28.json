@@ -1,0 +1,264 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 28",
+    "exercises": [
+      {
+        "name": "Translate",
+        "questions": [
+          {
+            "prompt": "34 people",
+            "answer": "Abantu mirongwitatu na bane",
+            "hint": ""
+          },
+          {
+            "prompt": "79 months",
+                        "answer": "Amezi mirongwirindwi n'icyenda",
+            "hint": ""
+          },
+          {
+            "prompt": "28 books",
+                        "answer": "Ibitabo makumyabiri n'umunani",
+            "hint": ""
+          },
+          {
+            "prompt": "11 mountains",
+            "answer": "Imisozi cumi n'umwe",
+            "hint": ""
+          },
+          {
+            "prompt": "98 sweet potatoes",
+            "answer": "Ibijumba mirongurwenda n'umunani",
+            "hint": ""
+          },
+          {
+            "prompt": "12 cattle",
+            "answer": "Inka cumi n'ebyiri",
+            "hint": ""
+          },
+          {
+            "prompt": "81 boards",
+            "answer": "Imbaho mirongwinani na rumwe.",
+            "hint": ""
+          },
+          {
+            "prompt": "12 boats",
+            "answer": "Amato cumi n'abiri",
+            "hint": ""
+          },
+          {
+            "prompt": "91 stones",
+            "answer": "Amabuye mirongurwenda na rimwe",
+            "hint": ""
+          },
+          {
+            "prompt": "2001 names",
+            "answer": "Amazina ibihumbi bibiri na rimwe.",
+            "hint": ""
+          },
+          {
+            "prompt": "108 stones",
+            "answer": "Amabuye ijana n'umunani",
+            "hint": ""
+          },
+          {
+            "prompt": "200 students",
+            "answer": "Abigishwa maganabiri",
+            "hint": ""
+          },
+          {
+            "prompt": "12 eggs",
+            "answer": "Amagi cumi n'abiri",
+            "hint": ""
+          },
+          {
+                        "prompt": "22 hoes",
+            "answer": "Amasuka makumyabiri n'abiri",
+            "hint": ""
+          },
+          {
+            "prompt": "78 fishes",
+                        "answer": "Ifi mirongwirindwi n'umunani",
+            "hint": ""
+          },
+          {
+            "prompt": "77 cows",
+            "answer": "Inka mirongwirindwi n'indwi",
+            "hint": ""
+          },
+          {
+            "prompt": "21 things",
+            "answer": "Ibintu makumyabiri na kimwe",
+            "hint": ""
+          },
+          {
+            "prompt": "11 thieves",
+            "answer": "Ibisambo cumi na kimwe",
+            "hint": ""
+          },
+          {
+                        "prompt": "111 rabbits",
+            "answer": "Inkwavu ijana cumi na rumwe",
+            "hint": ""
+          },
+          {
+            "prompt": "10,695 words",
+            "answer": "Amagambo inzovu, magana atandatu, mirongurwenda n'atanu",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate and read aloud",
+        "questions": [
+          {
+            "prompt": "umuntu wa gatatu",
+            "answer": "the third person",
+            "hint": ""
+          },
+          {
+            "prompt": "ikintu cya karindwi",
+            "answer": "the seventh thing",
+            "hint": ""
+          },
+          {
+            "prompt": "umusozi wa gatatu",
+            "answer": "the third hill",
+            "hint": ""
+          },
+          {
+            "prompt": "inka ya cumi",
+            "answer": "the tenth cow",
+            "hint": ""
+          },
+          {
+            "prompt": "igi rya cyenda",
+            "answer": "the ninth egg",
+            "hint": ""
+          },
+          {
+            "prompt": "urugendo rwa mbere",
+            "answer": "the first journey",
+            "hint": ""
+          },
+          {
+            "prompt": "umugore wa kabiri",
+            "answer": "the second wife",
+            "hint": ""
+          },
+          {
+            "prompt": "igitabo cya cumi na bitatu",
+            "answer": "the thirteenth book",
+            "hint": ""
+          },
+          {
+            "prompt": "urugo rwa gatatu",
+            "answer": "the third home",
+            "hint": ""
+          },
+          {
+            "prompt": "impumyi ya mbere",
+            "answer": "the first blind person",
+            "hint": ""
+          },
+          {
+            "prompt": "igisebe cya kabiri",
+            "answer": "the second sore",
+            "hint": ""
+          },
+          {
+            "prompt": "ishyano rya cyenda",
+            "answer": "the ninth plague",
+            "hint": ""
+          },
+          {
+            "prompt": "izina rye rya kabiri",
+            "answer": "his second name",
+            "hint": ""
+          },
+          {
+            "prompt": "ivi rya mbere",
+            "answer": "the first knee",
+            "hint": ""
+          },
+          {
+            "prompt": "umutsima wa kane",
+            "answer": "the fourth loaf of bread",
+            "hint": ""
+          },
+          {
+            "prompt": "urupapuro rwa makumyabiri na rumwe",
+                        "answer": "the twenty-first page/paper",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate and read aloud",
+        "questions": [
+          {
+            "prompt": "Yabisomye gatatu",
+            "answer": "He read it three times.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinzakubwira kabiri",
+            "answer": "I won't tell you twice.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iki n'igihe cya gatatu nkubwira kubishyira ku meza",
+            "answer": "This is the third time I'm telling you to put it on the table.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinzarya ku byokurya bye; sinzabiryaho, haba na rimwe.",
+            "answer": "I won't eat some of his food; I won't eat (any) of it, not even once.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iki n'igisebe cya kane kiri ku rugingo rwe. N'icya kane kiruriho.",
+            "answer": "This is the fourth sore on his limb. It is the fourth on it.",
+            "hint": ""
+          },
+          {
+                        "prompt": "Izi nka maganatatu n'ize; iki n'igihe cya mbere nzibona.",
+            "answer": "These three hundred cows are his; this is the first time I'm seeing them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Izi mbuto eshanu sinzazitera mu gicucu; sinzazigiteramo. Zikwiriye izuba.",
+            "answer": "These five seeds--I won't plant them in the shade; I won't plant them in it. They need the sun.",
+            "hint": ""
+          },
+          {
+            "prompt": "Muzajya mw ishuri rya kabiri; muzarijyamo",
+            "answer": "You shall go to the second school. You shall go to it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Arandika ku rubaho; ararwandikaho",
+            "answer": "He is writing on the board; he is writing on it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uzampa ku matunda yawe; uzayampaho ejo ni nguha ku byokurya mfite.",
+            "answer": "You'll give me some of your fruit; you will give me some of them tomorrow if I give you some of the food I have.",
+            "hint": ""
+          },
+          {
+            "prompt": "Iki n'igihe cya gatatu nkubwira kutabishyira ku meza. Ntukwiriye kubishyiraho.",
+            "answer": "This is the third time I'm telling you to not put them on the table. You mustn't put them on it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu n'umuhungu wa makumyabiri na batatu; uriya n'uwa makumyabiri na bane.",
+            "answer": "This is the twenty-third boy; that one over there is the twenty-fourth.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

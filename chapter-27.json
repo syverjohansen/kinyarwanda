@@ -1,0 +1,349 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 27",
+    "exercises": [
+      {
+        "name": "Count from 1 to 10 using the following nouns",
+        "questions": [
+          {
+            "prompt": "umuntu (umwe, babiri...)",
+            "answer": "Umuntu umwe, abantu babiri, abantu batatu, abantu bane, abantu batanu, abantu batandatu, abantu barindwi, abantu munani, abantu cyenda, abantu cumi.",
+            "hint": ""
+          },
+          {
+            "prompt": "umusozi",
+            "answer": "Umusozi umwe, imisozi ibiri, imisozi itatu, imisozi ine, imisozi itanu, imisozi itandatu, imisozi irindwi, imisozi munani, imisozi cyenda, imisozi cumi.",
+            "hint": ""
+          },
+          {
+            "prompt": "inka",
+            "answer": "Inka imwe, inka ebyiri, inka eshatu, inka enye, inka eshanu, inka esheshatu, inka ndwi, inka munani, inka cyenda, inka cumi.",
+            "hint": ""
+          },
+          {
+            "prompt": "ikintu",
+            "answer": "Ikintu kimwe, ibintu bibiri, ibintu bitatu, ibintu bine, ibintu bitanu, ibintu bitandatu, ibintu birindwi, ibintu munani, ibintu cyenda, ibintu cumi",
+            "hint": ""
+          },
+          {
+            "prompt": "inkwavu",
+            "answer": "Urukwavu rumwe, inkwavu ebyiri, inkwavu eshatu, inkwavu enye, inkwavu eshanu, inkwavu esheshatu, inkwavu ndwi, inkwavu munani, inkwavu cyenda, inkwavu cumi",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate and read aloud",
+        "questions": [
+          {
+            "prompt": "umuntu umwe",
+            "answer": "one person",
+            "hint": ""
+          },
+          {
+            "prompt": "ibuye rimwe",
+            "answer": "one stone",
+            "hint": ""
+          },
+          {
+            "prompt": "impu eshatu",
+            "answer": "three skins (hides)",
+            "hint": ""
+          },
+          {
+            "prompt": "abigisha munani",
+            "answer": "eight teachers",
+            "hint": ""
+          },
+          {
+            "prompt": "ibitabo cyenda",
+            "answer": "nine books",
+            "hint": ""
+          },
+          {
+            "prompt": "amagi atatu",
+            "answer": "three eggs",
+            "hint": ""
+          },
+          {
+            "prompt": "iminsi abiri",
+            "answer": "two days",
+            "hint": ""
+          },
+          {
+            "prompt": "amaboko abiir",
+            "answer": "two arms",
+            "hint": ""
+          },
+          {
+            "prompt": "amasuka munani",
+            "answer": "eight hoes",
+            "hint": ""
+          },
+          {
+            "prompt": "amashuri arindwi",
+            "answer": "seven schools",
+            "hint": ""
+          },
+          {
+            "prompt": "amezi cyenda",
+            "answer": "nine months",
+            "hint": ""
+          },
+          {
+            "prompt": "ingendo ebyiri",
+            "answer": "two journeys",
+            "hint": ""
+          },
+          {
+            "prompt": "ibigori birindwi",
+            "answer": "seven cobs of corn",
+            "hint": ""
+          },
+          {
+            "prompt": "ijambo rimwe",
+            "answer": "one word",
+            "hint": ""
+          },
+          {
+            "prompt": "ibijumba cumi",
+            "answer": "ten sweet potatoes",
+            "hint": ""
+          },
+          {
+            "prompt": "imitsima ibiri",
+            "answer": "two loaves of bread",
+            "hint": ""
+          },
+          {
+            "prompt": "umukiza umwe",
+            "answer": "one savior",
+            "hint": ""
+          },
+          {
+            "prompt": "amafi arindwi",
+            "answer": "seven fish(es)",
+            "hint": ""
+          },
+          {
+            "prompt": "inzandiko ebyiri",
+            "answer": "two letters",
+            "hint": ""
+          },
+          {
+            "prompt": "imisozi itatu",
+            "answer": "three hills",
+            "hint": ""
+          },
+          {
+            "prompt": "ibintu bitanu",
+            "answer": "five things",
+            "hint": ""
+          },
+          {
+            "prompt": "amaguru ane",
+            "answer": "four legs",
+            "hint": ""
+          },
+          {
+            "prompt": "ururabyo rumwe",
+            "answer": "one flower",
+            "hint": ""
+          },
+          {
+            "prompt": "inka cumi",
+            "answer": "ten cows",
+            "hint": ""
+          },
+          {
+            "prompt": "urugi rumwe",
+            "answer": "one door",
+            "hint": ""
+          },
+          {
+            "prompt": "ivunja rimwe",
+            "answer": "one chigger",
+            "hint": ""
+          },
+          {
+            "prompt": "amafranga munani",
+            "answer": "eight francs",
+            "hint": ""
+          },
+          {
+            "prompt": "insengero esheshatu",
+            "answer": "six churches",
+            "hint": ""
+          },
+          {
+            "prompt": "urubaho rumwe",
+            "answer": "one board",
+            "hint": ""
+          },
+          {
+            "prompt": "impinja ebyiri",
+            "answer": "two infants",
+            "hint": ""
+          },
+          {
+            "prompt": "umwigishwa umwe",
+            "answer": "one student",
+            "hint": ""
+          },
+          {
+            "prompt": "imigozi itanu",
+            "answer": "five strings/ropes",
+            "hint": ""
+          },
+          {
+            "prompt": "igiti kimwe",
+            "answer": "one tree",
+            "hint": ""
+          },
+          {
+            "prompt": "ibyaha cyenda",
+            "answer": "nine sins",
+            "hint": ""
+          },
+          {
+            "prompt": "amazina abiri",
+            "answer": "two names",
+            "hint": ""
+          },
+          {
+            "prompt": "imidugudu itatu",
+            "answer": "three towns",
+            "hint": ""
+          },
+          {
+            "prompt": "inka esheshatu",
+            "answer": "six cows",
+            "hint": ""
+          },
+          {
+            "prompt": "imbwa ndwi",
+            "answer": "seven dogs",
+            "hint": ""
+          },
+          {
+            "prompt": "inkwavu ebyiri",
+            "answer": "two rabbits",
+            "hint": ""
+          },
+          {
+            "prompt": "intama imwe",
+            "answer": "one sheep",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate and read aloud",
+        "questions": [
+          {
+            "prompt": "Har'amato makumyabiri na bumwe",
+            "answer": "There are 21 boats.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ejo nzohereza abantu barindwi. Bazashobora guha abakene ibyokurya bibakwiriye.",
+            "answer": "Tomorrow I will send seven people. They will be able to give the poor people the appropriate food.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya mukobwa afite ijisho rimwe gusa.",
+            "answer": "That girl has only one eye.",
+            "hint": ""
+          },
+          {
+            "prompt": "Hariho iminsi irindwi mu cyumweru.",
+            "answer": "There are seven days in a week.",
+            "hint": ""
+          },
+          {
+            "prompt": "Har'amazu cyenda dukwiriye kubaka muri iki cyumweru.",
+            "answer": "There are nine houses we must build this week.",
+            "hint": ""
+          },
+          {
+            "prompt": "Dukwiriye kumvira itegeko rye kuko rizazana amahoro mu gihugu.",
+            "answer": "We must obey his command because it will bring peace into the country.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nigisha abana cumi. Oya, si cyenda. Batatu bazasubira iwabo.",
+            "answer": "I teach 10 children. No, not nine. Three will return to their homes.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu gitabo cyanjye har'amagambo arindwi nkwiriye kwiga.",
+            "answer": "In my book there are seven words I must learn.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese har'imbwa enye? Oya, n'eshanu.",
+            "answer": "Are there four dogs? No there are five.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni tugerageza tuzashobora rwose kubona amabuye mirongwitatu na rimwe.",
+            "answer": "If we try, we will certainly be able to find 31 stones.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu maganabiri na mirongwine na bane bazaza mu materaniro.",
+            "answer": "244 people will come to the meetings.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntidukwiriye kugira imitima ibiri ahubwo dukwiriye gushyira umutima wose ku murimo dukora.",
+            "answer": "We mustn't be double minded; instead we must pull all our hearts into the work we are doing.",
+            "hint": ""
+          },
+          {
+            "prompt": "Tuzashyira ibintu ijana na makumyabiri na kimwe mu kibindi.",
+            "answer": "We will put 121 things into the jar.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bazashyira amabuye maganacyenda na mirongwine na rimwe mu kibindi.",
+            "answer": "They will put 941 stones into the jar.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mu mwaka har'iminsi magana atatu na mirongwitatu n'itanu.",
+            "answer": "In a year there are 365 days.",
+            "hint": ""
+          },
+          {
+            "prompt": "Inka mirongwinani n'ebyiri n'izanjye; izindi eshanu n'ize.",
+            "answer": "82 cows are mine; the other five are his.",
+            "hint": ""
+          },
+          {
+            "prompt": "Aba bagabo baravuga yuko bazazana ihene cumi.",
+            "answer": "These men say that they will bring 10 goats.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abakozi makumyabiri na batanu, bazashobora kuzana abandi mirongwine.",
+            "answer": "25 workers will be able to bring another 40.",
+            "hint": ""
+          },
+          {
+            "prompt": "N'umpa amafranga cumi n'atanu, nzagura amasahane atatu.",
+            "answer": "If you give me 15 francs, I will buy three dishes.",
+            "hint": ""
+          },
+          {
+            "prompt": "Har'amababi mirongwitatu n'atatu kuri iri shami rimwe.",
+            "answer": "There are 33 leaves on this one branch.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}
