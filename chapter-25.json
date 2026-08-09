@@ -1,0 +1,229 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 25",
+    "exercises": [
+      {
+        "name": "Translate the following",
+        "questions": [
+          {
+            "prompt": "Mpinga mu gitondo. Ariko bariya batazi guhinga sinshaka ko baza.",
+            "answer": "I hoe in the morning. But those (people) who do not know how to hoe I don't want to come (lit. that they come)",
+            "hint": ""
+          },
+          {
+            "prompt": "Nza mw ishuri iteka. Nkunda kwiga ibintu byinshi abantu benshi batazi.",
+            "answer": "I always come to school. I enjoy learning about many things many people do not know (about)",
+            "hint": ""
+          },
+          {
+            "prompt": "Shyira imboga mw isahane nini. Inyama itarimo, ukwiriye kuyishyira mu muriro.",
+            "answer": "Put the vegetables in the large bowl. The meat which is not in it, you should put in the fire.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntuhora ubikora utyo ni cyo gituma batagushima.",
+            "answer": "You don't always do it like that; that's why they don't thank/praise you.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bafite imfunguzo z'umwigisha.",
+            "answer": "They have the teacher's keys.",
+            "hint": ""
+          },
+          {
+            "prompt": "Uyu muntu udafite icyo kurya aragushaka.",
+            "answer": "This person who does not have any food is wanting you.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntitumukunda kuko atavuga neza.",
+            "answer": "We don't like him, because he does not speak well.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntukora neza kuko udafite imbaraga.",
+            "answer": "You don't work well because you don't have strength.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bafite imfunguzo bazashobora kwinjira mu rusengero. Abatazifite ntibazinjiramo.",
+            "answer": "The people who have the keys will be able to enter into the church. Those who do not have them will not enter.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mpora mvuga mu rurimi rwanjye gusa. Sinzi urwawe.",
+            "answer": "I always speak only in my language. I don't know yours.",
+            "hint": ""
+          },
+          {
+            "prompt": "Azavuga yuko atakuzi. Nanjye nzavuga yuko ntamuzi.",
+            "answer": "She will say that she does not know you. And I shall say that I don't know her.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mfite urwandiko rwe rutavuga neza. Sinshaka ko urusoma.",
+            "answer": "I have his/her letter which does not read (speak) well. I don't want you to read it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Impinja zikunda gusinzira cyane. Abantu bakuru ntibasinzira igihe cyose.",
+            "answer": "Infants like to sleep a lot. Grown-ups don't sleep all the time.",
+            "hint": ""
+          },
+          {
+            "prompt": "Urufunguzo rwabo bajya barubika munsi ya ruriya rubaho. Imfunguzo zanjye ndazifite.",
+            "answer": "They always keep their key under that board. I have my keys.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshaka guhora nkubwira yuko udakwiriye kujya mu rugo rwabo.",
+            "answer": "I don't want to be having to tell you constantly that you must not go to their home.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          {
+            "prompt": "None ndaruhuka, ariko ejo nzabafasha kuko nshaka kurangiza imirimo yose muri iki cyumweru",
+            "answer": "I'm resting today, but tomorrow I shall help you/them because I want to finish all the jobs/work this week.",
+            "hint": ""
+          },
+          {
+            "prompt": "Akunda kwibuka imigani ya kera no kuyandika kugira ngo twese tuyimenye.",
+            "answer": "He loves to remember the stories of old and write them down so that we all might know them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ukwiriye kubabwira yuko ntazaza ejo.",
+            "answer": "You must tell them that I will not come tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nzi ko ntazabirangiza ni cyo gitumye ndashaka kubitangira.",
+            "answer": "I know that I will not finish it; that's why I don't want to begin it.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sindamushima. N'arangiza ni bwo nzamushima.",
+            "answer": "I haven't thanked him yet. When he finishes, that's when I'll thank him.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ibisambo ntibiragerageza kwiba ibintu bye kuko bitazi yuko atari imuhira.",
+            "answer": "The thieves have not tried to steal his things because they don't know that he's not home.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bose ntibamushaka kuko atazi gukora.",
+            "answer": "Everyone doesn't want him because he doesn't know how to work.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu benshi basinzira nijoro, ariko bamwe ni bwo bakora.",
+            "answer": "Many people sleep at night, but that's when some work.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ajya arangiza imirimo ye yose atarataha kuko ari umuntu witonda.",
+            "answer": "She always finishes all her work before she goes home because she is a careful person.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntibashaka guhora batubwira yuko bazabirangiza ejo.",
+            "answer": "They don't want to always be telling us that they will finish it tomorrow.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bika ibintu byose kuri gahunda nziza kugira ngo abandi babibone ni babishaka.",
+            "answer": "Put away the things properly so that others can find them when they want them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sindamenya izina rye. Ntibarambwira amazina y'abazaza mw iteraniro.",
+            "answer": "I don't know his name. They haven't told me yet the names of those who will attend the meeting.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshobora gukora none kuko ntarasinzira.",
+            "answer": "I'm unable to work today because I haven't slept yet.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "I'm resting today, but tomorrow I shall help you/them because I want to finish all the jobs/work this week.",
+            "answer": "None ndaruhuka, ariko ejo nzabafasha kuko nshaka kurangiza imirimo yose muri iki cyumweru",
+            "hint": ""
+          },
+          {
+            "prompt": "He loves to remember the stories of old and write them down so that we all might know them.",
+            "answer": "Akunda kwibuka imigani ya kera no kuyandika kugira ngo twese tuyimenye.",
+            "hint": ""
+          },
+          {
+            "prompt": "You must tell them that I will not come tomorrow.",
+            "answer": "Ukwiriye kubabwira yuko ntazaza ejo.",
+            "hint": ""
+          },
+          {
+            "prompt": "I know that I will not finish it; that's why I don't want to begin it.",
+            "answer": "Nzi ko ntazabirangiza ni cyo gitumye ndashaka kubitangira.",
+            "hint": ""
+          },
+          {
+            "prompt": "I haven't thanked him yet. When he finishes, that's when I'll thank him.",
+            "answer": "Sindamushima. N'arangiza ni bwo nzamushima.",
+            "hint": ""
+          },
+          {
+            "prompt": "The thieves have not tried to steal his things because they don't know that he's not home.",
+            "answer": "Ibisambo ntibiragerageza kwiba ibintu bye kuko bitazi yuko atari imuhira.",
+            "hint": ""
+          },
+          {
+            "prompt": "Everyone doesn't want him because he doesn't know how to work.",
+            "answer": "Abantu bose ntibamushaka kuko atazi gukora.",
+            "hint": ""
+          },
+          {
+            "prompt": "Many people sleep at night, but that's when some work.",
+            "answer": "Abantu benshi basinzira nijoro, ariko bamwe ni bwo bakora.",
+            "hint": ""
+          },
+          {
+            "prompt": "She always finishes all her work before she goes home because she is a careful person.",
+            "answer": "Ajya arangiza imirimo ye yose atarataha kuko ari umuntu witonda.",
+            "hint": ""
+          },
+          {
+            "prompt": "They don't want to always be telling us that they will finish it tomorrow.",
+            "answer": "Ntibashaka guhora batubwira yuko bazabirangiza ejo.",
+            "hint": ""
+          },
+          {
+            "prompt": "Put away the things properly so that others can find them when they want them.",
+            "answer": "Bika ibintu byose kuri gahunda nziza kugira ngo abandi babibone ni babishaka.",
+            "hint": ""
+          },
+          {
+            "prompt": "I don't know his name. They haven't told me yet the names of those who will attend the meeting.",
+            "answer": "Sindamenya izina rye. Ntibarambwira amazina y'abazaza mw iteraniro.",
+            "hint": ""
+          },
+          {
+            "prompt": "I'm unable to work today because I haven't slept yet.",
+            "answer": "Sinshobora gukora none kuko ntarasinzira.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

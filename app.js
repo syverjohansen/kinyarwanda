@@ -1237,6 +1237,14 @@ function renderGrammarPractice(active) {
     });
   });
 
+  form.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.shiftKey || event.metaKey || event.ctrlKey || event.altKey) return;
+    if (!session.revealed || session.queue.some((cellId) => !session.grammarGrades[cellId])) return;
+
+    event.preventDefault();
+    gradeGrammarRound(exercise);
+  });
+
   form.querySelectorAll("[data-grade]").forEach((button) => {
     button.addEventListener("click", () => setGrammarGrade(button.dataset.cellId, button.dataset.grade, exercise));
   });
