@@ -1288,14 +1288,23 @@ function handlePracticeShortcut(event) {
   if (getExerciseType(active.exercise) === "grammar-table") {
     if (!session.revealed) return;
 
+    const canContinue = session.queue.every((cellId) => session.grammarGrades[cellId]);
+
     if (key === "1") {
       event.preventDefault();
       setVisibleGrammarGrades("correct", active.exercise);
+      return;
     }
 
     if (key === "2") {
       event.preventDefault();
       setVisibleGrammarGrades("wrong", active.exercise);
+      return;
+    }
+
+    if ((key === "3" || key === "Enter") && canContinue) {
+      event.preventDefault();
+      gradeGrammarRound(active.exercise);
     }
 
     return;
@@ -1328,6 +1337,7 @@ function getShortcutKey(event) {
   if (event.key === "1" || event.code === "Digit1" || event.code === "Numpad1") return "1";
   if (event.key === "2" || event.code === "Digit2" || event.code === "Numpad2") return "2";
   if (event.key === "3" || event.code === "Digit3" || event.code === "Numpad3") return "3";
+  if (event.key === "Enter" || event.code === "Enter" || event.code === "NumpadEnter") return "Enter";
   return "";
 }
 
