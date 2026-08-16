@@ -612,6 +612,34 @@ label {
   width: fit-content;
 }
 
+.practice-time-summary {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.5rem 0 0;
+  max-width: 18rem;
+}
+
+.practice-time-summary p {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.3rem 0;
+}
+
+.practice-time-summary strong {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.practice-time-summary span {
+  color: var(--accent-strong);
+  font-weight: 900;
+}
+
 .flashcard {
   display: grid;
   gap: 1rem;

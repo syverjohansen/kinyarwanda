@@ -1,0 +1,179 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 33",
+    "exercises": [
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "This little place",
+            "answer": "aha hantu hatoya",
+            "hint": ""
+          },
+          {
+            "prompt": "A few places",
+            "answer": "ahantu hakeya/ahakeya",
+            "hint": ""
+          },
+          {
+            "prompt": "These places",
+            "answer": "aha/aha hantu",
+            "hint": ""
+          },
+          {
+            "prompt": "Many places",
+            "answer": "ahantu henshi",
+            "hint": ""
+          },
+          {
+            "prompt": "This is my place.",
+            "answer": "Aha/aha hantu n'ahanjye",
+            "hint": ""
+          },
+          {
+            "prompt": "There is a blind man outside",
+            "answer": "Hanze har'impumyi",
+            "hint": ""
+          },
+          {
+            "prompt": "Those bad places (over there)",
+            "answer": "hariya hantu habi",
+            "hint": ""
+          },
+          {
+            "prompt": "This is a long place",
+            "answer": "Aha n'aharehare/ni harehare",
+            "hint": ""
+          },
+          {
+            "prompt": "Their places",
+            "answer": "ahantu habo/ahabo",
+            "hint": ""
+          },
+          {
+            "prompt": "My place",
+            "answer": "ahantu hanjye/ahanjye",
+            "hint": ""
+          },
+          {
+            "prompt": "There is much water in the pit today",
+            "answer": "Har'amazi menshi mu rwobo none.",
+            "hint": ""
+          },
+          {
+            "prompt": "We need a very wide place",
+            "answer": "Dukennye ahagari/ahantu hagari.",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate into English",
+        "questions": [
+          {
+            "prompt": "Dukwiriye kuva aha. Ni habi.",
+            "answer": "We must leave this place. It's a bad place.",
+            "hint": ""
+          },
+          {
+            "prompt": "Oya, sinzi aho bari.",
+            "answer": "No, I don't know where they are.",
+            "hint": ""
+          },
+          {
+            "prompt": "Hari amato menshi mu ruzi none.",
+            "answer": "There are many boats in the river today.",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinzi ko hari ahantu hataba imibabaro",
+            "answer": "I don't know if there's a place where there is no suffering.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbega ukuntu ari heza!",
+            "answer": "Wow! What a beautiful place this is!",
+            "hint": ""
+          },
+          {
+            "prompt": "Kera hariho inyamaswa nyinshi.",
+            "answer": "Long ago there used to be many animals.",
+            "hint": ""
+          },
+          {
+            "prompt": "Tuzajya gushaka aheza haruta aha.",
+            "answer": "We will go to look for a better place than this.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bazava ahakure cyane",
+            "answer": "They will come from very far away/from a very far-away place.",
+            "hint": ""
+          },
+          {
+            "prompt": "Aha n'aha makumyabiri na habiri.",
+            "answer": "This is the twenty-second place",
+            "hint": ""
+          },
+          {
+            "prompt": "Ukwiriye kujya hariya. Ni heza kuruta aha.",
+            "answer": "You must go over there. It is a better place than this.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese hari abantu hanze?",
+            "answer": "Are there people outside?",
+            "hint": ""
+          },
+          {
+            "prompt": "Hariho abantu benshi bakunda ibyiza.",
+            "answer": "There are many people who like good things.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni hafi; si kure.",
+            "answer": "It's nearby, it's not far away.",
+            "hint": ""
+          },
+          {
+            "prompt": "Bivane mu maso hanjye.",
+            "answer": "Take them away from my face.",
+            "hint": ""
+          },
+          {
+            "prompt": "Biboneka hamwe na hamwe.",
+            "answer": "It's/they are found here and there.",
+            "hint": ""
+          },
+          {
+            "prompt": "Shyira ibintu hano.",
+            "answer": "Put the things here.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nta bwo haza abagabo",
+            "answer": "Men never come there.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntibiboneka henshi.",
+            "answer": "They are not found in many places.",
+            "hint": ""
+          },
+          {
+            "prompt": "Hariho (long a) umugabo utazi.",
+            "answer": "There was a man you don't know.",
+            "hint": ""
+          },
+          {
+            "prompt": "Barashaka hose, ariko ntibarabona Petero.",
+            "answer": "They are looking everywhere, but they haven't found Peter yet.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

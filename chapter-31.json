@@ -1,0 +1,219 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 31",
+    "exercises": [
+      {
+        "name": "Form abstract words from these personal nouns",
+        "questions": [
+          {
+            "prompt": "boy (ubuhungu)",
+            "answer": "ubuhungu (boyhood)",
+            "hint": ""
+          },
+          {
+            "prompt": "bridegroom",
+            "answer": "ubukwe (wedding)",
+            "hint": ""
+          },
+          {
+            "prompt": "king",
+            "answer": "ubwami (kingdom)",
+            "hint": ""
+          },
+          {
+            "prompt": "lazy person",
+            "answer": "ubunebwe (laziness)",
+            "hint": ""
+          },
+          {
+            "prompt": "fool",
+            "answer": "ubupfu (foolishness)",
+            "hint": ""
+          },
+          {
+            "prompt": "youth",
+            "answer": "ubusore (youth/youthfulness)",
+            "hint": ""
+          },
+          {
+            "prompt": "senior person",
+            "answer": "ubukuru (seniority)",
+            "hint": ""
+          },
+          {
+            "prompt": "pauper",
+            "answer": "ubukene (poverty)",
+            "hint": ""
+          },
+          {
+            "prompt": "man",
+            "answer": "ubugabo (manliness)",
+            "hint": ""
+          },
+          {
+            "prompt": "infant",
+            "answer": "ubuhinja (infancy)",
+            "hint": ""
+          },
+          {
+            "prompt": "girl",
+            "answer": "ubukobwa (girlhood)",
+            "hint": ""
+          },
+          {
+            "prompt": "rebel",
+            "answer": "ubugome (rebelliousness)",
+            "hint": ""
+          },
+          {
+            "prompt": "chief",
+            "answer": "ubutware (chieftainship)",
+            "hint": ""
+          },
+          {
+            "prompt": "child",
+            "answer": "ubwana (childhood)",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          {
+            "prompt": "this marriage",
+            "answer": "ubu bukwe",
+            "hint": ""
+          },
+          {
+            "prompt": "many opportunities",
+            "answer": "uburyo bwinshi/ibihe byinshi",
+            "hint": ""
+          },
+          {
+            "prompt": "a short message",
+            "answer": "ubutumwa bugufi",
+            "hint": ""
+          },
+          {
+            "prompt": "this short life",
+            "answer": "ubu bugingo bugufi",
+            "hint": ""
+          },
+          {
+            "prompt": "many tribes",
+            "answer": "ubwoko bwinshi",
+            "hint": ""
+          },
+          {
+            "prompt": "a message of his kingdom",
+            "answer": "ubutumwa bwo mu bwami bwe",
+            "hint": ""
+          },
+          {
+            "prompt": "these beautiful flowers of his",
+            "answer": "ubu burabyo bwe bwiza",
+            "hint": ""
+          },
+          {
+            "prompt": "this gospel of the kingdom",
+            "answer": "ubu butumwa bwiza bw'ubwami",
+            "hint": ""
+          },
+          {
+            "prompt": "long grass",
+            "answer": "ubwatsi burebure",
+            "hint": ""
+          },
+          {
+            "prompt": "the destitution of the old woman",
+            "answer": "ubutindi bw'umukecuru",
+            "hint": ""
+          },
+          {
+            "prompt": "his youthfulness",
+            "answer": "ubusore bwe",
+            "hint": ""
+          },
+          {
+            "prompt": "This tribe does not fear hunger because they know how to hoe.",
+            "answer": "Ubu bwoko ntibutinya ubushonji kuko buzi guhinga",
+            "hint": ""
+          },
+          {
+            "prompt": "His good chieftainship takes people out of their rebelliousness",
+            "answer": "Ubutware bwe bwiza bukura abantu mu bugome bwabo",
+            "hint": ""
+          },
+          {
+            "prompt": "You must find a long boat because all of these people must be able to sit in it.",
+            "answer": "Ukwiriye kubona ubwato burebure, kuko aba bose bakwiriye kubona uko/uburyo babwicaramo",
+            "hint": ""
+          },
+          {
+            "prompt": "Don't you know how to cook corn? Let me help you, because it's getting dark.",
+            "answer": "Ntuzi uburyo bwo guteka ibigori? Reka ngufashe, kuko burije",
+            "hint": ""
+          },
+          {
+            "prompt": "There are many tribes in this country, yet they all live together in peace.",
+            "answer": "Hari/hariho amoko menshi muri iki gihugu, nyamara bose babana amahoro",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          {
+            "prompt": "Abatware ntibakunda kubona ubunebwe mu bakozi babo.",
+            "answer": "Chiefs don't like to find laziness amongst their workers.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kubona uburyarya mu bantu be bizakomeza kumutera agahinda.",
+            "answer": "To find hypocrisy among his people will continue to bring sorrow to him",
+            "hint": ""
+          },
+          {
+            "prompt": "Uriya muhungu azagura uburabyo bwiza bwo kujyana mu bukwe.",
+            "answer": "That boy will buy pretty flowers to take to the wedding",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bo muri iki gihugu bakwiriye kugira igihe cyo gufasha abakene mu butindi bwabo.",
+            "answer": "The people in this country should take time to help the poor in their poverty/need",
+            "hint": ""
+          },
+          {
+            "prompt": "Bavuga yuko bariya bantu ar'ubwoko bubi, ariko simbona impamvu yo kubavuga nabi.",
+            "answer": "They say that those people are (of) a bad tribe, but I don't see any reason to speak badly about them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Guhora mu byaha n'ubupfu kuko bitazana umunezero n'amahoro.",
+            "answer": "To continue in sin is foolishness because it doesn't bring happiness and peace",
+            "hint": ""
+          },
+          {
+            "prompt": "Mbese, ntufite uburyo bwo kuzazana ibijumba ubundi? None simfite agafranga na kamwe ko kubigura.",
+            "answer": "Don't you have a way to bring sweet potatoes some other time? Today I don't have any money whatsoever to buy them.",
+            "hint": ""
+          },
+          {
+            "prompt": "Inka zikunda ubwatsi bubisi kandi burebure.",
+            "answer": "Cows love fresh and long grass.",
+            "hint": ""
+          },
+          {
+            "prompt": "N'unyereka uburyo bwo kubikora ndabikora muri iki gitondo.",
+            "answer": "If you show me how to do it, I will do it this morning.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

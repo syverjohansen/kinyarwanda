@@ -1,0 +1,94 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 32",
+    "exercises": [
+      {
+        "name": "Translate",
+        "questions": [
+          {
+            "prompt": "Tujya tubona imvura nyinshi muri uku kwezi. Ni ko bihora iteka.",
+            "answer": "We (customarily) have much rain in this month. That's how it always is.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bamwe bagira amaguru maremare cyane. Ayanjye ni magufi.",
+            "answer": "Some people have very long legs. Mine are short.",
+            "hint": ""
+          },
+          {
+            "prompt": "Rwose, ntabwo nzi ukuntu nzashobora kurangiza imirimo yose muri uku kwezi.",
+            "answer": "Really, I truly don't know how I will be able to finish all the work in this month.",
+            "hint": ""
+          },
+          {
+            "prompt": "Mwana wanjye, kwizera kwawe ni ko kuzagukiza.",
+            "answer": "My child, it is your faith that will save you.",
+            "hint": ""
+          },
+          {
+            "prompt": "Abantu bajya bacogora kenshi, ariko Imana igira amaboko",
+            "answer": "People often get discouraged, but God is able (has arms).",
+            "hint": ""
+          },
+          {
+            "prompt": "Kuvuga si ko kubirangiza; ahubwo gukora ni ko kuduha ibyiringiro byo kubishobora.",
+            "answer": "Talking about it is not getting it done; to the contrary, working gives us hope that we will be able (to get it done).",
+            "hint": ""
+          },
+          {
+            "prompt": "Sinshaka kuvuga ibyo kungenda kwe. Ariko nzakomeza kwiringira yuko azagaruka.",
+            "answer": "I don't want to talk about her leaving. Nevertheless, I shall continue to hope that she will return.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kugerageza no gukora ni byo bizana amajyambere.",
+            "answer": "Trying and working--those are what bring progress.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni tugera mu gihugu cyabo tuzaririmba indirimbo zo kunesha.",
+            "answer": "When we get to their country, we will sing songs of victory.",
+            "hint": ""
+          },
+          {
+            "prompt": "Kubabara no kurira ntibizongera kubaho.",
+            "answer": "Pain and crying will not exist again.",
+            "hint": ""
+          },
+          {
+            "prompt": "Nzi yuko nzamushima n'aza, kuko ahora ampa ibyiringiro",
+            "answer": "I know that I will thank him when he comes, because he always gives me hope.",
+            "hint": ""
+          },
+          {
+            "prompt": "Buhoro buhoro ni rwo rugendo rwo gusohora.",
+            "answer": "Little by little--that is the way to arrive.",
+            "hint": ""
+          },
+          {
+            "prompt": "Guhorana ibyishimo n'ibyiringiro ni byo bizaduha kunesha imibabaro yose.",
+            "answer": "To constantly have gratitude and hope--these are what will enable us to conquer all suffering.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ntidukwiriye gucogora. Amaherezo tuzaririmba dufite ibyishimo byinshi.",
+            "answer": "We must not get discouraged. We will finally sing with much happiness.",
+            "hint": ""
+          },
+          {
+            "prompt": "Si kenshi imvura igwa muri uku kwezi.",
+            "answer": "It's not often that rain falls in this month.",
+            "hint": ""
+          },
+          {
+            "prompt": "Ni tunesha kubwa ubushobozi bw'umuyobozi wacu, ntituzongera kubabara iteka.",
+            "answer": "If we triumph, thanks to the leadership of our leader, we will never suffer again.",
+            "hint": ""
+          }
+        ]
+      }
+    ]
+  }
+}

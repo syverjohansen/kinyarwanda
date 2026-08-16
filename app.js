@@ -143,6 +143,10 @@ function addExercise(name, type = "flashcard") {
     type,
     questions: [],
     lastPracticed: "",
+    lastPracticeMs: null,
+    bestPracticeMs: null,
+    totalPracticeMs: 0,
+    practiceCount: 0,
   };
 
   if (type === "grammar-table") {
@@ -453,7 +457,7 @@ function renderExercise(exercise) {
   const isGrammarTable = getExerciseType(exercise) === "grammar-table";
 
   titleInput.value = exercise.name;
-  practiceMeta.textContent = `${isGrammarTable ? "Grammar table" : "Question cards"} · ${formatPracticeDate(exercise.lastPracticed)}`;
+  practiceMeta.textContent = `${isGrammarTable ? "Grammar table" : "Question cards"} · ${formatPracticeDate(exercise.lastPracticed)} · ${formatPracticeTimingSummary(exercise)}`;
   titleInput.addEventListener("change", () => {
     exercise.name = titleInput.value.trim() || "Untitled exercise";
     saveLessons();
@@ -657,6 +661,8 @@ function makePracticeSession(exercise) {
   return {
     exerciseId: exercise.id,
     kind: getExerciseType(exercise),
+    startedAt: Date.now(),
+    completedMs: null,
     phase: "initial",
     queue: getPracticeItemIds(exercise),
     index: 0,
@@ -724,10 +730,20 @@ function startReviewPhase(session) {
 
 function completePracticeSession(exercise) {
   const now = new Date().toISOString();
+  const session = state.practiceSession;
+  const startedAt = Number(session.startedAt) || Date.now();
+  const elapsedMs = Math.max(0, Date.now() - startedAt);
+  const previousBestMs = getBestPracticeMs(exercise);
+
   exercise.lastPracticed = now;
-  state.practiceSession.done = true;
-  state.practiceSession.phase = "complete";
-  state.practiceSession.queue = [];
+  exercise.lastPracticeMs = elapsedMs;
+  exercise.bestPracticeMs = previousBestMs ? Math.min(previousBestMs, elapsedMs) : elapsedMs;
+  exercise.totalPracticeMs = getTotalPracticeMs(exercise) + elapsedMs;
+  exercise.practiceCount = getPracticeCount(exercise) + 1;
+  session.completedMs = elapsedMs;
+  session.done = true;
+  session.phase = "complete";
+  session.queue = [];
   saveLessons();
 }
 
@@ -939,6 +955,72 @@ function formatPracticeDate(value) {
   })}`;
 }
 
+function getBestPracticeMs(exercise, fallback = null) {
+  const value = Number(exercise.bestPracticeMs);
+  return Number.isFinite(value) && value > 0 ? value : fallback;
+}
+
+function getTotalPracticeMs(exercise) {
+  const value = Number(exercise.totalPracticeMs);
+  return Number.isFinite(value) && value > 0 ? value : 0;
+}
+
+function getPracticeCount(exercise) {
+  const value = Number(exercise.practiceCount);
+  return Number.isFinite(value) && value > 0 ? value : 0;
+}
+
+function getAveragePracticeMs(exercise) {
+  const count = getPracticeCount(exercise);
+  if (count === 0) return null;
+  return Math.round(getTotalPracticeMs(exercise) / count);
+}
+
+function formatPracticeDuration(ms) {
+  if (!Number.isFinite(ms) || ms <= 0) return "0:00";
+
+  const totalSeconds = Math.round(ms / 1000);
+  const seconds = totalSeconds % 60;
+  const totalMinutes = Math.floor(totalSeconds / 60);
+  const minutes = totalMinutes % 60;
+  const hours = Math.floor(totalMinutes / 60);
+
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
+
+function formatPracticeTimingSummary(exercise) {
+  const bestMs = getBestPracticeMs(exercise);
+  if (!bestMs) return "No times yet";
+
+  const parts = [`Best ${formatPracticeDuration(bestMs)}`];
+  const averageMs = getAveragePracticeMs(exercise);
+  if (averageMs) parts.push(`Avg ${formatPracticeDuration(averageMs)}`);
+  return parts.join(" · ");
+}
+
+function renderPracticeComplete(exercise) {
+  const currentMs = Number(exercise.lastPracticeMs);
+  const bestMs = getBestPracticeMs(exercise, currentMs);
+  const averageMs = getAveragePracticeMs(exercise);
+
+  return `
+    <div class="flashcard-empty complete">
+      <h3>Exercise complete</h3>
+      <p>${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
+      <div class="practice-time-summary">
+        <p><strong>This run</strong><span>${escapeHtml(formatPracticeDuration(currentMs))}</span></p>
+        <p><strong>Best ever</strong><span>${escapeHtml(formatPracticeDuration(bestMs))}</span></p>
+        ${averageMs ? `<p><strong>Average</strong><span>${escapeHtml(formatPracticeDuration(averageMs))}</span></p>` : ""}
+      </div>
+      <button id="restart-practice" type="button">Practice again</button>
+    </div>
+  `;
+}
+
 function renderPracticeView() {
   const items = getPracticeExercises();
   elements.practiceNav.replaceChildren();
@@ -964,7 +1046,7 @@ function renderPracticeView() {
       <span>${item.label}</span>
       <span>
         <strong>${escapeHtml(item.exercise.name)}</strong>
-        <small>${getExerciseItemCount(item.exercise)} ${getExerciseType(item.exercise) === "grammar-table" ? "cells" : "questions"} · ${escapeHtml(formatPracticeDate(item.exercise.lastPracticed))}</small>
+        <small>${getExerciseItemCount(item.exercise)} ${getExerciseType(item.exercise) === "grammar-table" ? "cells" : "questions"} · ${escapeHtml(formatPracticeDate(item.exercise.lastPracticed))} · ${escapeHtml(formatPracticeTimingSummary(item.exercise))}</small>
       </span>
     `;
     button.addEventListener("click", () => selectPracticeExercise(item.exercise.id));
@@ -991,13 +1073,7 @@ function renderPracticeView() {
   const session = getPracticeSession(exercise);
 
   if (session.done) {
-    elements.practiceCard.innerHTML = `
-      <div class="flashcard-empty complete">
-        <h3>Exercise complete</h3>
-        <p>${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
-        <button id="restart-practice" type="button">Practice again</button>
-      </div>
-    `;
+    elements.practiceCard.innerHTML = renderPracticeComplete(exercise);
     elements.practiceCard.querySelector("#restart-practice").addEventListener("click", () => {
       resetPracticeSession();
       render();
@@ -1110,13 +1186,7 @@ function renderGrammarPractice(active) {
   const session = getPracticeSession(exercise);
 
   if (session.done) {
-    elements.practiceCard.innerHTML = `
-      <div class="flashcard-empty complete">
-        <h3>Exercise complete</h3>
-        <p>${escapeHtml(formatPracticeDate(exercise.lastPracticed))}</p>
-        <button id="restart-practice" type="button">Practice again</button>
-      </div>
-    `;
+    elements.practiceCard.innerHTML = renderPracticeComplete(exercise);
     elements.practiceCard.querySelector("#restart-practice").addEventListener("click", () => {
       resetPracticeSession();
       render();
@@ -1492,7 +1562,23 @@ function preservePracticeDates(existingChapter, importedChapter) {
     if (!exercise.lastPracticed && existingExercise.lastPracticed) {
       exercise.lastPracticed = existingExercise.lastPracticed;
     }
+    preservePracticeTiming(existingExercise, exercise);
   });
+}
+
+function preservePracticeTiming(existingExercise, importedExercise) {
+  if (importedExercise.lastPracticeMs == null && existingExercise.lastPracticeMs != null) {
+    importedExercise.lastPracticeMs = existingExercise.lastPracticeMs;
+  }
+  if (importedExercise.bestPracticeMs == null && existingExercise.bestPracticeMs != null) {
+    importedExercise.bestPracticeMs = existingExercise.bestPracticeMs;
+  }
+  if (!importedExercise.totalPracticeMs && existingExercise.totalPracticeMs) {
+    importedExercise.totalPracticeMs = existingExercise.totalPracticeMs;
+  }
+  if (!importedExercise.practiceCount && existingExercise.practiceCount) {
+    importedExercise.practiceCount = existingExercise.practiceCount;
+  }
 }
 
 function normalizeImportedChapter(data) {
@@ -1536,6 +1622,7 @@ function normalizeImportedExercise(exercise, index) {
     name,
     type: "flashcard",
     lastPracticed: typeof exercise.lastPracticed === "string" ? exercise.lastPracticed : "",
+    ...normalizePracticeTiming(exercise),
     questions: exercise.questions.map(normalizeImportedQuestion),
   };
 }
@@ -1560,6 +1647,7 @@ function normalizeImportedGrammarExercise(exercise, name) {
     name,
     type: "grammar-table",
     lastPracticed: typeof exercise.lastPracticed === "string" ? exercise.lastPracticed : "",
+    ...normalizePracticeTiming(exercise),
     questions: [],
     columns,
     rows: exercise.rows.reduce((rows, row, index) => {
@@ -1579,6 +1667,30 @@ function normalizeImportedGrammarExercise(exercise, name) {
       return rows;
     }, []),
   };
+}
+
+function normalizePracticeTiming(exercise) {
+  const practiceCount = normalizePositiveInteger(exercise.practiceCount);
+  const totalPracticeMs = normalizePositiveNumber(exercise.totalPracticeMs);
+  const bestPracticeMs = normalizePositiveNumber(exercise.bestPracticeMs);
+  const lastPracticeMs = normalizePositiveNumber(exercise.lastPracticeMs);
+
+  return {
+    lastPracticeMs,
+    bestPracticeMs,
+    totalPracticeMs,
+    practiceCount,
+  };
+}
+
+function normalizePositiveNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : null;
+}
+
+function normalizePositiveInteger(value) {
+  const number = Number(value);
+  return Number.isInteger(number) && number > 0 ? number : 0;
 }
 
 function normalizeImportedQuestion(question, index) {
