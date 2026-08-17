@@ -1,0 +1,89 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 37",
+    "exercises": [
+      {
+        "name": "Read aloud and translate",
+        "questions": [
+          { "prompt": "Twanditse amazina yabo, ariko ntibayasomye.", "answer": "We wrote their names, but they didn't read them.", "hint": "" },
+          { "prompt": "Ndangije gusoma, maze ubu ngiye kwandika", "answer": "I'm finished reading, and now I'm going to write.", "hint": "" },
+          { "prompt": "Sinabirangije, kuko ari byinshi cyane.", "answer": "I did not finish them, because they are very many/too many.", "hint": "" },
+          { "prompt": "Yabigerageje, ariko ntiyabishoboye.", "answer": "She tried to do it, but she was not able.", "hint": "" },
+          { "prompt": "Nakubwiye yuko twatangiye kubikora, ariko ntitwarangije.", "answer": "I told you that we began to do it, but we didn't finish.", "hint": "" },
+          { "prompt": "Sinzi aho yagiye, kandi sinzi yuko umubyeyi we yamubonye.", "answer": "I don't know where he went, and I don't know if his parent found him.", "hint": "" },
+          { "prompt": "Niringiye ko imibabaro yabo yashize.", "answer": "I hope that their sufferings have ended.", "hint": "" },
+          { "prompt": "N'ukuri, yaragiye.  Ntabwo azagaruka.", "answer": "Truly, he has gone.  He will never return.", "hint": "" },
+          { "prompt": "Bahoze bavuga neza; sinzi uko byabaye.", "answer": "They used to speak well; I don't know what happened.", "hint": "" },
+          { "prompt": "Namushatse hose, ariko sinamubonye", "answer": "I looked for her everywhere, but I didn't find her.", "hint": "" },
+          { "prompt": "Ntabwo yabizanye, ahubwo yabijyanye ahandi ntazi.", "answer": "He certainly didn't bring them; to the contrary, he took them to some other place of which I'm unaware.", "hint": "" },
+          { "prompt": "N'ujyana na we, azakubwira ibyamubayeho byose.", "answer": "If you go with him, he will tell you everything that happened to him.", "hint": "" },
+          { "prompt": "Ndarebye, ariko simbibonye.", "answer": "I've looked, but I haven't found them.", "hint": "" },
+          { "prompt": "Yavuye mu rwobo rurerure, ariko ntameze neza.", "answer": "He came out of the deep pit, but he is not doing well.", "hint": "" },
+          { "prompt": "Ninjiyemo, ariko harimo umwijima mwinshi watumye ntabasha kubibona.", "answer": "I went in, but it was so dark that I could not find them.", "hint": "" },
+          { "prompt": "Dore inka ziraje, ariko abakozi baragiye.", "answer": "Look, the cows are coming/have come, but the workers have gone.", "hint": "" },
+          { "prompt": "Abashyitsi bavuze menshi (amagambo), ariko agahinda ntigashize.", "answer": "The visitors talked a lot, but the sorrow has not ended.", "hint": "" },
+          { "prompt": "Afite amatwi, ariko ntiyumvise ibyo wamubwiye.", "answer": "He has ears, but he didn't hear what you told him.", "hint": "" },
+          { "prompt": "Ntameze neza rwose, sinzi amaherezo ye uko azamera", "answer": "She is not doing well at all; I don't know what the end will be for her.", "hint": "" },
+          { "prompt": "Babaye inzererezi zitagira aho ziba, ariko niringiye ko amagambo wababwiye azabafasha.", "answer": "They have been wanderers without a place to live, but I hope that the words you told them will help them.", "hint": "" },
+          { "prompt": "Namusabye ngo mbimufashemo, kandi nizera ko Imana na yo izabimufashamo", "answer": "I asked him so that I could help him concerning it, and I believe that God will also help him in it.", "hint": "" },
+          { "prompt": "Urakoze rwose; ndagushimye pe!", "answer": "You've really helped; I thank you profoundly.", "hint": "" },
+          { "prompt": "Yaranditse kandi yaravuze, ariko ntacyo byamaze.", "answer": "He wrote and he spoke, but to no avail.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Translate into any of the past tenses",
+        "questions": [
+          { "prompt": "Murakora", "answer": "Mwakoze; mwarakoze", "hint": "" },
+          { "prompt": "Ntibazabireba", "answer": "Ntibabirebye", "hint": "" },
+          { "prompt": "Ndabyiringira", "answer": "Nabyiringiye", "hint": "" },
+          { "prompt": "Turagenda", "answer": "Twagiye; twaragiye", "hint": "" },
+          { "prompt": "Tuzabivuga", "answer": "Twabivuze; twarabivuze", "hint": "" },
+          { "prompt": "Turumva ibyo uvuga", "answer": "Twumvise ibyo bavuga", "hint": "" },
+          { "prompt": "Turajya iwabo", "answer": "Twagiye iwabo", "hint": "" },
+          { "prompt": "Turabigerageza", "answer": "Twabigerageje; twarabigerageje", "hint": "" },
+          { "prompt": "Muzakora mu murima", "answer": "Mwakoze mu murima", "hint": "" },
+          { "prompt": "Ndaza", "answer": "Naje; ndaje; naraje", "hint": "" },
+          { "prompt": "Ndandika urwandiko", "answer": "Nanditse urwandiko", "hint": "" },
+          { "prompt": "Uzarangiza umurimo wawe wose.", "answer": "Warangije umurimo wawe wose", "hint": "" },
+          { "prompt": "Singishaka", "answer": "Sinagishatse", "hint": "" },
+          { "prompt": "Ndatangira kumva", "answer": "Natangiye kumva", "hint": "" },
+          { "prompt": "Ntabwo azagaruka", "answer": "Ntabwo yagarutse", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          { "prompt": "Ejobundi twarabategereje, ariko ntimwaje", "answer": "The day before yesterday we waited for you, but you didn't come.", "hint": "" },
+          { "prompt": "Namwizeye kuko namukunze", "answer": "I believed her because I loved her.", "hint": "" },
+          { "prompt": "Natekereje yuko ari byiza kugenda abandi bataraza", "answer": "I thought it was good to go before the others came.", "hint": "" },
+          { "prompt": "Yahoze atubwira yuko azagenda amaze kurangiza byose", "answer": "He always told us that he would go when he had finished everything.", "hint": "" },
+          { "prompt": "Twashoboye kwinjiramo nubwo umuryango wari mutoya", "answer": "We were able to enter in even though the entrance was small.", "hint": "" },
+          { "prompt": "Bashoboye kumenya ibitekerezo byanjye kuko nabyanditse ku rubaho", "answer": "They were able to know my thoughts because I wrote them on a board.", "hint": "" },
+          { "prompt": "Mwana wanjye, ngwino, hari icyo nshaka kukubwira ntarapfa", "answer": "My child, come, there is something I want to tell you before I die.", "hint": "" },
+          { "prompt": "Yarabivuze.  Nanjye naramwizeye", "answer": "He said it.  And I believed him.", "hint": "" },
+          { "prompt": "Mbese uvuze iki?", "answer": "What did you say?", "hint": "" },
+          { "prompt": "Simbivuze rwose", "answer": "I certainly didn't say it.", "hint": "" },
+          { "prompt": "Kera yar'umunebwe, ariko mur'iyi minsi yarahindutse.", "answer": "Long ago he was a lazy person, but he has changed recently.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          { "prompt": "The day before yesterday we waited for you, but you didn't come.", "answer": "Ejobundi twarabategereje, ariko ntimwaje", "hint": "" },
+          { "prompt": "I believed her because I loved her.", "answer": "Namwizeye kuko namukunze", "hint": "" },
+          { "prompt": "I thought it was good to go before the others came.", "answer": "Natekereje yuko ari byiza kugenda abandi bataraza", "hint": "" },
+          { "prompt": "He always told us that he would go when he had finished everything.", "answer": "Yahoze atubwira yuko azagenda amaze kurangiza byose", "hint": "" },
+          { "prompt": "We were able to enter in even though the entrance was small.", "answer": "Twashoboye kwinjiramo nubwo umuryango wari mutoya", "hint": "" },
+          { "prompt": "They were able to know my thoughts because I wrote them on a board.", "answer": "Bashoboye kumenya ibitekerezo byanjye kuko nabyanditse ku rubaho", "hint": "" },
+          { "prompt": "My child, come, there is something I want to tell you before I die.", "answer": "Mwana wanjye, ngwino, hari icyo nshaka kukubwira ntarapfa", "hint": "" },
+          { "prompt": "He said it.  And I believed him.", "answer": "Yarabivuze.  Nanjye naramwizeye", "hint": "" },
+          { "prompt": "What did you say?", "answer": "Mbese uvuze iki?", "hint": "" },
+          { "prompt": "I certainly didn't say it.", "answer": "Simbivuze rwose", "hint": "" },
+          { "prompt": "Long ago he was a lazy person, but he has changed recently.", "answer": "Kera yar'umunebwe, ariko mur'iyi minsi yarahindutse.", "hint": "" }
+        ]
+      }
+    ]
+  }
+}

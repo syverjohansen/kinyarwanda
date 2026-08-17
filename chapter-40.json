@@ -1,0 +1,35 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 40",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          { "prompt": "Nta gihoraho mw isi.  Ibyo dukwiriye kutabyibagirwa.", "answer": "Nothing lasts on (this) world.  We must not forget that.", "hint": "" },
+          { "prompt": "Mbese ntiwibuka wa mwungeri twabonye ejo?  Yee, ngaho rero mbwira ibye.", "answer": "Don't you remember that shepherd we saw yesterday?  Yes.  Very well then, tell me about him.", "hint": "" },
+          { "prompt": "Iryo sezerano rizadukomeza iteka -- mu bihe byo kunguka no mu byo gukena", "answer": "That promise will sustain us forever -- in times of increase and in those of poverty.", "hint": "" },
+          { "prompt": "Hari ikindi dukwiriye kutibagirwa: ni bya bihe by'ubukene, kuko bitwibutsa yuko abo mu muryango wa Petero badufashije mu buryo butangaje.", "answer": "There is something else we must not forget -- it is those times of poverty, because they remind us that Peter's family helped us in a marvelous way.", "hint": "" },
+          { "prompt": "Urugendo tuzarutangira ejo.  Ibyo bikwiriye gutuma twitegura none.", "answer": "We will begin the journey tomorrow.  That should cause us to prepare today.", "hint": "" },
+          { "prompt": "Yagiye kubaka rwa rusika rw'inzu ye.  Mbese ntiwibuka ukuntu rwaguye?", "answer": "He went to build that wall.  Don't you remember how it fell?", "hint": "" },
+          { "prompt": "Bakunda gusoma amagambo yanditse.  Ayo mvuga n'ayo yanditse mu bitabo yabahaye atarapfa.", "answer": "They love to read the words he wrote.  Those (the words) I'm speaking about are those he wrote in the books he gave them before he died.", "hint": "" },
+          { "prompt": "Isahane irimwo ubusa gusa.  Ntiharimo uburo, haba na rumwe.", "answer": "There is absolutely nothing in the dish.  There is not a grain of millet in it, no, not one.", "hint": "" },
+          { "prompt": "Ibyo mvuga n'iby'inzara yateye mu gihugu.  Mbese ntiwibuka wa mwaka war'umeze utyo?", "answer": "What I'm speaking about is the famine which ravaged the country.  Don't you remember the year when it was like that?", "hint": "" },
+          { "prompt": "Bose barakena cyane.  Ibyo s'igitangaza, kuko nta mvura na nke babonye.", "answer": "They are all very poor. This isn't surprising, because they have not had any rain at all.", "hint": "" },
+          { "prompt": "Ibyo twamuhaye yabiriye byose.  Dukwiriye kumuha ibindi, kuko nta cyo afite rwose.", "answer": "She ate everything we gave her.  We should give her more, because she has absolutely nothing.", "hint": "" },
+          { "prompt": "Dukwiriye kwitegura ya ngobyi kuko arwaye cyane.", "answer": "We must prepare that stretcher because he is very sick.", "hint": "" },
+          { "prompt": "Isezerano s'ubusa; dukwiriye kurikomeza.  Mbese ibyo nawe ntubyemera?", "answer": "A promise is not worthless; we must keep it.  Don't you also agree?", "hint": "" },
+          { "prompt": "Hari ikindi nkwiriye kukwibutsa: Ni twegera Imana, na yo izatwegera.  Mbese iryo sezerano ntuyizera?", "answer": "There's also something else I should remind you: if we draw near to God, He will draw near to us also.  Don't you believe that promise?", "hint": "" },
+          { "prompt": "Mukobwa wanjye nkunda, sinzongera kubikubwira.  Ibyo ukwiriye kubyibuka n'ujya gukina.", "answer": "My dear daughter, I will not tell you again.  You must remember that when you go to play.", "hint": "" },
+          { "prompt": "Ntimukwiriye gupfa kwemera ibyo uwo mugabo avuga byose.", "answer": "You should not simply agree to everything that man says.", "hint": "" },
+          { "prompt": "Banze kwica za ntama, nubwo nabahaye uburyo.", "answer": "They refused to kill those sheep, even though I provided them with a way.", "hint": "" },
+          { "prompt": "Ni twubaka neza, inzu izahagarara iminsi myinshi.  Ibyo, mbese ntubyemera?", "answer": "If we build well, the house will stand for many days.  Don't you agree with that?", "hint": "" },
+          { "prompt": "Wa mugabo, narabimuhaye.  Na we azabyemera n'umubaza", "answer": "That man -- I gave them to him.  He also will agree to it/admit it if you ask him.", "hint": "" },
+          { "prompt": "Abo bantu bankijije akaga kenshi; nanjye nkwiriye kubibuka muri ibi bihe bibi.", "answer": "Those people saved me from danger often; and I must remember them in these bad times.", "hint": "" },
+          { "prompt": "Sinigeze gukora ibimeze bityo; haba na rimwe.", "answer": "I never ever did something like that; not even once.", "hint": "" }
+        ]
+      }
+    ]
+  }
+}

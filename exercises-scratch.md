@@ -1,74 +1,49 @@
-Chapter 33
-Exercise 1: Translate to Kinyarwanda
+Chapter 40
+Exercise 1: Translate to English
 Questions:
-1. This little place
-2. A few places
-3. These places
-4. Many places
-5. This is my place.
-6. There is a blind man outside
-7. Those bad places (over there)
-8. This is a long place
-9. Their places
-10. My place
-11. There is much water in the pit today
-12. We need a very wide place
+1. Nta gihoraho mw isi.  Ibyo dukwiriye kutabyibagirwa.
+2. Ibese ntiwibuka wa mwungeri twabonye ejo?  Yee, ngaho rero mbwira ibye.
+3. Iryo sezerano rizadukomeza iteka -- mu bihe byo kunguka no mu byo gukena
+4. Hari ikindi dukwiriye kutibagirwa: ni bya bihe by'ubukene, kuko bitwibutsa yuko abo mu muryango wa Petero badufashije mu buryo butangaje.
+5. Urugendo tuzarutangira ejo.  Ibyo bikwiriye gutuma twitegura none.
+6. Yagiye kubaka rwa rusika rw'inzu ye.  Mbese ntiwibuka ukuntu rwaguye?
+7. Bakunda gusoma amagambo yanditse.  Ayo mvuga n'ayo yanditse mu bitabo yabahaye atarapfa.
+8. Isahane irimwo ubusa gusa.  Ntiharimo uburo, haba na rumwe.
+9. Ibyo mvuga n'iby'inzara yateye mu gihugu.  Mbese ntiwibuka wa mwaka war'umeze utyo?
+10. Bose barakena cyane.  Ibyo s'igitangaza, kuko nta mvura na nke babonye.
+11. Ibyo twamuhaye yabiriye byose.  Dukwiriye kumuha ibindi, kuko nta cyo afite rwose.
+12. Dukwiriye kwitegura ya ngobyi kuko arwaye cyane.
+13. Isezerano s'ubusa; dukwiriye kurikomeza.  Mbese ibyo nawe ntubyemera?
+14. Hari ikindi nkwiriye kukwibutsa: Ni twegera Imana, na yo izatwegera.  Mbese iryo sezerano ntuyizera?
+15. Mukobwa wanjye nkunda, sinzongera kubikubwira.  Ibyo ukwiriye kubyibuka n'ujya gukina.
+16. Ntimukwiriye gupfa kwemera ibyo uwo mugabo avuga byose.
+17. Banze kwica za ntama, nubwo nabahaye uburyo.
+18. Ni twubaka neza, inzu izahagarara iminsi myinshi.  Ibyo, mbese ntubyemera?
+19. Wa mugabo, narabimuhaye.  Na we azabyemera n'umubaza
+20. Abo bantu banijije akaga kenshi; nanjye nkwiriye kubibuka muri ibi bihe bibi.
+21. Sinigeze gukora ibimeze bityo; haba na rimwe.
 
 Answers:
-1. aha hantu hatoya
-2. ahantu hakeya/ahakeya
-3. aha/aha hantu
-4. ahantu henshi
-5. Aha/aha hantu n'ahanjye
-6. Hanze har'impumyi
-7. hariya hantu habi
-8. Aha n'aharehare/ni harehare
-9. ahantu habo/ahabo
-10. ahantu hanjye/ahanjye
-11. Har'amazi menshi mu rwobo none.
-12. Dukennye ahagari/ahantu hagari.
+1. Nothing lasts on (this) world.  We must not forget that.
+2. Don't you remember that shepherd we saw yesterday?  Yes.  Very well then, tell me about him.
+3. That promise will sustain us forever -- in times of increase and in those of poverty.
+4. There is something else we must not forget -- it is those times of poverty, because they remind us that Peter's family helped us in a marvelous way.
+5. We will begin the journey tomorrow.  That should cause us to prepare today.
+6. He went to build that wall.  Don't you remember how it fell?
+7. They love to read the words he wrote.  Those (the words) I'm speaking about are those he wrote in the books he gave them before he died.
+8. There is absolutely nothing in the dish.  There is not a grain of millet in it, no, not one.
+9. What I'm speaking about is the famine which ravaged the country.  Don't you remember the year when it was like that?
+10. They are all very poor. This isn't surprising, because they have not had any rain at all.
+11. She ate everything we gave her.  We should give her more, because she has absolutely nothing.
+12. We must prepare that stretcher because he is very sick.
+13. A promise is not worthless; we must keep it.  Don't you also agree?
+14. There's also something else I should remind you: if we draw near to God, He will draw near to us also.  Don't you believe that promise?
+15. My dear daughter, I will not tell you again.  You must remember that when you go to play.
+16. You should not simply agree to everything that man says.
+17. They refused to kill those sheep, even though I provided them with a way.
+18. If we build well, the house will stand for many days.  Don't you agree with that?
+19. That man -- I gave them to him.  He also will agree to it/admit it if you ask him.
+20. Those people saved me from danger often; and I must remember them in these bad times.
+21. I never ever did something like that; not even once.
 
-Exercise 2: Translate into English
-Questions:
-1. Dukwiriye kuva aha.  Ni habi.
-2. Oya, sinzi aho bari.
-3. Hari amato menshi mu ruzi none.
-4. Sinzi ko hari ahantu hataba imibabaro
-5. Mbega ukuntu ari heza!
-6. Kera hariho inyamaswa nyinshi.
-7. Tuzajya gushaka aheza haruta aha.
-8. Bazava ahakure cyane
-9. Aha n'aha makumyabiri na habiri.
-10. Ukwiriye kujya hariya.  Ni heza kuruta aha.
-11. Mbese hari abantu hanze?
-12. Hariho abantu benshi bakunda ibyiza.
-13. Ni hafi; si kure.
-14. Bivane mu maso hanjye.
-15. Biboneka hamwe na hamwe.
-16. Shyira ibintu hano.
-17. Nta bwo haza abagabo
-18. Ntibiboneka henshi.
-19. Hariho (long a) umugabo utazi.
-20. Barashaka hose, ariko ntibarabona Petero.
 
-Answers:
-1. We must leave this place.  It's a bad place.
-2. No, I don't know where they are.
-3. There are many boats in the river today.
-4. I don't know if there's a place where there is no suffering.
-5. Wow! What a beautiful place this is!
-6. Long ago there used to be many animals.
-7. We will go to look for a better place than this.
-8. They will come from very far away/from a very far-away place.
-9. This is the twenty-second place
-10. You must go over there.  It is a better place than this.
-11. Are there people outside?
-12. There are many people who like good things.
-13. It's nearby, it's not far away.
-14. Take them away from my face.
-15. It's/they are found here and there.
-16. Put the things here.
-17. Men never come there.
-18. They are not found in many places.
-19. There was a man you don't know.
-20. They are looking everywhere, but they haven't found Peter yet.

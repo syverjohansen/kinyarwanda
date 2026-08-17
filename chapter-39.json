@@ -1,0 +1,69 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 39",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          { "prompt": "Ibi n'ibihe byiza: twungutse byinshi.", "answer": "These are good times: we have increased/profited a lot.", "hint": "" },
+          { "prompt": "Sinzongera kukubwira.  Ukwiriye kunyumvira.", "answer": "I won't tell you again.  You must obey me.", "hint": "" },
+          { "prompt": "Ni twegera Imana, na yo izatwegera.  Mbese, mwarayegereye?", "answer": "If we draw near to God, He will also draw near to us.  Have you drawn near to Him?", "hint": "" },
+          { "prompt": "Turiga byinshi.  Sinzi ko tuzabyibuka byose. Jyewe, namaze kwibagirwa byinshi.", "answer": "We are learning a lot.  I don't know whether we will remember it all.  As for me, I have already forgotten a lot.", "hint": "" },
+          { "prompt": "Ntimukwiriye gupfa kubyemera", "answer": "You must not simply agree to it.", "hint": "" },
+          { "prompt": "Ntabwo mushobora kumwigisha, kuko yibagirwa iteka", "answer": "You can never teach him, because he forgets constantly", "hint": "" },
+          { "prompt": "Banze kucica (inka), ariko inzara yatumye babikora", "answer": "They hated to kill them (cows, sheep or goats), but hunger/the famine caused them to do it.", "hint": "" },
+          { "prompt": "Ni twubaka neza, inzu izahagarara iminsi myinshi.", "answer": "If we build well, the house will stand for many days.", "hint": "" },
+          { "prompt": "Inka ze ntibashobora kuzibara zose, kuko ar'umubare ugera mu bihumbi byinshi.", "answer": "They can't count all of his cows, because it is a number that reaches into the many thousands.", "hint": "" },
+          { "prompt": "Narabimuhaye. Na w'azabyemera n'umubaza", "answer": "I gave them to her.  And she will admit it if you ask her.", "hint": "" },
+          { "prompt": "Nzagutuma ejo.  N'ugerayo ukwiriye kumwegera no kumubwira ibyo nakubwiye byose.", "answer": "I will send you tomorrow.  When you arrive there, you must approach him and tell him everything I have told you.", "hint": "" },
+          { "prompt": "Nanze kwiba kuko atari byiza.  Ibyiza n'ukumvira amategeka agenga uko abantu bagirirana", "answer": "I refused to steal because it is not good.  What is good is to obey the laws that decree how people treat one another.", "hint": "" },
+          { "prompt": "Afite intama nyinshi, kandi yakomeje kuzongeraho.  N'ubundi yazongeyeho kenshi.", "answer": "He has many sheep, and he continued to add to them.  And at other times he added to them often.", "hint": "" },
+          { "prompt": "Uyu mukene arakwibutsa yuko wemeye ejo ko uzamufasha.  Ndagira ngo utabikoze.", "answer": "This poor person is reminding you that you agreed yesterday that you would help him.  I presume you have not done so.", "hint": "" },
+          { "prompt": "Mu mubare w'abantu iki gihugu cyungutse, nkwiriye kukwibutsa yuko hariho benshi bataremera kumvira amategeko yahanzwe vub'aha.", "answer": "In the number of people this country has increased, I must remind you that there are many who don't agree to obey the laws that were enacted recently.", "hint": "" },
+          { "prompt": "Pfa kubigerageza, ahari bizamwibutsa.", "answer": "Just try it; perhaps it will remind him", "hint": "" },
+          { "prompt": "Hari umugani uvuga yuko uburyo bwo gutsinda bugenda buhoro buhoro.", "answer": "There is a proverb that says that the road to success goes inch by inch (little by little)", "hint": "" },
+          { "prompt": "Ni wemera kubaka inzu yanjye, nzatuma wunguka amafaranga menshi.", "answer": "If you agree to build my house, I will cause you to gain much money", "hint": "" },
+          { "prompt": "Nzi ibyo wibwira: uratekereza yuko bidashoboka, ariko si ko biri", "answer": "I know what you are saying to yourself: you are thinking that it is not possible, but that is not so.", "hint": "" },
+          { "prompt": "Ibagirwa ibyo nakubwiye byose.  Nashatse kukwibutsa gusa.", "answer": "Forget everything I told you.  I only wanted to remind you.", "hint": "" },
+          { "prompt": "Intumwa ntizivuga izazo magambo, ahubwo zikwiriye kuvuga ayo uwazitumye", "answer": "Messengers don't speak their own words; to the contrary, they must say what the one who sent them said.", "hint": "" },
+          { "prompt": "Ntabwo yemeye.  Ahari azemera n'abona ukuntu bahindutse abakene rwose.", "answer": "She never agreed.  Perhaps she will agree if she sees how they have become totally destitute people.", "hint": "" },
+          { "prompt": "Sindabona uburyo bwo kubara umubare w'ibyo azunguka, kukw ari byinshi cyane.", "answer": "I have not yet found a way to count the amount of his profits because it is very high.", "hint": "" },
+          { "prompt": "Orororo!  Nishe ikirenge!  Aya mabuye n'ibyago.", "answer": "Ouch!  I have wrecked my foot!  These stones are a plague.", "hint": "" },
+          { "prompt": "Yego, n'ukuri, yaranyibukije, ariko narabyibagiwe.  Mpora nibagirwa.", "answer": "Yes, it is true; she reminded me, but I forgot.  I keep forgetting.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          { "prompt": "Ndizera ibyo avuga byose.  Yego, ndabyizera rwose.", "answer": "I believe everything he says. Yes, I really believe it.", "hint": "" },
+          { "prompt": "Sinshobora gusoma ibyo atarwanditseho.", "answer": "I can't read that which he has not written on it.", "hint": "" },
+          { "prompt": "Ntukwiriye kwiringira ubutunzi kuko utazabujyana", "answer": "You must not put your trust in riches, because you will not take them with you to the grave.", "hint": "" },
+          { "prompt": "Inshuti ze ntizizera ibyo wamubwiye nubwo wabyeruye rwose.", "answer": "His friends will not believe what you told him even though you made it very plain.", "hint": "" },
+          { "prompt": "Abakristo bizera yuko Bibiliya ar'ijambo ry'Imana; ni cyo gituma baryizera.", "answer": "Christians believe that the Bible is the word of God; that's why they believe it.", "hint": "" },
+          { "prompt": "Utwana twiba dukwiriye guhanwa", "answer": "Little children who steal should be punished.", "hint": "" },
+          { "prompt": "Sinzi ko babaho kuko abahagiye batababonye", "answer": "I don't know whether they exist because those who went there didn't see/find them", "hint": "" },
+          { "prompt": "Nubwo wabisobanuye neza, ntazemera kubigerageza", "answer": "Even though you explained it well, he will not agree to try it.", "hint": "" },
+          { "prompt": "Nyereka itara rya Petero, kuko nshaka kugura iryanjye rimeze nkaryo", "answer": "Show me Peter's lamp, because I want to buy one for myself that is like it.", "hint": "" },
+          { "prompt": "Uzamwibutsa uko akwiriye kubigenza, ariko ntazibuka icy'ari cyo cyose.", "answer": "You will remind him how to do it, but he will not remember anything at all.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          { "prompt": "I believe everything he says. Yes, I really believe it.", "answer": "Ndizera ibyo avuga byose.  Yego, ndabyizera rwose.", "hint": "" },
+          { "prompt": "I can't read that which he has not written on it.", "answer": "Sinshobora gusoma ibyo atarwanditseho.", "hint": "" },
+          { "prompt": "You must not put your trust in riches, because you will not take them with you to the grave.", "answer": "Ntukwiriye kwiringira ubutunzi kuko utazabujyana", "hint": "" },
+          { "prompt": "His friends will not believe what you told him even though you made it very plain.", "answer": "Inshuti ze ntizizera ibyo wamubwiye nubwo wabyeruye rwose.", "hint": "" },
+          { "prompt": "Christians believe that the Bible is the word of God; that's why they believe it.", "answer": "Abakristo bizera yuko Bibiliya ar'ijambo ry'Imana; ni cyo gituma baryizera.", "hint": "" },
+          { "prompt": "Little children who steal should be punished.", "answer": "Utwana twiba dukwiriye guhanwa", "hint": "" },
+          { "prompt": "I don't know whether they exist because those who went there didn't see/find them", "answer": "Sinzi ko babaho kuko abahagiye batababonye", "hint": "" },
+          { "prompt": "Even though you explained it well, he will not agree to try it.", "answer": "Nubwo wabisobanuye neza, ntazemera kubigerageza", "hint": "" },
+          { "prompt": "Show me Peter's lamp, because I want to buy one for myself that is like it.", "answer": "Nyereka itara rya Petero, kuko nshaka kugura iryanjye rimeze nkaryo", "hint": "" },
+          { "prompt": "You will remind him how to do it, but he will not remember anything at all.", "answer": "Uzamwibutsa uko akwiriye kubigenza, ariko ntazibuka icy'ari cyo cyose.", "hint": "" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 38",
+    "exercises": [
+      {
+        "name": "Read aloud and translate",
+        "questions": [
+          { "prompt": "Narabatabaye, ariko abandi barabahemukiye", "answer": "I came to their succor, but the others let them down/deserted them.", "hint": "" },
+          { "prompt": "Nubwo yambwiye neza uko gisa, sinshobora kukwereka icy'ari cyo", "answer": "Even though he told me well what it looks like, I can't show you which one it is.", "hint": "" },
+          { "prompt": "Ntabwo azamenya uwo ndi we", "answer": "He will never recognize who I am", "hint": "" },
+          { "prompt": "We kujya impaka z'ubusa, kuko ari ntacyo bimaze", "answer": "Don't argue needlessly/about nothing, because it avails nothing", "hint": "" },
+          { "prompt": "Ntibavugije induru, kuko batagize icyo babonye", "answer": "They didn't sound an alarm, because they didn't see anything", "hint": "" },
+          { "prompt": "Igituma asodoka n'uko atagira umwete na muke", "answer": "The reason he slouches around is because he has not the slightest enthusiasm", "hint": "" },
+          { "prompt": "Babikoze nubwo twababujije", "answer": "They did it even though we forbade them", "hint": "" },
+          { "prompt": "Mwebwe mutazi umukungugu icy'ari cyo, nimuze nwyubereke", "answer": "You who don't know what dust is, come and I'll show you", "hint": "" },
+          { "prompt": "Bamaze kubirabukwa, induru bayivaho", "answer": "When they caught sight of it, they sounded the alarm", "hint": "" },
+          { "prompt": "Yibutse, asanga inkono yahindutse imbyiro", "answer": "When she remembered, she found the pot had turned to/was covered with soot", "hint": "" },
+          { "prompt": "Zana kuri ya mashaza twaguze ejo", "answer": "Bring some of those peas we bought yesterday", "hint": "" },
+          { "prompt": "Ntukagire ubwo wenda ikitari icyawe", "answer": "Don't you ever take something that doesn't belong to you.", "hint": "" },
+          { "prompt": "Uzi nawe ko atari ko biri", "answer": "You know (well enough) that that is not how it is.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          { "prompt": "Let him go now, since it is late", "answer": "Mureke agende kuko bitinze", "hint": "" },
+          { "prompt": "Even though he is much smaller than the others, he carried all the loads without so much as a murmur", "answer": "Nubwo ari mutoya cyane hanyuma y'abandi, yikoreye imitwaro yose ativovota na hato", "hint": "" },
+          { "prompt": "Do not let him go, because it is not finished", "answer": "Ntimumureke ngo agende kuko bitarangiye", "hint": "" },
+          { "prompt": "Whatever is not good is bad", "answer": "Ikitari icyiza n'ikibi", "hint": "" },
+          { "prompt": "Those who have not seen him would not be able to show him to us now, even though he is among these people.", "answer": "Abatamubonye ntibashobora kumutwereka ubu, nubgo ari mur'aba bantu", "hint": "" },
+          { "prompt": "They sounded the alarm, but nobody heard it because of the thunder and rain.", "answer": "Bavugije induru, ariko nta wayumvise kubwa inkuba n'imvura", "hint": "" },
+          { "prompt": "We told them that you will not be there tomorrow", "answer": "Twababwiye yuko utazaba uhari ejo", "hint": "" },
+          { "prompt": "Let us buy this one, since it is the best", "answer": "Reka tugure iki, kuko ari cyo cyiza", "hint": "" },
+          { "prompt": "Do not come tomorrow, as I won't have the opportunity of seeing him before then", "answer": "Ejo ntuzaze, kuko ntazashobora kubona uburyo bwo kumubona mbere y'ubwo", "hint": "" },
+          { "prompt": "Do whatever he commands", "answer": "Kora ibyo ategeka byose OR Kora icyo ategeka cyose", "hint": "" },
+          { "prompt": "Bring whatever you have, no matter what it may be", "answer": "Zana icyo ufite, icy'ari cyo cyose", "hint": "" },
+          { "prompt": "The burglar escaped and I don't know who he was", "answer": "Umujura yacitse, kandi sinzi uw'ari we", "hint": "" },
+          { "prompt": "We should feed them edible things", "answer": "Dukwiriye kubagaburira ibiribwa", "hint": "" },
+          { "prompt": "Obedient children shouldn't be punished", "answer": "Abana bumvira ntibakwiriye guhanwa.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Translate to English",
+        "questions": [
+          { "prompt": "Urakoze", "answer": "Thank you.  (also means \"you have done well\" or \"very well\")", "hint": "" },
+          { "prompt": "Ndagushimuye.  N'ukuri Imana izakugororera", "answer": "I thank you.  Truly God will reward you.", "hint": "" },
+          { "prompt": "Bagiye he?  Turabizi se?", "answer": "Where did they go?  How should we know?", "hint": "" },
+          { "prompt": "Sinumvise ibyo yavuse kuko ndafite amatwi", "answer": "I didn't hear what he said because I do not have ears.", "hint": "" },
+          { "prompt": "Namushatse, ariko nasanze yaragiye", "answer": "I looked for her, but I found she had gone", "hint": "" },
+          { "prompt": "Petero, uri he?  Ndaje Mariko!", "answer": "Peter, where are you? I'm coming, Mark!", "hint": "" },
+          { "prompt": "Yamukunze urukundo ruhebuje", "answer": "He loved her with a great/passionate love", "hint": "" },
+          { "prompt": "Twamushatse hose, ariko ntitwamubonye; ntituzi aho yagiye", "answer": "We looked for him everywhere, but we did not find him; we don't know where he went", "hint": "" },
+          { "prompt": "Nabishyize ku meza.  Sinzi aho byagiye.  Kandi sinzi uwabijyanye", "answer": "I put them on the table.  I don't know where they have gone.  And I don't know who took them.", "hint": "" },
+          { "prompt": "Natekereje yuko bamwe bagiye kumufasha", "answer": "I thought that someone went to help her.", "hint": "" },
+          { "prompt": "Oya, sinatekereje yuko yabikoze, ahubwo nzi ko ar'abantu bavuye abandi", "answer": "No, I did not think that he did it, instead/but rather I know that it was people who came from somewhere else.", "hint": "" },
+          { "prompt": "Twahoze tumubwira yuko adakwiriye kubyandika ku rubaho, kuko abandi bazabibona", "answer": "We told him all the time/constantly that he should not write it on the board, because others would see it.", "hint": "" },
+          { "prompt": "Sinamushimye rwose kuko atabikoze neza", "answer": "I did not thank him at all, because he did not do it well.", "hint": "" },
+          { "prompt": "Bagerageje koko, ariko Petero n'inshuti ze nta bwo bazabikora", "answer": "They tried for sure, but Peter and his friends will never do it.", "hint": "" },
+          { "prompt": "Bavuse yuko bamwe binjiye aha, naho abandi banyuze hariya", "answer": "They said that some (people) entered here, whereas the others passed by over there.", "hint": "" },
+          { "prompt": "Waramuhamagaye, ariko wasanze yaragiye", "answer": "You called him, but you found he had gone.", "hint": "" },
+          { "prompt": "Mbese yabijyanye na we?  Yego, barabimuhaye", "answer": "Did she take them with her?  Yes, they gave them to her.", "hint": "" },
+          { "prompt": "Tugeze mu bihe bibi; sinzi uko bizamera", "answer": "We have come upon bad times; I don't know what will happen.", "hint": "" },
+          { "prompt": "Ntacyo dushobora gukora; byarashize rwose.  Ntibizongera gushoboka ubundi", "answer": "We can't do anything; it's absolutely finished.  It won't be possible again some other time.", "hint": "" },
+          { "prompt": "Wamushimye kuko yakoze umurimo ukomeye", "answer": "You thanked her because she did a great job", "hint": "" },
+          { "prompt": "N'uvuga ko yabivuze, bose bazamuhana", "answer": "If you say that he did it, everyone will avoid him", "hint": "" },
+          { "prompt": "Yabijyanye mu nzu, ni ho yabishyize rwose.  Ntuzabibona ahandi ahw ari ho hose.", "answer": "She took them into the house; that's where she put them for sure.  You will not find them elsewhere", "hint": "" },
+          { "prompt": "Iminsi imwe ndibwira yuko atankunda; ariko ingeso ze zigaragaza yuko ar'inshuti rwose.", "answer": "Some days I tell myself that he doesn't love me; but his habits/characteristics show that he is a real friend.", "hint": "" },
+          { "prompt": "Dore inshuti yawe iraje, ariko uyu munsi ntukwiriye kuyifasha.  Amaherezo izagushima", "answer": "Look, your friend has come, but today you mustn't help her.  In the end she will thank you.", "hint": "" },
+          { "prompt": "Kwiringira no gusenga nta cyo bimaze.  Iyi si ibaye nabi cyane.  Dore abapfuye bari hose.", "answer": "To hope and pray are worthless.  This world has become very bad.  Look, the dead are everywhere.", "hint": "" },
+          { "prompt": "Ibihugu byinshi bihoramo akaga n'imibabaro.  Mbese amahoro azagaruka ryari?", "answer": "Many countries constantly have danger and suffering.  When will peace return?", "hint": "" },
+          { "prompt": "Sinabikoze kandi sinzabikora, kuko ndatekereza kw ari byiza", "answer": "I didn't do it and I shall not do it, because I don't think it is good.", "hint": "" },
+          { "prompt": "N'ubyiringira bizaba", "answer": "If you hope for it, it will be", "hint": "" },
+          { "prompt": "Oya, siko bimeze.  Abantu babaye babi.", "answer": "No, that's not how it is.  People have become bad.", "hint": "" },
+          { "prompt": "Mu bihe by'akaga dukwiriye gukomeza kwizera Imana no gukora ibyo ishaka.", "answer": "During dangerous times we must continue to believe in God and do what He wishes.", "hint": "" },
+          { "prompt": "Ndakubwira inkuru nziza.  Petero agiye gusoma igitabo yanditse.", "answer": "I'm telling you good news!  Peter is going to read the book he/she wrote.", "hint": "" },
+          { "prompt": "Yabizanye kuko azi yuko bihora binezeza.", "answer": "She brought them because she knows that they always please me.", "hint": "" },
+          { "prompt": "Ndababonye!  Dore, bavuye mu rwobo rurerure kuko Petero yabibafashijemo.", "answer": "I see them/have found them!  Look, they have come out of the deep pit because Peter assisted them (to do so)", "hint": "" },
+          { "prompt": "Nta bwo twatekereje yuko bizamera bitya!  Dukwiriye gushima bose badufashije", "answer": "We never thought that it would be like this!  We must thank all those who helped us.", "hint": "" },
+          { "prompt": "Nuko, ndagiye", "answer": "Very well, I'm going.", "hint": "" }
+        ]
+      }
+    ]
+  }
+}

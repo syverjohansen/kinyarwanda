@@ -1,0 +1,82 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 36",
+    "exercises": [
+      {
+        "name": "Translate to Kinyarwanda",
+        "questions": [
+          { "prompt": "I want him (the child)", "answer": "Ndamushaka (umwana)", "hint": "" },
+          { "prompt": "You (sing.) want them (the children)", "answer": "Urabashaka (abana)", "hint": "" },
+          { "prompt": "She wants it (the string)", "answer": "Arawushaka (umugozi)", "hint": "" },
+          { "prompt": "We want them (the boats)", "answer": "Turayashaka (amato)", "hint": "" },
+          { "prompt": "You want it (the goat)", "answer": "Urayishaka (ihene)", "hint": "" },
+          { "prompt": "They want them (the cows)", "answer": "Barazishaka (inka)", "hint": "" },
+          { "prompt": "The blind man wants it (the thing)", "answer": "Impumyi iragishaka (ikintu)", "hint": "" },
+          { "prompt": "The blind men want them (the things)", "answer": "Impumyi zirabishaka (ibintu)", "hint": "" },
+          { "prompt": "The deaf man wants you (plural)", "answer": "Igipfamatwi kirabashaka", "hint": "" },
+          { "prompt": "The deaf men want them (the blind men)", "answer": "Ibipfamatwi birazishaka (impumyi)", "hint": "" },
+          { "prompt": "A book: I want it.", "answer": "Igitabo: ndagishaka", "hint": "" },
+          { "prompt": "Love: He wants it", "answer": "Urukundo: ararushaka", "hint": "" },
+          { "prompt": "A giant: I can hear him", "answer": "Igihangange: nshobora kucyumva", "hint": "" }
+        ]
+      },
+      {
+        "name": "Translate into English",
+        "questions": [
+          { "prompt": "Simbishobora rwose.  Ukwiriye kubimuha.", "answer": "I'm really unable to do it.  You must give them to her", "hint": "" },
+          { "prompt": "Mbese uzamuha igitambaro cye ryari?  Mbese uzakimuha ejo?", "answer": "When will you give her her cloth?  Will you give it to her tomorrow?", "hint": "" },
+          { "prompt": "Igitambaro cye, nzakimuha ejobundi", "answer": "Her cloth: I'll give it to her the day after tomorrow.", "hint": "" },
+          { "prompt": "Ubwatsi: izi nka ziraburya", "answer": "Grass: these cows are eating it.", "hint": "" },
+          { "prompt": "Ibuye riri he?  Abana bararishaka.  Mbese bazaribona barimuhe?", "answer": "Where is the stone?  The children are wanting/looking for it.  Will they find it and give it to him?", "hint": "" },
+          { "prompt": "Ndashaka kumubaza ikibazo.  Nzakimubaza.", "answer": "I want to ask him a question.  I'll ask him (it)", "hint": "" },
+          { "prompt": "Mutware wanjye, ndagusaba ibyokurya.  Nuko, ndabiguha.", "answer": "My chief, I'm asking you for food.  Very well, I'll give you some.", "hint": "" },
+          { "prompt": "Biriya bishyimbo, ntukwiriye kubisiga hanze.  Simbisiga hanze", "answer": "Those beans, you mustn't leave them outside.  I'm not leaving them outside.", "hint": "" },
+          { "prompt": "Ndagira ngo bazabajyana i Kibuye.  Yego, bazabajyanayo.  Nanjye nzajyana na bo", "answer": "I suppose they will take them to Kibuye.  Yes, they will take them there.  I also will go with them.", "hint": "" },
+          { "prompt": "Ubwato buri he?  Nkwiriye kubusiga irange.", "answer": "Where is the boat?  I must paint it (with paint)", "hint": "" },
+          { "prompt": "Izi mboga, urukwavu ntiruzirya", "answer": "These vegetables, the rabbit doesn't eat them/is not eating them", "hint": "" },
+          { "prompt": "Ngwino, tujyane ku ruzi.  Ndashaka kurukwereka.", "answer": "Come, let's go to the river.  I want to show it to you.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          { "prompt": "Ndagusaba kugira ngo unyereke uburyo bwo kucyuzuza.", "answer": "I am asking you to show me how to fill it [icyansi]", "hint": "" },
+          { "prompt": "Kubeshya no kwiba n'ingeso mbi zituma abantu batubaha ababikora.", "answer": "Lying and stealing are bad habits which cause people to not respect those who practice them", "hint": "" },
+          { "prompt": "Ni wasama aremera kukuvura", "answer": "If you open your mouth, he will agree to treat you", "hint": "" },
+          { "prompt": "Ni wemera kujyana nanjye, ndabikwereka", "answer": "If you agree to go with me, I will show them to you", "hint": "" },
+          { "prompt": "Ngwino, tujye ku ruzi, kuko rwuzuye.  Turahasanga abandi badashobora kurwambuka.", "answer": "Come, let's go to the river, because it's full.  We will find others there who cannot cross it", "hint": "" },
+          { "prompt": "Ni tubyanika bizuma neza", "answer": "If we put them out in the sun, they will dry nicely", "hint": "" },
+          { "prompt": "Ntazemera kuzica kuko ar'umuntu ukunda inyamaswa", "answer": "He will not agree to kill them because he is a person who loves animals", "hint": "" },
+          { "prompt": "Ibyiza n'ukubyohereza none bitaruma", "answer": "It's best to send them today before they dry out", "hint": "" },
+          { "prompt": "Sinzi aho umuhungu wanjye ari, ntabwo tuzamubona muri iyi mihana", "answer": "I don't know where my son is, we will never find him in this vicinity", "hint": "" },
+          { "prompt": "Ni bakubaza, ukwiriye kubabwira yuko ufite ibyokurya byabo, ariko ko uzabibaha ejo mu gitondo", "answer": "If they ask you, you must tell them that you have their food, but that you will give it to them tomorrow morning", "hint": "" },
+          { "prompt": "N'usaba Imana, izagufasha mu byago byose bizakugeraho", "answer": "If you ask God, he will help you in all the troubles that will come upon you", "hint": "" },
+          { "prompt": "Ngwino tujyane, Petero, tujyane na Maria", "answer": "Come, let's go Peter; let's go along with Mary", "hint": "" },
+          { "prompt": "Ubwo uzamusaba, azabiguha ariko ntukwiriye kubijyana", "answer": "When you ask him, he will give them to you, but you must not take them with you.", "hint": "" },
+          { "prompt": "N'urubaha none (urukwavu), ntuzashobora kurubaha ejo.", "answer": "If you give it to them today, you will not be able to give it to them tomorrow.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          { "prompt": "I am asking you to show me how to fill it [icyansi]", "answer": "Ndagusaba kugira ngo unyereke uburyo bwo kucyuzuza.", "hint": "" },
+          { "prompt": "Lying and stealing are bad habits which cause people to not respect those who practice them", "answer": "Kubeshya no kwiba n'ingeso mbi zituma abantu batubaha ababikora.", "hint": "" },
+          { "prompt": "If you open your mouth, he will agree to treat you", "answer": "Ni wasama aremera kukuvura", "hint": "" },
+          { "prompt": "If you agree to go with me, I will show them to you", "answer": "Ni wemera kujyana nanjye, ndabikwereka", "hint": "" },
+          { "prompt": "Come, let's go to the river, because it's full.  We will find others there who cannot cross it", "answer": "Ngwino, tujye ku ruzi, kuko rwuzuye.  Turahasanga abandi badashobora kurwambuka.", "hint": "" },
+          { "prompt": "If we put them out in the sun, they will dry nicely", "answer": "Ni tubyanika bizuma neza", "hint": "" },
+          { "prompt": "He will not agree to kill them because he is a person who loves animals", "answer": "Ntazemera kuzica kuko ar'umuntu ukunda inyamaswa", "hint": "" },
+          { "prompt": "It's best to send them today before they dry out", "answer": "Ibyiza n'ukubyohereza none bitaruma", "hint": "" },
+          { "prompt": "I don't know where my son is, we will never find him in this vicinity", "answer": "Sinzi aho umuhungu wanjye ari, ntabwo tuzamubona muri iyi mihana", "hint": "" },
+          { "prompt": "If they ask you, you must tell them that you have their food, but that you will give it to them tomorrow morning", "answer": "Ni bakubaza, ukwiriye kubabwira yuko ufite ibyokurya byabo, ariko ko uzabibaha ejo mu gitondo", "hint": "" },
+          { "prompt": "If you ask God, he will help you in all the troubles that will come upon you", "answer": "N'usaba Imana, izagufasha mu byago byose bizakugeraho", "hint": "" },
+          { "prompt": "Come, let's go Peter; let's go along with Mary", "answer": "Ngwino tujyane, Petero, tujyane na Maria", "hint": "" },
+          { "prompt": "When you ask him, he will give them to you, but you must not take them with you.", "answer": "Ubwo uzamusaba, azabiguha ariko ntukwiriye kubijyana", "hint": "" },
+          { "prompt": "If you give it to them today, you will not be able to give it to them tomorrow.", "answer": "N'urubaha none (urukwavu), ntuzashobora kurubaha ejo.", "hint": "" }
+        ]
+      }
+    ]
+  }
+}

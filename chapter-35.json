@@ -1,0 +1,71 @@
+{
+  "type": "kinyarwanda-chapter",
+  "version": 1,
+  "chapter": {
+    "name": "Chapter 35",
+    "exercises": [
+      {
+        "name": "Translate to English",
+        "questions": [
+          { "prompt": "Hariho igihe cyo kugira umunezero hariho n'igihe cyo kubabara", "answer": "There's a time for happiness, and there's a time to hurt.", "hint": "" },
+          { "prompt": "Rwose, dukwiriye kuririmba mu cyimbo cyo kubabara", "answer": "Absolutely! We should sing instead of hurting.", "hint": "" },
+          { "prompt": "Ibyo yakoze mu cyimbo cyacu n'igitangaza rwose.", "answer": "What he did in our place is truly remarkable.", "hint": "" },
+          { "prompt": "Bakwiriye kubona umufundi wo gukora mu cyimbo cye", "answer": "They must find a skilled workman to work in his stead.", "hint": "" },
+          { "prompt": "Iki ntabwo ar'igitambaro cyawe; n'icyanjye rwose.", "answer": "This is definitely not your cloth; it is certainly mine.", "hint": "" },
+          { "prompt": "Ijuru n'isi bizashira, ariko isezerano rye rizahoraho iteka ryose.", "answer": "Heaven and earth will pass away, but his promise will remain forever.", "hint": "" },
+          { "prompt": "Ntitubishobora rwose.  Ukwiriye kubimuha.", "answer": "We are absolutely unable to do it.  You must give them to him.", "hint": "" },
+          { "prompt": "Mbese uzamusura ryari?", "answer": "When will you visit her?", "hint": "" },
+          { "prompt": "Mbese, ntuzamusura mu kigwi cyacu?  Simbizi rwose.", "answer": "Will you visit her in our stead?  I really don't know.", "hint": "" },
+          { "prompt": "Simbashima rwose; ntabwo mukora neza.", "answer": "I don't thank you at all; you don't work well.", "hint": "" },
+          { "prompt": "Sindamuha ibintu byo kubikora.  Nzamuha byose ejo.", "answer": "I haven't yet given him the things with which to do it.  I'll give him everything tomorrow.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Translate into Kinyarwanda",
+        "questions": [
+          { "prompt": "He doesn't love me at all.", "answer": "Ntankunda na hato/rwose", "hint": "" },
+          { "prompt": "They don't see me", "answer": "Ntibandeba", "hint": "" },
+          { "prompt": "We will thank him profusely", "answer": "Tuzamushima rwose", "hint": "" },
+          { "prompt": "They won't be able to see you", "answer": "Ntibazashobora kukureba", "hint": "" },
+          { "prompt": "No, I don't want him", "answer": "Oya, simushaka", "hint": "" },
+          { "prompt": "He will do it in my stead.", "answer": "Azabikora mu cyimbo cyanjye", "hint": "" },
+          { "prompt": "She is helping me.", "answer": "Aramfasha", "hint": "" },
+          { "prompt": "We are coming away from the fire.", "answer": "Turava ku muriro", "hint": "" },
+          { "prompt": "Try to help them, even though they are not your friends.", "answer": "Gerageza kubafasha nubwo batari inshuti zawe", "hint": "" },
+          { "prompt": "You are not thanking me today; tomorrow you will", "answer": "Ntunshima none; ejo uzabikora", "hint": "" },
+          { "prompt": "Don't look at them!  They will not help you at all.", "answer": "Ntibarebe!  Ntibazagufasha na hato.", "hint": "" },
+          { "prompt": "I suppose we will help them today.", "answer": "Ndagira ngo turabafasha none", "hint": "" },
+          { "prompt": "I don't know her at all.  You know her.", "answer": "Simuzi na hato.  Uramuzi", "hint": "" },
+          { "prompt": "The blind man cannot see them.", "answer": "Impumyi ntishobora kubareba", "hint": "" },
+          { "prompt": "I will give her to you", "answer": "Ndamuguha/nzamuguha", "hint": "" },
+          { "prompt": "Give them (babies) to me.", "answer": "Uzimpe (impinja)", "hint": "" },
+          { "prompt": "When will you give her her cloth?", "answer": "Uzamuha/uramuha igitambaro cye ryari?", "hint": "" },
+          { "prompt": "They want you", "answer": "Baragushaka/barabashaka", "hint": "" },
+          { "prompt": "We see you, but you can't see us", "answer": "Turakureba, ariko ntushobora kutureba", "hint": "" },
+          { "prompt": "I will give you the cloth.  I will not give her the cloth.", "answer": "Nzaguha umwenda.  Sinzamuha umwenda", "hint": "" },
+          { "prompt": "Heaven and earth will pass away totally.", "answer": "Ijuru n'isi bizashira rwose.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: Kinyarwanda to English",
+        "questions": [
+          { "prompt": "Nubwo aha ari heza, ntituzahaguma.", "answer": "Even though this is a good place, we will not remain here.", "hint": "" },
+          { "prompt": "Bahora batubwira ko atari byiza ko dukora mu cyimbo cye.", "answer": "They tell us constantly that it isn't good that we work in his stead.", "hint": "" },
+          { "prompt": "Ni mureba mu maso he, muzabona yuko atari muzima.", "answer": "If you look in his face, you will see that he is not well.", "hint": "" },
+          { "prompt": "Hamwe na hamwe hakunda kuboneka abantu batazi gusoma.", "answer": "Here and there are frequently found people who don't know how to read.", "hint": "" },
+          { "prompt": "Ubwo tuzagaruka tuzahasura.", "answer": "When we return, we will visit there.", "hint": "" }
+        ]
+      },
+      {
+        "name": "Extra Sentences: English to Kinyarwanda",
+        "questions": [
+          { "prompt": "Even though this is a good place, we will not remain here.", "answer": "Nubwo aha ari heza, ntituzahaguma.", "hint": "" },
+          { "prompt": "They tell us constantly that it isn't good that we work in his stead.", "answer": "Bahora batubwira ko atari byiza ko dukora mu cyimbo cye.", "hint": "" },
+          { "prompt": "If you look in his face, you will see that he is not well.", "answer": "Ni mureba mu maso he, muzabona yuko atari muzima.", "hint": "" },
+          { "prompt": "Here and there are frequently found people who don't know how to read.", "answer": "Hamwe na hamwe hakunda kuboneka abantu batazi gusoma.", "hint": "" },
+          { "prompt": "When we return, we will visit there.", "answer": "Ubwo tuzagaruka tuzahasura.", "hint": "" }
+        ]
+      }
+    ]
+  }
+}

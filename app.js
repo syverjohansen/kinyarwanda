@@ -1,4 +1,5 @@
 const STORAGE_KEY = "kinyarwanda-lessons-v1";
+const PRACTICE_STATS_KEY = "kinyarwanda-practice-stats-v1";
 const TOKEN_KEY = "kinyarwanda-github-token";
 const GIST_ID_KEY = "kinyarwanda-gist-id";
 const LAST_SYNCED_KEY = "kinyarwanda-last-synced";
@@ -59,7 +60,9 @@ function makeId(prefix) {
 
 function loadLessons() {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    const lessons = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    applyPracticeStats(lessons, loadPracticeStats());
+    return lessons;
   } catch {
     return [];
   }
@@ -67,6 +70,46 @@ function loadLessons() {
 
 function saveLessons() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state.lessons));
+  localStorage.setItem(PRACTICE_STATS_KEY, JSON.stringify(makePracticeStats(state.lessons)));
+}
+
+function makePracticeStats(lessons) {
+  return Object.fromEntries(
+    lessons.flatMap((lesson) =>
+      lesson.exercises.map((exercise) => [getPracticeStatsKey(lesson, exercise), {
+        lastPracticeMs: exercise.lastPracticeMs ?? null,
+        bestPracticeMs: exercise.bestPracticeMs ?? null,
+        totalPracticeMs: exercise.totalPracticeMs ?? 0,
+        practiceCount: exercise.practiceCount ?? 0,
+      }]),
+    ),
+  );
+}
+
+function loadPracticeStats() {
+  try {
+    return JSON.parse(localStorage.getItem(PRACTICE_STATS_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function getPracticeStatsKey(lesson, exercise) {
+  return `${String(lesson.name || "").trim().toLocaleLowerCase()}::${String(exercise.name || "").trim().toLocaleLowerCase()}`;
+}
+
+function applyPracticeStats(lessons, stats = {}) {
+  lessons.forEach((lesson) => {
+    (lesson.exercises || []).forEach((exercise) => {
+      const saved = stats[getPracticeStatsKey(lesson, exercise)];
+      if (!saved) return;
+
+      exercise.lastPracticeMs = saved.lastPracticeMs ?? exercise.lastPracticeMs ?? null;
+      exercise.bestPracticeMs = saved.bestPracticeMs ?? exercise.bestPracticeMs ?? null;
+      exercise.totalPracticeMs = saved.totalPracticeMs ?? exercise.totalPracticeMs ?? 0;
+      exercise.practiceCount = saved.practiceCount ?? exercise.practiceCount ?? 0;
+    });
+  });
 }
 
 function makeSyncData() {
@@ -74,6 +117,7 @@ function makeSyncData() {
     app: "kinyarwanda-lessons",
     version: 1,
     lessons: makeCleanLessons(state.lessons),
+    practiceStats: makePracticeStats(state.lessons),
     lastSynced: new Date().toISOString(),
   };
 }
@@ -1859,6 +1903,7 @@ async function loadFromGist() {
     if (!Array.isArray(data.lessons)) throw new Error("The sync data is not a valid lesson file.");
 
     state.lessons = data.lessons;
+    applyPracticeStats(state.lessons, data.practiceStats || {});
     state.activeLessonId = state.lessons[0]?.id || null;
     saveLessons();
     localStorage.setItem(LAST_SYNCED_KEY, data.lastSynced || new Date().toISOString());
